@@ -129,7 +129,7 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 权限列表
      */
     @Override
-    public Set<String> selectPermsByRoleId(Long roleId)
+    public Set<String> selectPermsByRoleId(String roleId)
     {
         List<String> perms = menuMapper.selectPermsByRoleId(roleId);
         Set<String> permsSet = new HashSet<>();
@@ -152,7 +152,7 @@ public class SysMenuServiceImpl implements ISysMenuService
     @Override
     public List<Ztree> roleMenuTreeData(SysRole role, String userId)
     {
-        Long roleId = role.getRoleId();
+        String roleId = role.getRoleId();
         List<Ztree> ztrees = new ArrayList<Ztree>();
         List<SysMenu> menuList = selectMenuAll(userId);
         if (StringUtils.isNotNull(roleId))
@@ -257,7 +257,7 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 结果
      */
     @Override
-    public int deleteMenuById(Long menuId)
+    public int deleteMenuById(String menuId)
     {
         return menuMapper.deleteMenuById(menuId);
     }
@@ -269,7 +269,7 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 菜单信息
      */
     @Override
-    public SysMenu selectMenuById(Long menuId)
+    public SysMenu selectMenuById(String menuId)
     {
         return menuMapper.selectMenuById(menuId);
     }
@@ -281,7 +281,7 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 结果
      */
     @Override
-    public int selectCountMenuByParentId(Long parentId)
+    public int selectCountMenuByParentId(String parentId)
     {
         return menuMapper.selectCountMenuByParentId(parentId);
     }
@@ -293,7 +293,7 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 结果
      */
     @Override
-    public int selectCountRoleMenuByMenuId(Long menuId)
+    public int selectCountRoleMenuByMenuId(String menuId)
     {
         return roleMenuMapper.selectCountRoleMenuByMenuId(menuId);
     }

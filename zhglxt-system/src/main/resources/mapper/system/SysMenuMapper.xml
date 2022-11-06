@@ -70,14 +70,14 @@
 		where m.visible = '0' and r.status = '0' and ur.user_id = #{userId}
 	</select>
 
-	<select id="selectPermsByRoleId" parameterType="Long" resultType="String">
+	<select id="selectPermsByRoleId" parameterType="String" resultType="String">
 		select distinct m.perms
 		from sys_menu m
 			 left join sys_role_menu rm on m.menu_id = rm.menu_id
 		where m.visible = '0' and rm.role_id = #{roleId}
 	</select>
 
-	<select id="selectMenuTree" parameterType="Long" resultType="String">
+	<select id="selectMenuTree" parameterType="String" resultType="String">
 		select concat(m.menu_id, nvl(m.perms,'')) as perms
 		from sys_menu m
 			left join sys_role_menu rm on m.menu_id = rm.menu_id
@@ -114,11 +114,11 @@
 		order by m.parent_id, m.order_num
 	</select>
 
-	<delete id="deleteMenuById" parameterType="Long">
+	<delete id="deleteMenuById" parameterType="String">
 	    delete from sys_menu where menu_id = #{menuId} or parent_id = #{menuId}
 	</delete>
 
-	<select id="selectMenuById" parameterType="Long" resultMap="SysMenuResult">
+	<select id="selectMenuById" parameterType="String" resultMap="SysMenuResult">
 		SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.target, t.menu_type, t.visible, t.is_refresh, t.perms, t.icon, t.remark,
 			(SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name
 		FROM sys_menu t

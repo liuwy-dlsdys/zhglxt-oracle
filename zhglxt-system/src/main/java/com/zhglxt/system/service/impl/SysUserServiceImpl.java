@@ -277,7 +277,7 @@ public class SysUserServiceImpl implements ISysUserService
      */
     @Override
     @Transactional
-    public void insertUserAuth(String userId, Long[] roleIds)
+    public void insertUserAuth(String userId, String[] roleIds)
     {
         userRoleMapper.deleteUserRoleByUserId(userId);
         insertUserRole(userId, roleIds);
@@ -301,13 +301,13 @@ public class SysUserServiceImpl implements ISysUserService
      * @param userId 用户ID
      * @param roleIds 角色组
      */
-    public void insertUserRole(String userId, Long[] roleIds)
+    public void insertUserRole(String userId, String[] roleIds)
     {
         if (StringUtils.isNotNull(roleIds))
         {
             // 新增用户与角色管理
             List<SysUserRole> list = new ArrayList<SysUserRole>();
-            for (Long roleId : roleIds)
+            for (String roleId : roleIds)
             {
                 SysUserRole ur = new SysUserRole();
                 ur.setUserId(userId);

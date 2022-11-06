@@ -14,7 +14,7 @@ public class SysUserRole
     private String userId;
     
     /** 角色ID */
-    private Long roleId;
+    private String roleId;
 
     public String getUserId()
     {
@@ -26,12 +26,12 @@ public class SysUserRole
         this.userId = userId;
     }
 
-    public Long getRoleId()
+    public String getRoleId()
     {
         return roleId;
     }
 
-    public void setRoleId(Long roleId)
+    public void setRoleId(String roleId)
     {
         this.roleId = roleId;
     }

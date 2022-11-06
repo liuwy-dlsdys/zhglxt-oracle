@@ -84,21 +84,21 @@
 			content,
 			create_by, 
 			create_date, 
-			update_by, 
-			update_date, 
+			update_by,
+			update_date,
 			remarks
 		) VALUES (
 			#{id}, 
 			#{userId}, 
 			#{deptId}, 
-			#{post}, 
-			#{startTime}, 
-			#{endTime}, 
+			#{post},
+			to_date(#{startTime},'yyyy-MM-dd HH24:mi'),
+			to_date(#{endTime},'yyyy-MM-dd HH24:mi'),
 			#{content},
 			#{createBy}, 
-			#{createDate}, 
-			#{updateBy}, 
-			#{updateDate}, 
+			sysdate,
+			#{updateBy},
+			sysdate,
 			#{remarks}
 		)
 	</insert>

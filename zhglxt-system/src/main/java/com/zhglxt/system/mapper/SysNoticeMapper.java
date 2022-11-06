@@ -16,7 +16,7 @@ public interface SysNoticeMapper
      * @param noticeId 公告ID
      * @return 公告信息
      */
-    public SysNotice selectNoticeById(Long noticeId);
+    public SysNotice selectNoticeById(String noticeId);
 
     /**
      * 查询公告列表

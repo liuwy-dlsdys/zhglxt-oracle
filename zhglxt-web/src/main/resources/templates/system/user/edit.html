@@ -148,7 +148,7 @@
     $("#form-user-edit").validate({
         onkeyup: false,
         rules: {
-            email: {
+            /*email: {
                 email: true,
                 remote: {
                     url: prefix + "/checkEmailUnique",
@@ -185,7 +185,7 @@
                         return $.validate.unique(data);
                     }
                 }
-            },
+            },*/
             /*idCard: {
                 isNumber:true,
                 remote: {
@@ -213,9 +213,9 @@
             "phonenumber": {
                 remote: "手机号码已经存在"
             },
-            /*"idCard": {
+            "idCard": {
                 remote: "身份证号码已经存在"
-            }*/
+            }
         },
         focusCleanup: true
     });

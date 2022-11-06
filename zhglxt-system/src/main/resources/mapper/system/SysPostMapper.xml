@@ -49,7 +49,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE up.user_id = #{userId}
 	</select>
 	
-	<select id="selectPostById" parameterType="Long" resultMap="SysPostResult">
+	<select id="selectPostById" parameterType="String" resultMap="SysPostResult">
 		<include refid="selectPostVo"/>
 		where post_id = #{postId}
 	</select>
@@ -64,7 +64,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		 where post_code=#{postCode} and rownum <![CDATA[ <= ]]> 1
 	</select>
 	
- 	<delete id="deletePostByIds" parameterType="Long">
+ 	<delete id="deletePostByIds" parameterType="String">
  		delete from sys_post where post_id in
  		<foreach collection="array" item="postId" open="(" separator="," close=")">
  			#{postId}

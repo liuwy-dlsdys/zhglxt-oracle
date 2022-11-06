@@ -51,7 +51,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 	
 	<sql id="selectUserVo">
-        select  u.user_id, u.dept_id, u.login_name, u.user_name, u.user_type, u.email, u.avatar, u.phonenumber, u.sex, u.password, u.salt, u.status, u.del_flag, u.login_ip, u.login_date, u.pwd_update_date, u.create_time, u.remark,
+        select  u.user_id, u.dept_id, u.login_name, u.user_name, u.id_card, u.user_type, u.email, u.avatar, u.phonenumber, u.sex, u.password, u.salt, u.status, u.del_flag, u.login_ip, u.login_date, u.pwd_update_date, u.create_time, u.remark,
        		    d.dept_id, d.parent_id, d.ancestors, d.dept_name, d.order_num, d.leader, d.status as dept_status,
        		    r.role_id, r.role_name, r.role_key, r.role_sort, r.data_scope, r.status as role_status
 		from sys_user u
@@ -173,6 +173,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="deptId != null and deptId != ''">dept_id = #{deptId},</if>
  			<if test="loginName != null and loginName != ''">login_name = #{loginName},</if>
  			<if test="userName != null and userName != ''">user_name = #{userName},</if>
+			<if test="idCard != null and idCard != ''">id_card = #{idCard},</if>
  			<if test="userType != null and userType != ''">user_type = #{userType},</if>
  			<if test="email != null and email != ''">email = #{email},</if>
  			<if test="phonenumber != null and phonenumber != ''">phonenumber = #{phonenumber},</if>
@@ -191,15 +192,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		where user_id = #{userId}
 	</update>
  	
- 	<insert id="insertUser" parameterType="SysUser" useGeneratedKeys="true" keyProperty="userId">
- 	    <selectKey keyProperty="userId" order="BEFORE" resultType="String">
-			select seq_sys_user.nextval as userId from DUAL
-		</selectKey>
+ 	<insert id="insertUser" parameterType="SysUser">
  		insert into sys_user(
  			<if test="userId != null and userId != ''">user_id,</if>
  			<if test="deptId != null and deptId != ''">dept_id,</if>
  			<if test="loginName != null and loginName != ''">login_name,</if>
  			<if test="userName != null and userName != ''">user_name,</if>
+		    <if test="idCard != null and idCard != ''">id_card,</if>
  			<if test="userType != null and userType != ''">user_type,</if>
  			<if test="email != null and email != ''">email,</if>
  			<if test="avatar != null and avatar != ''">avatar,</if>
@@ -216,6 +215,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  			<if test="deptId != null and deptId != ''">#{deptId},</if>
  			<if test="loginName != null and loginName != ''">#{loginName},</if>
  			<if test="userName != null and userName != ''">#{userName},</if>
+		    <if test="idCard != null and idCard != ''">#{idCard},</if>
  			<if test="userType != null and userType != ''">#{userType},</if>
  			<if test="email != null and email != ''">#{email},</if>
  			<if test="avatar != null and avatar != ''">#{avatar},</if>

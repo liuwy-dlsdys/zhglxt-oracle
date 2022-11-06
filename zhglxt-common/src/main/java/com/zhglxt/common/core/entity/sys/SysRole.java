@@ -19,7 +19,7 @@ public class SysRole extends BaseEntity
 
     /** 角色ID */
     @Excel(name = "角色序号", cellType = ColumnType.NUMERIC)
-    private Long roleId;
+    private String roleId;
 
     /** 角色名称 */
     @Excel(name = "角色名称")
@@ -61,17 +61,17 @@ public class SysRole extends BaseEntity
 
     }
 
-    public SysRole(Long roleId)
+    public SysRole(String roleId)
     {
         this.roleId = roleId;
     }
 
-    public Long getRoleId()
+    public String getRoleId()
     {
         return roleId;
     }
 
-    public void setRoleId(Long roleId)
+    public void setRoleId(String roleId)
     {
         this.roleId = roleId;
     }
@@ -81,9 +81,9 @@ public class SysRole extends BaseEntity
         return isAdmin(this.roleId);
     }
 
-    public static boolean isAdmin(Long roleId)
+    public static boolean isAdmin(String roleId)
     {
-        return roleId != null && 1L == roleId;
+        return roleId != null && "1".equals(roleId);
     }
 
     public String getDataScope()

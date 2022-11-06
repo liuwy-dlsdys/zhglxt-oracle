@@ -55,7 +55,7 @@ public interface ISysMenuService
      * @param roleId 角色ID
      * @return 权限列表
      */
-    public Set<String> selectPermsByRoleId(Long roleId);
+    public Set<String> selectPermsByRoleId(String roleId);
 
     /**
      * 根据角色ID查询菜单
@@ -88,7 +88,7 @@ public interface ISysMenuService
      * @param menuId 菜单ID
      * @return 结果
      */
-    public int deleteMenuById(Long menuId);
+    public int deleteMenuById(String menuId);
 
     /**
      * 根据菜单ID查询信息
@@ -96,7 +96,7 @@ public interface ISysMenuService
      * @param menuId 菜单ID
      * @return 菜单信息
      */
-    public SysMenu selectMenuById(Long menuId);
+    public SysMenu selectMenuById(String menuId);
 
     /**
      * 查询菜单数量
@@ -104,7 +104,7 @@ public interface ISysMenuService
      * @param parentId 菜单父ID
      * @return 结果
      */
-    public int selectCountMenuByParentId(Long parentId);
+    public int selectCountMenuByParentId(String parentId);
 
     /**
      * 查询菜单使用数量
@@ -112,7 +112,7 @@ public interface ISysMenuService
      * @param menuId 菜单ID
      * @return 结果
      */
-    public int selectCountRoleMenuByMenuId(Long menuId);
+    public int selectCountRoleMenuByMenuId(String menuId);
 
     /**
      * 新增保存菜单信息

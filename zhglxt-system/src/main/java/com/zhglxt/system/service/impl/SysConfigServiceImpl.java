@@ -41,7 +41,7 @@ public class SysConfigServiceImpl implements ISysConfigService
      * @return 参数配置信息
      */
     @Override
-    public SysConfig selectConfigById(Long configId)
+    public SysConfig selectConfigById(String configId)
     {
         SysConfig config = new SysConfig();
         config.setConfigId(configId);
@@ -127,8 +127,8 @@ public class SysConfigServiceImpl implements ISysConfigService
     @Override
     public void deleteConfigByIds(String ids)
     {
-        Long[] configIds = Convert.toLongArray(ids);
-        for (Long configId : configIds)
+        String[] configIds = Convert.toStrArray(ids);
+        for (String configId : configIds)
         {
             SysConfig config = selectConfigById(configId);
             if (StringUtils.equals(UserConstants.YES, config.getConfigType()))
@@ -181,9 +181,9 @@ public class SysConfigServiceImpl implements ISysConfigService
     @Override
     public String checkConfigKeyUnique(SysConfig config)
     {
-        Long configId = StringUtils.isNull(config.getConfigId()) ? -1L : config.getConfigId();
+        String configId = StringUtils.isNull(config.getConfigId()) ? "" : config.getConfigId();
         SysConfig info = configMapper.checkConfigKeyUnique(config.getConfigKey());
-        if (StringUtils.isNotNull(info) && info.getConfigId().longValue() != configId.longValue())
+        if (StringUtils.isNotNull(info) && !info.getConfigId().equals(configId))
         {
             return UserConstants.CONFIG_KEY_NOT_UNIQUE;
         }

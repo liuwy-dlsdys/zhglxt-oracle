@@ -89,8 +89,8 @@ public class SysDeptServiceImpl implements ISysDeptService
     @Override
     public List<Ztree> roleDeptTreeData(SysRole role)
     {
-        Long roleId = role.getRoleId();
-        List<Ztree> ztrees = new ArrayList<Ztree>();
+        String roleId = role.getRoleId();
+        List<Ztree> ztrees = new ArrayList<>();
         List<SysDept> deptList = SpringUtils.getAopProxy(this).selectDeptList(new SysDept());
         if (StringUtils.isNotNull(roleId))
         {

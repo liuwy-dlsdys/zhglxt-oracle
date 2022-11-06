@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from sys_notice
     </sql>
     
-    <select id="selectNoticeById" parameterType="Long" resultMap="SysNoticeResult">
+    <select id="selectNoticeById" parameterType="String" resultMap="SysNoticeResult">
         <include refid="selectNoticeVo"/>
         where notice_id = #{noticeId}
     </select>

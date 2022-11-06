@@ -99,7 +99,7 @@ public class SysUser extends BaseEntity
     private List<SysRole> roles;
 
     /** 角色组 */
-    private Long[] roleIds;
+    private String[] roleIds;
 
     /** 岗位组 */
     private Long[] postIds;
@@ -350,12 +350,12 @@ public class SysUser extends BaseEntity
         this.roles = roles;
     }
 
-    public Long[] getRoleIds()
+    public String[] getRoleIds()
     {
         return roleIds;
     }
 
-    public void setRoleIds(Long[] roleIds)
+    public void setRoleIds(String[] roleIds)
     {
         this.roleIds = roleIds;
     }

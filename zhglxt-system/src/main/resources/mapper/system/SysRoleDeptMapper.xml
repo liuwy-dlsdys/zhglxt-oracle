@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="deptId"     column="dept_id"      />
 	</resultMap>
 
-	<delete id="deleteRoleDeptByRoleId" parameterType="Long">
+	<delete id="deleteRoleDeptByRoleId" parameterType="String">
 		delete from sys_role_dept where role_id=#{roleId}
 	</delete>
 	
@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    select count(1) from sys_role_dept where dept_id=#{deptId}
 	</select>
 	
-	<delete id="deleteRoleDept" parameterType="Long">
+	<delete id="deleteRoleDept" parameterType="String">
  		delete from sys_role_dept where role_id in
  		<foreach collection="array" item="roleId" open="(" separator="," close=")">
  			#{roleId}

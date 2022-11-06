@@ -25,7 +25,7 @@ public interface SysUserPostMapper
      * @param postId 岗位ID
      * @return 结果
      */
-    public int countUserPostById(Long postId);
+    public int countUserPostById(String postId);
     
     /**
      * 批量删除用户和岗位关联

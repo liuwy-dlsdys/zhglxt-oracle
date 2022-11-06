@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="menuId"     column="menu_id"      />
 	</resultMap>
 
-	<delete id="deleteRoleMenuByRoleId" parameterType="Long">
+	<delete id="deleteRoleMenuByRoleId" parameterType="String">
 		delete from sys_role_menu where role_id=#{roleId}
 	</delete>
 	
@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    select count(1) from sys_role_menu where menu_id=#{menuId}  
 	</select>
 	
-	<delete id="deleteRoleMenu" parameterType="Long">
+	<delete id="deleteRoleMenu" parameterType="String">
  		delete from sys_role_menu where role_id in
  		<foreach collection="array" item="roleId" open="(" separator="," close=")">
  			#{roleId}

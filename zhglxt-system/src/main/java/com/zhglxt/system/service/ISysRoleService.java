@@ -50,7 +50,7 @@ public interface ISysRoleService
      * @param roleId 角色ID
      * @return 角色对象信息
      */
-    public SysRole selectRoleById(Long roleId);
+    public SysRole selectRoleById(String roleId);
 
     /**
      * 通过角色ID删除角色
@@ -58,7 +58,7 @@ public interface ISysRoleService
      * @param roleId 角色ID
      * @return 结果
      */
-    public boolean deleteRoleById(Long roleId);
+    public boolean deleteRoleById(String roleId);
 
     /**
      * 批量删除角色用户信息
@@ -121,7 +121,7 @@ public interface ISysRoleService
      * 
      * @param roleId 角色id
      */
-    public void checkRoleDataScope(Long roleId);
+    public void checkRoleDataScope(String roleId);
 
     /**
      * 通过角色ID查询角色使用数量
@@ -129,7 +129,7 @@ public interface ISysRoleService
      * @param roleId 角色ID
      * @return 结果
      */
-    public int countUserRoleByRoleId(Long roleId);
+    public int countUserRoleByRoleId(String roleId);
 
     /**
      * 角色状态修改
@@ -154,7 +154,7 @@ public interface ISysRoleService
      * @param userIds 需要删除的用户数据ID
      * @return 结果
      */
-    public int deleteAuthUsers(Long roleId, String userIds);
+    public int deleteAuthUsers(String roleId, String userIds);
 
     /**
      * 批量选择授权用户角色
@@ -163,5 +163,5 @@ public interface ISysRoleService
      * @param userIds 需要删除的用户数据ID
      * @return 结果
      */
-    public int insertAuthUsers(Long roleId, String userIds);
+    public int insertAuthUsers(String roleId, String userIds);
 }

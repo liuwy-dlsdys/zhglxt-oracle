@@ -96,7 +96,7 @@ public class SysRoleServiceImpl implements ISysRoleService
         {
             for (SysRole userRole : userRoles)
             {
-                if (role.getRoleId().longValue() == userRole.getRoleId().longValue())
+                if (role.getRoleId().equals(userRole.getRoleId()))
                 {
                     role.setFlag(true);
                     break;
@@ -124,7 +124,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      * @return 角色对象信息
      */
     @Override
-    public SysRole selectRoleById(Long roleId)
+    public SysRole selectRoleById(String roleId)
     {
         return roleMapper.selectRoleById(roleId);
     }
@@ -137,7 +137,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      */
     @Override
     @Transactional
-    public boolean deleteRoleById(Long roleId)
+    public boolean deleteRoleById(String roleId)
     {
         // 删除角色与菜单关联
         roleMenuMapper.deleteRoleMenuByRoleId(roleId);
@@ -156,8 +156,8 @@ public class SysRoleServiceImpl implements ISysRoleService
     @Transactional
     public int deleteRoleByIds(String ids)
     {
-        Long[] roleIds = Convert.toLongArray(ids);
-        for (Long roleId : roleIds)
+        String[] roleIds = Convert.toStrArray(ids);
+        for (String roleId : roleIds)
         {
             checkRoleAllowed(new SysRole(roleId));
             checkRoleDataScope(roleId);
@@ -281,9 +281,9 @@ public class SysRoleServiceImpl implements ISysRoleService
     @Override
     public String checkRoleNameUnique(SysRole role)
     {
-        Long roleId = StringUtils.isNull(role.getRoleId()) ? -1L : role.getRoleId();
+        String roleId = StringUtils.isNull(role.getRoleId()) ? "" : role.getRoleId();
         SysRole info = roleMapper.checkRoleNameUnique(role.getRoleName());
-        if (StringUtils.isNotNull(info) && info.getRoleId().longValue() != roleId.longValue())
+        if (StringUtils.isNotNull(info) && !info.getRoleId().equals(roleId))
         {
             return UserConstants.ROLE_NAME_NOT_UNIQUE;
         }
@@ -299,9 +299,9 @@ public class SysRoleServiceImpl implements ISysRoleService
     @Override
     public String checkRoleKeyUnique(SysRole role)
     {
-        Long roleId = StringUtils.isNull(role.getRoleId()) ? -1L : role.getRoleId();
+        String roleId = StringUtils.isNull(role.getRoleId()) ? "" : role.getRoleId();
         SysRole info = roleMapper.checkRoleKeyUnique(role.getRoleKey());
-        if (StringUtils.isNotNull(info) && info.getRoleId().longValue() != roleId.longValue())
+        if (StringUtils.isNotNull(info) && info.getRoleId().equals(roleId))
         {
             return UserConstants.ROLE_KEY_NOT_UNIQUE;
         }
@@ -328,7 +328,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      * @param roleId 角色id
      */
     @Override
-    public void checkRoleDataScope(Long roleId)
+    public void checkRoleDataScope(String roleId)
     {
         if (!SysUser.isAdmin(ShiroUtils.getUserId()))
         {
@@ -349,7 +349,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      * @return 结果
      */
     @Override
-    public int countUserRoleByRoleId(Long roleId)
+    public int countUserRoleByRoleId(String roleId)
     {
         return userRoleMapper.countUserRoleByRoleId(roleId);
     }
@@ -386,7 +386,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      * @return 结果
      */
     @Override
-    public int deleteAuthUsers(Long roleId, String userIds)
+    public int deleteAuthUsers(String roleId, String userIds)
     {
         return userRoleMapper.deleteUserRoleInfos(roleId, Convert.toLongArray(userIds));
     }
@@ -399,7 +399,7 @@ public class SysRoleServiceImpl implements ISysRoleService
      * @return 结果
      */
     @Override
-    public int insertAuthUsers(Long roleId, String userIds)
+    public int insertAuthUsers(String roleId, String userIds)
     {
         String[] users = Convert.toStrArray(userIds);
         // 新增用户与角色管理

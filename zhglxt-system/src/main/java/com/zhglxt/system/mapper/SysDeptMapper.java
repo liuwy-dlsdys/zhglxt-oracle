@@ -92,7 +92,7 @@ public interface SysDeptMapper
      * @param roleId 角色ID
      * @return 部门列表
      */
-    public List<String> selectRoleDeptTree(Long roleId);
+    public List<String> selectRoleDeptTree(String roleId);
 
     /**
      * 修改所在部门正常状态

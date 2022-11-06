@@ -11,17 +11,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 public class SysRoleDept
 {
     /** 角色ID */
-    private Long roleId;
+    private String roleId;
     
     /** 部门ID */
     private Long deptId;
 
-    public Long getRoleId()
+    public String getRoleId()
     {
         return roleId;
     }
 
-    public void setRoleId(Long roleId)
+    public void setRoleId(String roleId)
     {
         this.roleId = roleId;
     }

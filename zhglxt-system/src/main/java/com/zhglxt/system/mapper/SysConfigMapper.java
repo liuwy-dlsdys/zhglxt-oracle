@@ -56,7 +56,7 @@ public interface SysConfigMapper
      * @param configId 参数主键
      * @return 结果
      */
-    public int deleteConfigById(Long configId);
+    public int deleteConfigById(String configId);
 
     /**
      * 批量删除参数配置

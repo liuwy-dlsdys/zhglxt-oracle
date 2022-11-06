@@ -1,11 +1,13 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
+import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.Ztree;
 import com.zhglxt.common.core.entity.sys.SysDept;
+import com.zhglxt.common.core.entity.sys.SysRole;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.StringUtils;
 import com.zhglxt.common.utils.WebUtil;
@@ -27,13 +29,12 @@ import java.util.Map;
 
 /**
  * 部门信息
- * 
+ *
  * @author ruoyi
  */
 @Controller
 @RequestMapping("/system/dept")
-public class SysDeptController extends BaseController
-{
+public class SysDeptController extends BaseController {
     private String prefix = "system/dept";
 
     @Autowired
@@ -41,16 +42,14 @@ public class SysDeptController extends BaseController
 
     @RequiresPermissions("system:dept:view")
     @GetMapping()
-    public String dept()
-    {
+    public String dept() {
         return prefix + "/dept";
     }
 
     @RequiresPermissions("system:dept:list")
     @PostMapping("/list")
     @ResponseBody
-    public List<SysDept> list(SysDept dept)
-    {
+    public List<SysDept> list(SysDept dept) {
         List<SysDept> deptList = deptService.selectDeptList(dept);
         return deptList;
     }
@@ -59,8 +58,7 @@ public class SysDeptController extends BaseController
      * 新增部门
      */
     @GetMapping("/add/{parentId}")
-    public String add(@PathVariable("parentId") String parentId, ModelMap mmap)
-    {
+    public String add(@PathVariable("parentId") String parentId, ModelMap mmap) {
         if (!getSysUser().isAdmin())
         {
             parentId = getSysUser().getDeptId();
@@ -76,10 +74,11 @@ public class SysDeptController extends BaseController
     @RequiresPermissions("system:dept:add")
     @PostMapping("/add")
     @ResponseBody
-    public AjaxResult addSave(@Validated SysDept dept)
-    {
-        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept)))
-        {
+    public AjaxResult addSave(@Validated SysDept dept) {
+        if (GlobalConfig.isDemoEnabled()) {
+            return error("演示模式不允许本操作");
+        }
+        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept))) {
             return error("新增部门'" + dept.getDeptName() + "'失败，部门名称已存在");
         }
         dept.setCreateBy(getLoginName());
@@ -91,12 +90,10 @@ public class SysDeptController extends BaseController
      */
     @RequiresPermissions("system:dept:edit")
     @GetMapping("/edit/{deptId}")
-    public String edit(@PathVariable("deptId") String deptId, ModelMap mmap)
-    {
+    public String edit(@PathVariable("deptId") String deptId, ModelMap mmap) {
         deptService.checkDeptDataScope(deptId);
         SysDept dept = deptService.selectDeptById(deptId);
-        if (StringUtils.isNotNull(dept) && "100".equals(deptId))
-        {
+        if (StringUtils.isNotNull(dept) && deptId.equals("100")) {
             dept.setParentName("无");
         }
         mmap.put("dept", dept);
@@ -110,20 +107,19 @@ public class SysDeptController extends BaseController
     @RequiresPermissions("system:dept:edit")
     @PostMapping("/edit")
     @ResponseBody
-    public AjaxResult editSave(@Validated SysDept dept)
-    {
+    public AjaxResult editSave(@Validated SysDept dept) {
+        if (GlobalConfig.isDemoEnabled()) {
+            return error("演示模式不允许本操作");
+        }
+
         String deptId = dept.getDeptId();
         deptService.checkDeptDataScope(deptId);
-        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept)))
-        {
+
+        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept))) {
             return error("修改部门'" + dept.getDeptName() + "'失败，部门名称已存在");
-        }
-        else if (dept.getParentId().equals(deptId))
-        {
+        } else if (dept.getParentId().equals(deptId)) {
             return error("修改部门'" + dept.getDeptName() + "'失败，上级部门不能是自己");
-        }
-        else if (StringUtils.equals(UserConstants.DEPT_DISABLE, dept.getStatus()) && deptService.selectNormalChildrenDeptById(deptId) > 0)
-        {
+        } else if (StringUtils.equals(UserConstants.DEPT_DISABLE, dept.getStatus()) && deptService.selectNormalChildrenDeptById(deptId) > 0){
             return AjaxResult.error("该部门包含未停用的子部门！");
         }
         dept.setUpdateBy(getLoginName());
@@ -137,14 +133,14 @@ public class SysDeptController extends BaseController
     @RequiresPermissions("system:dept:remove")
     @GetMapping("/remove/{deptId}")
     @ResponseBody
-    public AjaxResult remove(@PathVariable("deptId") String deptId)
-    {
-        if (deptService.selectDeptCount(deptId) > 0)
-        {
+    public AjaxResult remove(@PathVariable("deptId") String deptId) {
+        if (GlobalConfig.isDemoEnabled()) {
+            return error("演示模式不允许本操作");
+        }
+        if (deptService.selectDeptCount(deptId) > 0) {
             return AjaxResult.warn("存在下级部门,不允许删除");
         }
-        if (deptService.checkDeptExistUser(deptId))
-        {
+        if (deptService.checkDeptExistUser(deptId)) {
             return AjaxResult.warn("部门存在用户,不允许删除");
         }
         deptService.checkDeptDataScope(deptId);
@@ -156,21 +152,19 @@ public class SysDeptController extends BaseController
      */
     @PostMapping("/checkDeptNameUnique")
     @ResponseBody
-    public String checkDeptNameUnique(SysDept dept)
-    {
+    public String checkDeptNameUnique(SysDept dept) {
         return deptService.checkDeptNameUnique(dept);
     }
 
     /**
      * 选择部门树
-     * 
-     * @param deptId 部门ID
+     *
+     * @param deptId    部门ID
      * @param excludeId 排除ID
      */
-    @GetMapping(value = { "/selectDeptTree/{deptId}", "/selectDeptTree/{deptId}/{excludeId}" })
+    @GetMapping(value = {"/selectDeptTree/{deptId}", "/selectDeptTree/{deptId}/{excludeId}"})
     public String selectDeptTree(@PathVariable("deptId") String deptId,
-            @PathVariable(value = "excludeId", required = false) String excludeId, ModelMap mmap)
-    {
+                                 @PathVariable(value = "excludeId", required = false) String excludeId, ModelMap mmap) {
         mmap.put("dept", deptService.selectDeptById(deptId));
         mmap.put("excludeId", excludeId);
         return prefix + "/tree";
@@ -202,11 +196,20 @@ public class SysDeptController extends BaseController
      */
     @GetMapping("/treeData/{excludeId}")
     @ResponseBody
-    public List<Ztree> treeDataExcludeChild(@PathVariable(value = "excludeId", required = false) Long excludeId)
-    {
+    public List<Ztree> treeDataExcludeChild(@PathVariable(value = "excludeId", required = false) String excludeId) {
         SysDept dept = new SysDept();
-        dept.setExcludeId(excludeId);
+        dept.setDeptId(excludeId);
         List<Ztree> ztrees = deptService.selectDeptTreeExcludeChild(dept);
+        return ztrees;
+    }
+
+    /**
+     * 加载角色部门（数据权限）列表树
+     */
+    @GetMapping("/roleDeptTreeData")
+    @ResponseBody
+    public List<Ztree> deptTreeData(SysRole role) {
+        List<Ztree> ztrees = deptService.roleDeptTreeData(role);
         return ztrees;
     }
 }

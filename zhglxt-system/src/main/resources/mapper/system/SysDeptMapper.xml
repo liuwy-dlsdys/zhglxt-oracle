@@ -27,7 +27,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         from sys_dept d
     </sql>
     
-	<select id="selectRoleDeptTree" parameterType="Long" resultType="String">
+	<select id="selectRoleDeptTree" parameterType="String" resultType="String">
 		select concat(d.dept_id, d.dept_name) as dept_name
 		from sys_dept d
 			left join sys_role_dept rd on d.dept_id = rd.dept_id

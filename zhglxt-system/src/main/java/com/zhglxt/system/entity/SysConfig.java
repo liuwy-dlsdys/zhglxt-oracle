@@ -20,7 +20,7 @@ public class SysConfig extends BaseEntity
 
     /** 参数主键 */
     @Excel(name = "参数主键", cellType = ColumnType.NUMERIC)
-    private Long configId;
+    private String configId;
 
     /** 参数名称 */
     @Excel(name = "参数名称")
@@ -38,12 +38,12 @@ public class SysConfig extends BaseEntity
     @Excel(name = "系统内置", readConverterExp = "Y=是,N=否")
     private String configType;
 
-    public Long getConfigId()
+    public String getConfigId()
     {
         return configId;
     }
 
-    public void setConfigId(Long configId)
+    public void setConfigId(String configId)
     {
         this.configId = configId;
     }

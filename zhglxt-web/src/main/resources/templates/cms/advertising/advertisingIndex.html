@@ -14,17 +14,15 @@
                             广告标题：<input type="text" name="title"/>
                         </li>
                         <li>
-                            显示状态：<select name="status" th:with="type=${@dict.getType('cms_show_hide')}">
+                            显示状态：
+                            <select name="status" th:with="type=${@dict.getType('cms_show_hide')}">
                             <option value="">所有</option>
-                            <option th:each="dict : ${type}" th:text="${dict.dictLabel}"
-                                    th:value="${dict.dictValue}"></option>
+                            <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
                         </select>
                         </li>
                         <li>
-                            <a class="btn btn-success btn-rounded btn-sm" onclick="$.table.search()"><i
-                                    class="fa fa-search"></i>&nbsp;搜索</a>
-                            <a class="btn btn-success btn-rounded btn-sm" onclick="$.form.reset()"><i
-                                    class="fa fa-refresh"></i>&nbsp;重置</a>
+                            <a class="btn btn-success btn-rounded btn-sm" onclick="$.table.search()"><i class="fa fa-search"></i>&nbsp;搜索</a>
+                            <a class="btn btn-success btn-rounded btn-sm" onclick="$.form.reset()"><i class="fa fa-refresh"></i>&nbsp;重置</a>
                         </li>
                     </ul>
                 </div>
@@ -35,12 +33,10 @@
             <a class="btn btn-success" onclick="$.operate.addFull()" shiro:hasPermission="'cms:advertising:add'">
                 <i class="fa fa-plus"></i> 新增
             </a>
-            <a class="btn btn-primary single disabled" onclick="$.operate.editFull()"
-               shiro:hasPermission="'cms:advertising:edit'">
+            <a class="btn btn-primary single disabled" onclick="$.operate.editFull()" shiro:hasPermission="'cms:advertising:edit'">
                 <i class="fa fa-edit"></i> 修改
             </a>
-            <a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()"
-               shiro:hasPermission="'cms:advertising:remove'">
+            <a class="btn btn-danger multiple disabled" onclick="$.operate.removeAll()" shiro:hasPermission="'cms:advertising:remove'">
                 <i class="fa fa-remove"></i> 删除
             </a>
         </div>

@@ -27,7 +27,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
      * @return 公告信息
      */
     @Override
-    public SysNotice selectNoticeById(Long noticeId)
+    public SysNotice selectNoticeById(String noticeId)
     {
         return noticeMapper.selectNoticeById(noticeId);
     }

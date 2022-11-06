@@ -52,7 +52,7 @@ public class SysDictDataServiceImpl implements ISysDictDataService
      * @return 字典数据
      */
     @Override
-    public SysDictData selectDictDataById(Long dictCode)
+    public SysDictData selectDictDataById(String dictCode)
     {
         return dictDataMapper.selectDictDataById(dictCode);
     }
@@ -65,8 +65,8 @@ public class SysDictDataServiceImpl implements ISysDictDataService
     @Override
     public void deleteDictDataByIds(String ids)
     {
-        Long[] dictCodes = Convert.toLongArray(ids);
-        for (Long dictCode : dictCodes)
+        String[] dictCodes = Convert.toStrArray(ids);
+        for (String dictCode : dictCodes)
         {
             SysDictData data = selectDictDataById(dictCode);
             dictDataMapper.deleteDictDataById(dictCode);

@@ -68,9 +68,7 @@ public class LeaveServiceImpl implements ILeaveService {
         //新增保存
         paramMap.put("id", UUID.fastUUID().toString(true));
         paramMap.put("createBy", user.getUserId());
-        paramMap.put("createDate", new Date());
         paramMap.put("updateBy", user.getUserId());
-        paramMap.put("updateDate", new Date());
         //插入数据库
         int insert = leaveMapper.insert(paramMap);
 

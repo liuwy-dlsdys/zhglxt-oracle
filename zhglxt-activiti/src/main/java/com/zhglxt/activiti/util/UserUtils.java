@@ -25,7 +25,7 @@ public class UserUtils {
     public static SysUser getByLoginName(String loginName) {
         SysUser user = userDao.selectUserByLoginName(loginName);
         if (user != null) {
-            user.setRoles(roleDao.selectRolesByUserId(user.getRoleId()));
+            user.setRoles(roleDao.selectRolesByUserId(user.getUserId()));
         }
         return user;
     }

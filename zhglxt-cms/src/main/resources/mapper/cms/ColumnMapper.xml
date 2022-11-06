@@ -112,7 +112,7 @@
     <update id="updateColumn" parameterType="map">
         UPDATE cms_column SET
             parent_id = #{pId},
-            `column_name` = #{name},
+            column_name = #{name},
             site_id = #{siteId},
             out_link = #{outLink},
             column_flag = #{columnFlag},
