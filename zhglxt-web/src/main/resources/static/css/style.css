@@ -726,8 +726,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active,  .btn-success.active, .open .dropdown-toggle.btn-success {
-    background-color: #1a7bb9;
-    border-color: #1a7bb9;
+    background-color: #1a7bb9 !important;
+    border-color: #1a7bb9 !important;
     color: #FFFFFF;
 }
 
@@ -3037,8 +3037,9 @@ body.boxed-layout #wrapper {
 }
 
 .clear {
-    display: block;
-    overflow: hidden;
+    /*会影响到datetimepicker日期和时间插件的清除按钮*/
+    /*display: block;
+    overflow: hidden;*/
 }
 
 a {

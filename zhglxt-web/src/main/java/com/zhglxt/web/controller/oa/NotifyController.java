@@ -89,9 +89,6 @@ public class NotifyController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(Notify notify) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         return toAjax(notifyService.insertNotify(notify));
     }
 
@@ -132,9 +129,6 @@ public class NotifyController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(Notify notify) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         notify.setUpdateBy(ShiroUtils.getLoginName());
         return toAjax(notifyService.updateNotify(notify));
     }
@@ -147,9 +141,6 @@ public class NotifyController extends BaseController {
     @PostMapping("/remove")
     @ResponseBody
     public AjaxResult remove(String ids) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         return toAjax(notifyService.deleteNotifyByIds(ids));
     }
 

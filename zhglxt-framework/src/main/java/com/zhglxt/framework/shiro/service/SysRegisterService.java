@@ -1,19 +1,16 @@
 package com.zhglxt.framework.shiro.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import com.zhglxt.common.constant.Constants;
 import com.zhglxt.common.constant.ShiroConstants;
 import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.entity.sys.SysUser;
-import com.zhglxt.common.utils.DateUtils;
-import com.zhglxt.common.utils.MessageUtils;
-import com.zhglxt.common.utils.ServletUtils;
-import com.zhglxt.common.utils.ShiroUtils;
-import com.zhglxt.common.utils.StringUtils;
+import com.zhglxt.common.utils.*;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.framework.manager.AsyncManager;
 import com.zhglxt.framework.manager.factory.AsyncFactory;
 import com.zhglxt.system.service.ISysUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * 注册校验方法
@@ -34,7 +31,7 @@ public class SysRegisterService
      */
     public String register(SysUser user)
     {
-        String msg = "", loginName = user.getLoginName(), password = user.getPassword();
+        String msg = "", loginName = user.getLoginName(), password = user.getPassword(),idCard=user.getIdCard();
 
         if (ShiroConstants.CAPTCHA_ERROR.equals(ServletUtils.getRequest().getAttribute(ShiroConstants.CURRENT_CAPTCHA)))
         {
@@ -61,9 +58,10 @@ public class SysRegisterService
         else if (UserConstants.USER_NAME_NOT_UNIQUE.equals(userService.checkLoginNameUnique(user)))
         {
             msg = "保存用户'" + loginName + "'失败，注册账号已存在";
-        }
-        else
-        {
+        } else if(!"".equals(IDCardUtils.IDCardValidate(idCard))){
+                msg = IDCardUtils.IDCardValidate(idCard);
+        } else {
+            user.setUserId(UUID.fastUUID().toString(true));
             user.setPwdUpdateDate(DateUtils.getNowDate());
             user.setUserName(loginName);
             user.setSalt(ShiroUtils.randomSalt());

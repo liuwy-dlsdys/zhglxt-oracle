@@ -6,7 +6,6 @@ import com.zhglxt.cms.service.IColumnService;
 import com.zhglxt.cms.service.ISiteService;
 import com.zhglxt.cms.service.impl.ArticleServiceImpl;
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.enums.BusinessType;
@@ -22,11 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -130,9 +125,6 @@ public class ColumnController extends BaseController {
     @RequestMapping("/addColumn")
     @ResponseBody
     public AjaxResult addColumn(HttpServletRequest request) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         Map<String, Object> paramMap = WebUtil.paramsToMap(request.getParameterMap());
 
         paramMap.put("id", UUID.fastUUID().toString(true));
@@ -150,9 +142,6 @@ public class ColumnController extends BaseController {
     @RequestMapping("/editColumn")
     @ResponseBody
     public AjaxResult editColumn(HttpServletRequest request) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         Map<String, Object> paramMap = WebUtil.paramsToMap(request.getParameterMap());
 
         paramMap.put("siteId", siteService.selectOneSite().getId());
@@ -172,10 +161,6 @@ public class ColumnController extends BaseController {
     @GetMapping("/remove/{columnId}")
     @ResponseBody
     public AjaxResult deleteColumn(@PathVariable("columnId") String columnId) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
-
         Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("columnId",columnId);
         List<Column> columns = columnService.selectColumnList(paramMap);

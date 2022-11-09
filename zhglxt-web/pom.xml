@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>zhglxt</artifactId>
         <groupId>com.zhglxt</groupId>
+        <artifactId>zhglxt</artifactId>
         <version>4.7.5</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-    <packaging>war</packaging>
     <artifactId>zhglxt-web</artifactId>
-
+    <packaging>war</packaging>
     <description>
         web服务入口
     </description>
@@ -50,14 +49,16 @@
         </dependency>
 
         <!--oracle驱动-->
-        <!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+        <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
         <dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>${oracle.version}</version>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>10.2.0.4.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/ojdbc14.jar</systemPath>
         </dependency>
 
-        <!-- 核心模块-->
+        <!-- 核心模块 -->
         <dependency>
             <groupId>com.zhglxt</groupId>
             <artifactId>zhglxt-framework</artifactId>
@@ -147,53 +148,53 @@
                 <version>3.3.1</version>
                 <configuration>
                     <!--打war时，同时把lib目录下的jar也打进去-->
-                    <!--                    <webResources>-->
-                    <!--                        <resource>-->
-                    <!--                            <directory>${project.basedir}/src/main/resources/lib</directory>-->
-                    <!--                            <targetPath>WEB-INF/lib/</targetPath>-->
-                    <!--                            <includes>-->
-                    <!--                                <include>**/*.jar</include>-->
-                    <!--                            </includes>-->
-                    <!--                        </resource>-->
-                    <!--                    </webResources>-->
+                    <webResources>
+                        <resource>
+                            <directory>${project.basedir}/src/main/resources/lib</directory>
+                            <targetPath>WEB-INF/lib/</targetPath>
+                            <includes>
+                                <include>**/*.jar</include>
+                            </includes>
+                        </resource>
+                    </webResources>
                     <!--打包配置-->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warName>${project.artifactId}</warName>
                 </configuration>
             </plugin>
 
-            <!-- YUI Compressor (CSS/JS压缩) -->
-            <!--<plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>yuicompressor-maven-plugin</artifactId>
-                <version>1.5.1</version>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>compress</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <jswarn>false</jswarn>
-                    <nosuffix>true</nosuffix>
-                    <linebreakpos>50000</linebreakpos>
-                    <sourceDirectory>src/main/resources/static</sourceDirectory>
-                    <force>true</force>
-                    <includes>
-                        <include>**/*.js</include>
-                        <include>**/*.css</include>
-                    </includes>
-                    <excludes>
-                        <exclude>**/*.min.js</exclude>
-                        <exclude>**/*.min.css</exclude>
-                        <exclude>**/fileinput.js</exclude>
-                        <exclude>**/bootstrap-table/**</exclude>
-                    </excludes>
-                </configuration>
-            </plugin>-->
+        <!-- YUI Compressor (CSS/JS压缩) -->
+        <!--<plugin>
+            <groupId>net.alchim31.maven</groupId>
+            <artifactId>yuicompressor-maven-plugin</artifactId>
+            <version>1.5.1</version>
+            <executions>
+                <execution>
+                    <phase>prepare-package</phase>
+                    <goals>
+                        <goal>compress</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <encoding>UTF-8</encoding>
+                <jswarn>false</jswarn>
+                <nosuffix>true</nosuffix>
+                <linebreakpos>50000</linebreakpos>
+                <sourceDirectory>src/main/resources/static</sourceDirectory>
+                <force>true</force>
+                <includes>
+                    <include>**/*.js</include>
+                    <include>**/*.css</include>
+                </includes>
+                <excludes>
+                    <exclude>**/*.min.js</exclude>
+                    <exclude>**/*.min.css</exclude>
+                    <exclude>**/fileinput.js</exclude>
+                    <exclude>**/bootstrap-table/**</exclude>
+                </excludes>
+            </configuration>
+        </plugin>-->
 
         </plugins>
         <!-- 项目名称，war包名称 -->

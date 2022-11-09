@@ -698,8 +698,7 @@
 	                        if (_ls && _ls.length > 0) {
 	                            $.each(_ls, function(index, item) {
 	                                var _p_icon = $("#" + $(item).attr("pid")).children().eq(options.expandColumn).find(".treetable-expander");
-	                                var _p_display = $("#" + $(item).attr("pid")).css('display');
-	                                if (_p_icon.hasClass(options.expanderExpandedClass) && _p_display == 'table') {
+	                                if (_p_icon.hasClass(options.expanderExpandedClass)) {
 	                                    $(item).css("display", "table");
 	                                }
 	                            });

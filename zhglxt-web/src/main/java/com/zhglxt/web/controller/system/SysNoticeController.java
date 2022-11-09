@@ -75,9 +75,6 @@ public class SysNoticeController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysNotice notice) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         notice.setCreateBy(getLoginName());
         return toAjax(noticeService.insertNotice(notice));
     }
@@ -100,9 +97,6 @@ public class SysNoticeController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(@Validated SysNotice notice) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         notice.setUpdateBy(getLoginName());
         return toAjax(noticeService.updateNotice(notice));
     }
@@ -115,9 +109,6 @@ public class SysNoticeController extends BaseController {
     @PostMapping("/remove")
     @ResponseBody
     public AjaxResult remove(String ids) {
-        if (GlobalConfig.isDemoEnabled()) {
-            return error("演示模式不允许本操作");
-        }
         return toAjax(noticeService.deleteNoticeByIds(ids));
     }
 }

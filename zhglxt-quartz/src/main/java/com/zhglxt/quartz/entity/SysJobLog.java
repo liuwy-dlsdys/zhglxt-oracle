@@ -1,10 +1,11 @@
 package com.zhglxt.quartz.entity;
 
-import java.util.Date;
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.zhglxt.common.annotation.Excel;
 import com.zhglxt.common.core.entity.BaseEntity;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
+import java.util.Date;
 
 /**
  * 定时任务调度日志表 sys_job_log
@@ -17,7 +18,7 @@ public class SysJobLog extends BaseEntity
 
     /** ID */
     @Excel(name = "日志序号")
-    private Long jobLogId;
+    private String jobLogId;
 
     /** 任务名称 */
     @Excel(name = "任务名称")
@@ -49,12 +50,12 @@ public class SysJobLog extends BaseEntity
     /** 结束时间 */
     private Date endTime;
 
-    public Long getJobLogId()
+    public String getJobLogId()
     {
         return jobLogId;
     }
 
-    public void setJobLogId(Long jobLogId)
+    public void setJobLogId(String jobLogId)
     {
         this.jobLogId = jobLogId;
     }

@@ -51,7 +51,15 @@ spring:
           # 慢SQL记录
           log-slow-sql: true
           slow-sql-millis: 1000
-          merge-sql: false
+          merge-sql: true
         wall:
           config:
             multi-statement-allow: true
+      # 数据库密码加密配置
+      # 是否启用数据库密码加密功能
+      enable-encryption: false
+      # 加密回调函数
+      password-callback: com.zhglxt.framework.config.properties.DbPasswordCallback
+      # 本地数据库公钥及加密后数据库密码
+      publickey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ4gHlkqebZjvH5CSpng/8rg9kKSfPDm1PQqZ+u25DTm2FUaVpZpsMzsu/cbmzaBg4qOvbo+bNxJyyVTDmktIoECAwEAAQ==
+      password: fVCSkZXap/4J2YzzmYHmhund/+zLLpi2V60R0c1pc/LLQ4MjsswlDlW67ArSSlMYJhBX5bVLLRSD0qABTuZSBw==

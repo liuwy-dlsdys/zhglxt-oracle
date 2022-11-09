@@ -144,10 +144,10 @@ public abstract class MyBaseEntity<T> implements Serializable {
     /**
      * 获取数据库名称
      */
-    @JsonIgnore
-    public String getDbName() {
-        return "mysql";//Global.getConfig("activitidataType")
-    }
+//    @JsonIgnore
+//    public String getDbName() {
+//        return Global.getConfig("activiti.dataType");
+//    }
 
     @Override
     public boolean equals(Object obj) {
