@@ -1,7 +1,6 @@
 package com.zhglxt.framework.config;
 
 import com.zhglxt.common.config.GlobalConfig;
-import com.zhglxt.common.constant.Constants;
 import com.zhglxt.framework.interceptor.RepeatSubmitInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,7 +40,7 @@ public class ResourcesConfig implements WebMvcConfigurer
     public void addResourceHandlers(ResourceHandlerRegistry registry)
     {
         /** 本地文件上传路径 */
-        registry.addResourceHandler(Constants.RESOURCE_PREFIX + "/**").addResourceLocations("file:" + GlobalConfig.getProfile() + "/");
+        registry.addResourceHandler("/profile/**").addResourceLocations("file:" + GlobalConfig.getProfile() + "/");
 
         /** CKFinder文件访问路径配置 (D:/zhglxt_userfiles/userfiles/) */
         registry.addResourceHandler("/userfiles/**").addResourceLocations("file:" + GlobalConfig.getProfile() + GlobalConfig.USERFILES_BASE_URL);

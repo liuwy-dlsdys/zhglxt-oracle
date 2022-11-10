@@ -5,26 +5,35 @@ import org.springframework.stereotype.Component;
 
 /**
  * 全局配置类
- * 
+ *
  * @author ruoyi
  */
 @Component
 @ConfigurationProperties(prefix = "zhglxt")
-public class GlobalConfig
-{
-    /** 项目名称 */
+public class GlobalConfig {
+    /**
+     * 项目名称
+     */
     private static String name;
 
-    /** 版本 */
+    /**
+     * 版本
+     */
     private static String version;
 
-    /** 版权年份 */
+    /**
+     * 版权年份
+     */
     private static String copyrightYear;
 
-    /** 实例演示开关 */
+    /**
+     * 实例演示开关
+     */
     private static boolean demoEnabled;
 
-    /** 上传路径 */
+    /**
+     * 上传路径
+     */
     private static String profile;
 
     /**
@@ -32,66 +41,56 @@ public class GlobalConfig
      */
     public static final String USERFILES_BASE_URL = "/userfiles/";
 
-    /** 获取地址开关 */
+    /**
+     * 获取地址开关
+     */
     private static boolean addressEnabled;
 
-    public static String getName()
-    {
+    public static String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         GlobalConfig.name = name;
     }
 
-    public static String getVersion()
-    {
+    public static String getVersion() {
         return version;
     }
 
-    public void setVersion(String version)
-    {
+    public void setVersion(String version) {
         GlobalConfig.version = version;
     }
 
-    public static String getCopyrightYear()
-    {
+    public static String getCopyrightYear() {
         return copyrightYear;
     }
 
-    public void setCopyrightYear(String copyrightYear)
-    {
+    public void setCopyrightYear(String copyrightYear) {
         GlobalConfig.copyrightYear = copyrightYear;
     }
 
-    public static boolean isDemoEnabled()
-    {
+    public static boolean isDemoEnabled() {
         return demoEnabled;
     }
 
-    public void setDemoEnabled(boolean demoEnabled)
-    {
+    public void setDemoEnabled(boolean demoEnabled) {
         GlobalConfig.demoEnabled = demoEnabled;
     }
 
-    public static String getProfile()
-    {
+    public static String getProfile() {
         return profile;
     }
 
-    public void setProfile(String profile)
-    {
+    public void setProfile(String profile) {
         GlobalConfig.profile = profile;
     }
 
-    public static boolean isAddressEnabled()
-    {
+    public static boolean isAddressEnabled() {
         return addressEnabled;
     }
 
-    public void setAddressEnabled(boolean addressEnabled)
-    {
+    public void setAddressEnabled(boolean addressEnabled) {
         GlobalConfig.addressEnabled = addressEnabled;
     }
 
@@ -106,24 +105,35 @@ public class GlobalConfig
     /**
      * 获取头像上传路径
      */
-    public static String getAvatarPath()
-    {
+    public static String getAvatarPath() {
         return getProfile() + "/avatar";
     }
 
     /**
      * 获取下载路径
      */
-    public static String getDownloadPath()
-    {
+    public static String getDownloadPath() {
         return getProfile() + "/download/";
     }
 
     /**
      * 获取上传路径
      */
-    public static String getUploadPath()
-    {
+    public static String getUploadPath() {
         return getProfile() + "/upload";
+    }
+
+    /**
+     * 获取CMS上传路径
+     */
+    public static String getCMSUploadPath() {
+        return getProfile() + "/cms/upload";
+    }
+
+    /**
+     * 获取editor.md上传路径
+     */
+    public static String getMarkdownUploadPath() {
+        return getProfile() + "/markdown/upload";
     }
 }
