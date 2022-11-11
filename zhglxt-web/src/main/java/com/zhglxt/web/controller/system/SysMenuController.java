@@ -77,7 +77,7 @@ public class SysMenuController extends BaseController {
     @GetMapping("/add/{parentId}")
     public String add(@PathVariable("parentId") String parentId, ModelMap mmap) {
         SysMenu menu = null;
-        if (!parentId.equals("0")) {
+        if (!"0".equals(parentId)) {
             menu = menuService.selectMenuById(parentId);
         } else {
             menu = new SysMenu();

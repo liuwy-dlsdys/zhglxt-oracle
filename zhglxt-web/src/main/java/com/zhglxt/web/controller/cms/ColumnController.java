@@ -167,7 +167,7 @@ public class ColumnController extends BaseController {
         if (!CollectionUtils.isEmpty(columns)) {
             Column column = columns.get(0);
             //非外部链接
-            if (column.getOutLink().equals("1")) {
+            if ("1".equals(column.getOutLink())) {
                 List<Article> articleList = articleService.selectArticleList(paramMap);
                 if (!CollectionUtils.isEmpty(articleList)) {
                     return error("如需删除本栏目，请先删除内容管理-文章列表中，对应本栏目的文章数据");

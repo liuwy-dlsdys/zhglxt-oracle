@@ -1,5 +1,6 @@
 package com.zhglxt.activiti.controller;
 
+import com.zhglxt.activiti.constant.ActConstant;
 import com.zhglxt.activiti.entity.Act;
 import com.zhglxt.activiti.service.impl.ActTaskService;
 import com.zhglxt.activiti.util.ActUtils;
@@ -68,11 +69,11 @@ public class ActTaskController extends BaseController {
         Map<String, Object> paramMap = WebUtil.paramsToMap(request.getParameterMap());
         List<Map<String, Object>> list = null;
         /*请假详情-历史流转信息*/
-        if (paramMap.containsKey("procInsId")) {
+        if (paramMap.containsKey(ActConstant.PROC_INS_ID)) {
             list = actTaskService.histoicFlowList(paramMap);
         }
         /*任务办理-历史流转信息*/
-        if(paramMap.containsKey("act.procInsId")){
+        if(paramMap.containsKey(ActConstant.ACT_PROC_INS_ID)){
             paramMap.put("procInsId",paramMap.get("act.procInsId"));
             list = actTaskService.histoicFlowList(paramMap);
         }

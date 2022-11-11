@@ -1,17 +1,18 @@
 package com.zhglxt.common.utils;
 
+import com.zhglxt.common.constant.Constants;
+import com.zhglxt.common.core.text.Convert;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-import com.zhglxt.common.constant.Constants;
-import com.zhglxt.common.core.text.Convert;
 
 /**
  * 客户端工具类
@@ -23,7 +24,7 @@ public class ServletUtils
     /**
      * 定义移动端请求的所有可能类型
      */
-    private final static String[] agent = { "Android", "iPhone", "iPod", "iPad", "Windows Phone", "MQQBrowser" };
+    private final static String[] AGENT = { "Android", "iPhone", "iPod", "iPad", "Windows Phone", "MQQBrowser" };
 
     /**
      * 获取String参数
@@ -165,7 +166,7 @@ public class ServletUtils
             // 排除 苹果桌面系统
             if (!ua.contains("Windows NT") && !ua.contains("Macintosh"))
             {
-                for (String item : agent)
+                for (String item : AGENT)
                 {
                     if (ua.contains(item))
                     {

@@ -1,15 +1,11 @@
 package com.zhglxt.common.json;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.zhglxt.common.utils.StringUtils;
+
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 通用消息对象，基于Map实现的可嵌套数据结构。 支持JSON数据结构。
@@ -19,8 +15,8 @@ import com.zhglxt.common.utils.StringUtils;
 public class JSONObject extends LinkedHashMap<String, Object>
 {
     private static final long serialVersionUID = 1L;
-    private static final Pattern arrayNamePattern = Pattern.compile("(\\w+)((\\[\\d+\\])+)");
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final Pattern ARRAY_NAME_PATTERN = Pattern.compile("(\\w+)((\\[\\d+\\])+)");
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     /**
      * 数组结构。
@@ -103,7 +99,7 @@ public class JSONObject extends LinkedHashMap<String, Object>
     {
         try
         {
-            return objectMapper.writeValueAsString(this);
+            return OBJECT_MAPPER.writeValueAsString(this);
         }
         catch (Exception e)
         {
@@ -218,7 +214,7 @@ public class JSONObject extends LinkedHashMap<String, Object>
         }
         else
         {
-            final Matcher matcher = arrayNamePattern.matcher(name);
+            final Matcher matcher = ARRAY_NAME_PATTERN.matcher(name);
             if (matcher.find())
             {
                 return endArray(matcher.group(1), matcher.group(2), new EndArrayCallback<Object>()
@@ -253,7 +249,7 @@ public class JSONObject extends LinkedHashMap<String, Object>
         }
         else
         {
-            final Matcher matcher = arrayNamePattern.matcher(name);
+            final Matcher matcher = ARRAY_NAME_PATTERN.matcher(name);
             if (matcher.find())
             {
                 endArray(matcher.group(1), matcher.group(2), new EndArrayCallback<Void>()
@@ -282,7 +278,7 @@ public class JSONObject extends LinkedHashMap<String, Object>
      */
     public JSONObject obj(final String name)
     {
-        final Matcher matcher = arrayNamePattern.matcher(name);
+        final Matcher matcher = ARRAY_NAME_PATTERN.matcher(name);
         if (matcher.find())
         {
             return endArray(matcher.group(1), matcher.group(2), new EndArrayCallback<JSONObject>()

@@ -61,7 +61,7 @@ public class NotifyServiceImpl implements INotifyService {
         int i = notifyMapper.insertNotify(notify);
 
         //发布状态才保存到通知记录表
-        if (notify.getStatus().equals("1")) {
+        if ("1".equals(notify.getStatus())) {
             // 更新发送接受人记录
             ntifyRecordMapper.deleteByNotifyId(Convert.toStrArray(notify.getId()));
             //获取接收人列表
@@ -119,7 +119,7 @@ public class NotifyServiceImpl implements INotifyService {
         notify.setUpdateBy(ShiroUtils.getLoginName());
 
         //发布状态才保存到通知记录表
-        if (notify.getStatus().equals("1")) {
+        if ("1".equals(notify.getStatus())) {
             //先删除原有的通告记录数据
             ntifyRecordMapper.deleteByNotifyId(Convert.toStrArray(notify.getId()));
 
@@ -167,7 +167,7 @@ public class NotifyServiceImpl implements INotifyService {
         notifyRecord.setUserId(userId);
         List<NotifyRecord> notifyRecords = ntifyRecordMapper.selectByNotify(notifyRecord);
         if (!CollectionUtils.isEmpty(notifyRecords)) {
-            if (notifyRecords.get(0).getReadFlag().equals("0")) {
+            if ("0".equals(notifyRecords.get(0).getReadFlag())) {
                 ntifyRecordMapper.updateNotifyRecordByNotifyIdAndUserId(notifyId, userId);
             }
         }
@@ -180,7 +180,7 @@ public class NotifyServiceImpl implements INotifyService {
 
         //新增页面 默认无选中用户
         if(userIds.size()==1){
-            if(userIds.get(0).equals("undefined")){
+            if("undefined".equals(userIds.get(0))){
                 userIds.clear();
             }
         }

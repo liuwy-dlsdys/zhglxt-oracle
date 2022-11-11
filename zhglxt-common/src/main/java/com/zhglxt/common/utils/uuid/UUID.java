@@ -1,11 +1,12 @@
 package com.zhglxt.common.utils.uuid;
 
+import com.zhglxt.common.exception.UtilException;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-import com.zhglxt.common.exception.UtilException;
 
 /**
  * 提供通用唯一识别码（universally unique identifier）（UUID）实现
@@ -22,7 +23,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      */
     private static class Holder
     {
-        static final SecureRandom numberGenerator = getSecureRandom();
+        static final SecureRandom NUMBER_GENERATOR = getSecureRandom();
     }
 
     /** 此UUID的最高64有效位 */
@@ -93,7 +94,7 @@ public final class UUID implements java.io.Serializable, Comparable<UUID>
      */
     public static UUID randomUUID(boolean isSecure)
     {
-        final Random ng = isSecure ? Holder.numberGenerator : getRandom();
+        final Random ng = isSecure ? Holder.NUMBER_GENERATOR : getRandom();
 
         byte[] randomBytes = new byte[16];
         ng.nextBytes(randomBytes);

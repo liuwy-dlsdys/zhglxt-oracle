@@ -1,6 +1,5 @@
 package com.zhglxt.web.controller.demo.controller;
 
-import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.page.PageDomain;
@@ -14,11 +13,7 @@ import com.zhglxt.demo.entity.CustomerModel;
 import com.zhglxt.demo.entity.UserOperateModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
@@ -36,35 +31,35 @@ import java.util.Map;
 public class DemoOperateController extends BaseController {
     private String prefix = "demo/operate";
 
-    private final static Map<Integer, UserOperateModel> users = new LinkedHashMap<Integer, UserOperateModel>();
+    private final static Map<Integer, UserOperateModel> USERS = new LinkedHashMap<Integer, UserOperateModel>();
 
     {
-        users.put(1, new UserOperateModel(1, "1000001", "测试1", "0", "15888888888", "1111111111@qq.com", 150.0, "0"));
-        users.put(2, new UserOperateModel(2, "1000002", "测试2", "1", "15666666666", "1111111111@qq.com", 180.0, "1"));
-        users.put(3, new UserOperateModel(3, "1000003", "测试3", "0", "15666666666", "1111111111@qq.com", 110.0, "1"));
-        users.put(4, new UserOperateModel(4, "1000004", "测试4", "1", "15666666666", "1111111111@qq.com", 220.0, "1"));
-        users.put(5, new UserOperateModel(5, "1000005", "测试5", "0", "15666666666", "1111111111@qq.com", 140.0, "1"));
-        users.put(6, new UserOperateModel(6, "1000006", "测试6", "1", "15666666666", "1111111111@qq.com", 330.0, "1"));
-        users.put(7, new UserOperateModel(7, "1000007", "测试7", "0", "15666666666", "1111111111@qq.com", 160.0, "1"));
-        users.put(8, new UserOperateModel(8, "1000008", "测试8", "1", "15666666666", "1111111111@qq.com", 170.0, "1"));
-        users.put(9, new UserOperateModel(9, "1000009", "测试9", "0", "15666666666", "1111111111@qq.com", 180.0, "1"));
-        users.put(10, new UserOperateModel(10, "1000010", "测试10", "0", "15666666666", "1111111111@qq.com", 210.0, "1"));
-        users.put(11, new UserOperateModel(11, "1000011", "测试11", "1", "15666666666", "1111111111@qq.com", 110.0, "1"));
-        users.put(12, new UserOperateModel(12, "1000012", "测试12", "0", "15666666666", "1111111111@qq.com", 120.0, "1"));
-        users.put(13, new UserOperateModel(13, "1000013", "测试13", "1", "15666666666", "1111111111@qq.com", 380.0, "1"));
-        users.put(14, new UserOperateModel(14, "1000014", "测试14", "0", "15666666666", "1111111111@qq.com", 280.0, "1"));
-        users.put(15, new UserOperateModel(15, "1000015", "测试15", "0", "15666666666", "1111111111@qq.com", 570.0, "1"));
-        users.put(16, new UserOperateModel(16, "1000016", "测试16", "1", "15666666666", "1111111111@qq.com", 260.0, "1"));
-        users.put(17, new UserOperateModel(17, "1000017", "测试17", "1", "15666666666", "1111111111@qq.com", 210.0, "1"));
-        users.put(18, new UserOperateModel(18, "1000018", "测试18", "1", "15666666666", "1111111111@qq.com", 340.0, "1"));
-        users.put(19, new UserOperateModel(19, "1000019", "测试19", "1", "15666666666", "1111111111@qq.com", 160.0, "1"));
-        users.put(20, new UserOperateModel(20, "1000020", "测试20", "1", "15666666666", "1111111111@qq.com", 220.0, "1"));
-        users.put(21, new UserOperateModel(21, "1000021", "测试21", "1", "15666666666", "1111111111@qq.com", 120.0, "1"));
-        users.put(22, new UserOperateModel(22, "1000022", "测试22", "1", "15666666666", "1111111111@qq.com", 130.0, "1"));
-        users.put(23, new UserOperateModel(23, "1000023", "测试23", "1", "15666666666", "1111111111@qq.com", 490.0, "1"));
-        users.put(24, new UserOperateModel(24, "1000024", "测试24", "1", "15666666666", "1111111111@qq.com", 570.0, "1"));
-        users.put(25, new UserOperateModel(25, "1000025", "测试25", "1", "15666666666", "1111111111@qq.com", 250.0, "1"));
-        users.put(26, new UserOperateModel(26, "1000026", "测试26", "1", "15666666666", "1111111111@qq.com", 250.0, "1"));
+        USERS.put(1, new UserOperateModel(1, "1000001", "测试1", "0", "15888888888", "1111111111@qq.com", 150.0, "0"));
+        USERS.put(2, new UserOperateModel(2, "1000002", "测试2", "1", "15666666666", "1111111111@qq.com", 180.0, "1"));
+        USERS.put(3, new UserOperateModel(3, "1000003", "测试3", "0", "15666666666", "1111111111@qq.com", 110.0, "1"));
+        USERS.put(4, new UserOperateModel(4, "1000004", "测试4", "1", "15666666666", "1111111111@qq.com", 220.0, "1"));
+        USERS.put(5, new UserOperateModel(5, "1000005", "测试5", "0", "15666666666", "1111111111@qq.com", 140.0, "1"));
+        USERS.put(6, new UserOperateModel(6, "1000006", "测试6", "1", "15666666666", "1111111111@qq.com", 330.0, "1"));
+        USERS.put(7, new UserOperateModel(7, "1000007", "测试7", "0", "15666666666", "1111111111@qq.com", 160.0, "1"));
+        USERS.put(8, new UserOperateModel(8, "1000008", "测试8", "1", "15666666666", "1111111111@qq.com", 170.0, "1"));
+        USERS.put(9, new UserOperateModel(9, "1000009", "测试9", "0", "15666666666", "1111111111@qq.com", 180.0, "1"));
+        USERS.put(10, new UserOperateModel(10, "1000010", "测试10", "0", "15666666666", "1111111111@qq.com", 210.0, "1"));
+        USERS.put(11, new UserOperateModel(11, "1000011", "测试11", "1", "15666666666", "1111111111@qq.com", 110.0, "1"));
+        USERS.put(12, new UserOperateModel(12, "1000012", "测试12", "0", "15666666666", "1111111111@qq.com", 120.0, "1"));
+        USERS.put(13, new UserOperateModel(13, "1000013", "测试13", "1", "15666666666", "1111111111@qq.com", 380.0, "1"));
+        USERS.put(14, new UserOperateModel(14, "1000014", "测试14", "0", "15666666666", "1111111111@qq.com", 280.0, "1"));
+        USERS.put(15, new UserOperateModel(15, "1000015", "测试15", "0", "15666666666", "1111111111@qq.com", 570.0, "1"));
+        USERS.put(16, new UserOperateModel(16, "1000016", "测试16", "1", "15666666666", "1111111111@qq.com", 260.0, "1"));
+        USERS.put(17, new UserOperateModel(17, "1000017", "测试17", "1", "15666666666", "1111111111@qq.com", 210.0, "1"));
+        USERS.put(18, new UserOperateModel(18, "1000018", "测试18", "1", "15666666666", "1111111111@qq.com", 340.0, "1"));
+        USERS.put(19, new UserOperateModel(19, "1000019", "测试19", "1", "15666666666", "1111111111@qq.com", 160.0, "1"));
+        USERS.put(20, new UserOperateModel(20, "1000020", "测试20", "1", "15666666666", "1111111111@qq.com", 220.0, "1"));
+        USERS.put(21, new UserOperateModel(21, "1000021", "测试21", "1", "15666666666", "1111111111@qq.com", 120.0, "1"));
+        USERS.put(22, new UserOperateModel(22, "1000022", "测试22", "1", "15666666666", "1111111111@qq.com", 130.0, "1"));
+        USERS.put(23, new UserOperateModel(23, "1000023", "测试23", "1", "15666666666", "1111111111@qq.com", 490.0, "1"));
+        USERS.put(24, new UserOperateModel(24, "1000024", "测试24", "1", "15666666666", "1111111111@qq.com", 570.0, "1"));
+        USERS.put(25, new UserOperateModel(25, "1000025", "测试25", "1", "15666666666", "1111111111@qq.com", 250.0, "1"));
+        USERS.put(26, new UserOperateModel(26, "1000026", "测试26", "1", "15666666666", "1111111111@qq.com", 250.0, "1"));
     }
 
     /**
@@ -90,18 +85,18 @@ public class DemoOperateController extends BaseController {
     @ResponseBody
     public TableDataInfo list(UserOperateModel userModel) {
         TableDataInfo rspData = new TableDataInfo();
-        List<UserOperateModel> userList = new ArrayList<UserOperateModel>(users.values());
+        List<UserOperateModel> userList = new ArrayList<UserOperateModel>(USERS.values());
         // 查询条件过滤
         if (StringUtils.isNotEmpty(userModel.getSearchValue())) {
             userList.clear();
-            for (Map.Entry<Integer, UserOperateModel> entry : users.entrySet()) {
+            for (Map.Entry<Integer, UserOperateModel> entry : USERS.entrySet()) {
                 if (entry.getValue().getUserName().equals(userModel.getSearchValue())) {
                     userList.add(entry.getValue());
                 }
             }
         } else if (StringUtils.isNotEmpty(userModel.getUserName())) {
             userList.clear();
-            for (Map.Entry<Integer, UserOperateModel> entry : users.entrySet()) {
+            for (Map.Entry<Integer, UserOperateModel> entry : USERS.entrySet()) {
                 if (entry.getValue().getUserName().equals(userModel.getUserName())) {
                     userList.add(entry.getValue());
                 }
@@ -137,9 +132,9 @@ public class DemoOperateController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(UserOperateModel user) {
-        Integer userId = users.size() + 1;
+        Integer userId = USERS.size() + 1;
         user.setUserId(userId);
-        return AjaxResult.success(users.put(userId, user));
+        return AjaxResult.success(USERS.put(userId, user));
     }
 
     /**
@@ -157,7 +152,7 @@ public class DemoOperateController extends BaseController {
      */
     @GetMapping("/edit/{userId}")
     public String edit(@PathVariable("userId") Integer userId, ModelMap mmap) {
-        mmap.put("user", users.get(userId));
+        mmap.put("user", USERS.get(userId));
         return prefix + "/edit";
     }
 
@@ -167,7 +162,7 @@ public class DemoOperateController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(UserOperateModel user) {
-        return AjaxResult.success(users.put(user.getUserId(), user));
+        return AjaxResult.success(USERS.put(user.getUserId(), user));
     }
 
     /**
@@ -176,7 +171,7 @@ public class DemoOperateController extends BaseController {
     @PostMapping("/export")
     @ResponseBody
     public AjaxResult export(UserOperateModel user) {
-        List<UserOperateModel> list = new ArrayList<UserOperateModel>(users.values());
+        List<UserOperateModel> list = new ArrayList<UserOperateModel>(USERS.values());
         ExcelUtil<UserOperateModel> util = new ExcelUtil<UserOperateModel>(UserOperateModel.class);
         return util.exportExcel(list, "用户数据");
     }
@@ -211,7 +206,7 @@ public class DemoOperateController extends BaseController {
     public AjaxResult remove(String ids) {
         Integer[] userIds = Convert.toIntArray(ids);
         for (Integer userId : userIds) {
-            users.remove(userId);
+            USERS.remove(userId);
         }
         return AjaxResult.success();
     }
@@ -221,14 +216,14 @@ public class DemoOperateController extends BaseController {
      */
     @GetMapping("/detail/{userId}")
     public String detail(@PathVariable("userId") Integer userId, ModelMap mmap) {
-        mmap.put("user", users.get(userId));
+        mmap.put("user", USERS.get(userId));
         return prefix + "/detail";
     }
 
     @PostMapping("/clean")
     @ResponseBody
     public AjaxResult clean() {
-        users.clear();
+        USERS.clear();
         return success();
     }
 
@@ -251,20 +246,20 @@ public class DemoOperateController extends BaseController {
             try {
                 // 验证是否存在这个用户
                 boolean userFlag = false;
-                for (Map.Entry<Integer, UserOperateModel> entry : users.entrySet()) {
+                for (Map.Entry<Integer, UserOperateModel> entry : USERS.entrySet()) {
                     if (entry.getValue().getUserName().equals(user.getUserName())) {
                         userFlag = true;
                         break;
                     }
                 }
                 if (!userFlag) {
-                    Integer userId = users.size() + 1;
+                    Integer userId = USERS.size() + 1;
                     user.setUserId(userId);
-                    users.put(userId, user);
+                    USERS.put(userId, user);
                     successNum++;
                     successMsg.append("<br/>" + successNum + "、用户 " + user.getUserName() + " 导入成功");
                 } else if (isUpdateSupport) {
-                    users.put(user.getUserId(), user);
+                    USERS.put(user.getUserId(), user);
                     successNum++;
                     successMsg.append("<br/>" + successNum + "、用户 " + user.getUserName() + " 更新成功");
                 } else {

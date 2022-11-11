@@ -26,7 +26,7 @@ public class WebUtil {
             Entry entry = (Entry) it.next();
             String[] value = (String[]) entry.getValue();
             if (value.length == 1) {
-                result.put(entry.getKey(), value[0].equalsIgnoreCase("'undefined'") ? null : value[0]);
+                result.put(entry.getKey(), "'undefined'".equalsIgnoreCase(value[0]) ? null : value[0]);
             } else {
                 result.put(entry.getKey(), value);
             }

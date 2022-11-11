@@ -1,73 +1,5 @@
 package com.zhglxt.common.utils.poi;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import javax.servlet.http.HttpServletResponse;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.RegExUtils;
-import org.apache.commons.lang3.reflect.FieldUtils;
-import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
-import org.apache.poi.hssf.usermodel.HSSFPicture;
-import org.apache.poi.hssf.usermodel.HSSFPictureData;
-import org.apache.poi.hssf.usermodel.HSSFShape;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ooxml.POIXMLDocumentPart;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.ss.usermodel.DataValidationHelper;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Drawing;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.PictureData;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
-import org.apache.poi.xssf.usermodel.XSSFDataValidation;
-import org.apache.poi.xssf.usermodel.XSSFDrawing;
-import org.apache.poi.xssf.usermodel.XSSFPicture;
-import org.apache.poi.xssf.usermodel.XSSFShape;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.zhglxt.common.annotation.Excel;
 import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.annotation.Excel.Type;
@@ -83,6 +15,32 @@ import com.zhglxt.common.utils.file.FileTypeUtils;
 import com.zhglxt.common.utils.file.FileUtils;
 import com.zhglxt.common.utils.file.ImageUtils;
 import com.zhglxt.common.utils.reflect.ReflectUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.RegExUtils;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ooxml.POIXMLDocumentPart;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.CellRangeAddressList;
+import org.apache.poi.util.IOUtils;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
+import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Excel相关处理
@@ -100,7 +58,7 @@ public class ExcelUtil<T>
     /**
      * Excel sheet最大行数，默认65536
      */
-    public static final int sheetSize = 65536;
+    public static final int SHEET_SIZE = 65536;
 
     /**
      * 工作表名称
@@ -641,7 +599,7 @@ public class ExcelUtil<T>
     public void writeSheet()
     {
         // 取出一共有多少个sheet.
-        int sheetNo = Math.max(1, (int) Math.ceil(list.size() * 1.0 / sheetSize));
+        int sheetNo = Math.max(1, (int) Math.ceil(list.size() * 1.0 / SHEET_SIZE));
         for (int index = 0; index < sheetNo; index++)
         {
             createSheet(sheetNo, index);
@@ -684,12 +642,12 @@ public class ExcelUtil<T>
     @SuppressWarnings("unchecked")
     public void fillExcelData(int index, Row row)
     {
-        int startNo = index * sheetSize;
-        int endNo = Math.min(startNo + sheetSize, list.size());
+        int startNo = index * SHEET_SIZE;
+        int endNo = Math.min(startNo + SHEET_SIZE, list.size());
         int rowNo = (1 + rownum) - startNo;
         for (int i = startNo; i < endNo; i++)
         {
-            rowNo = i > 1 ? rowNo + 1 : rowNo + i;
+            rowNo = isSubList() ? (i > 1 ? rowNo + 1 : rowNo + i) : i + 1 + rownum - startNo;
             row = sheet.createRow(rowNo);
             // 得到导出对象.
             T vo = (T) list.get(i);
@@ -910,6 +868,10 @@ public class ExcelUtil<T>
             if (StringUtils.startsWithAny(cellValue, FORMULA_STR))
             {
                 cellValue = RegExUtils.replaceFirst(cellValue, FORMULA_REGEX_STR, "\t$0");
+            }
+            if (value instanceof Collection && StringUtils.equals("[]", cellValue))
+            {
+                cellValue = StringUtils.EMPTY;
             }
             cell.setCellValue(StringUtils.isNull(cellValue) ? attr.defaultValue() : cellValue + attr.suffix());
         }

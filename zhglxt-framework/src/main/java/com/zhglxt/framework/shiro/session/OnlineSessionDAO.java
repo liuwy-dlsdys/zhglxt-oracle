@@ -79,7 +79,7 @@ public class OnlineSessionDAO extends EnterpriseCacheSessionDAO
                 needSync = false;
             }
             // isGuest = true 访客
-            boolean isGuest = StringUtils.isEmpty(onlineSession.getUserId()) || onlineSession.getUserId().equals("0");
+            boolean isGuest = StringUtils.isEmpty(onlineSession.getUserId()) || "0".equals(onlineSession.getUserId());
 
             // session 数据变更了 同步
             if (!isGuest && onlineSession.isAttributeChanged())

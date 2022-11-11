@@ -2,6 +2,7 @@ package com.zhglxt.activiti.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.zhglxt.activiti.constant.ActConstant;
 import com.zhglxt.activiti.entity.ProcessDefinitionDto;
 import com.zhglxt.activiti.service.ActProcessService;
 import com.zhglxt.common.core.entity.AjaxResult;
@@ -24,7 +25,6 @@ import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.thymeleaf.expression.Maps;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamReader;
@@ -142,7 +142,7 @@ public class ActProcessServiceImpl implements ActProcessService {
         ZipInputStream zipInputStream = null;
         try {
             String extension = FilenameUtils.getExtension(fileName);
-            if (extension.equals("zip")) {
+            if (ActConstant.ACT_FILE_EXTENSION_ZIP.equals(extension)) {
                 zipInputStream = new ZipInputStream(is);
                 // 创建流程定义
                 Deployment deployment = repositoryService.createDeployment().name(fileName)
@@ -299,10 +299,10 @@ public class ActProcessServiceImpl implements ActProcessService {
     @Override
     public boolean updateState(String state, Map<String, Object> paramMap) {
         boolean flag = false;
-        if (state.equals("active")) {
+        if (ActConstant.ACT_STATE_ACTIVE.equals(state)) {
             repositoryService.activateProcessDefinitionById(paramMap.get("procDefId").toString(), true, null);
             flag = true;
-        } else if (state.equals("suspend")) {
+        } else if (ActConstant.ACT_STATE_SUSPEND.equals(state)) {
             repositoryService.suspendProcessDefinitionById(paramMap.get("procDefId").toString(), true, null);
             flag = true;
         }
