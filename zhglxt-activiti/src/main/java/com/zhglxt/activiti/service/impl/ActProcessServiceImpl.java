@@ -13,6 +13,7 @@ import org.activiti.bpmn.converter.BpmnXMLConverter;
 import org.activiti.bpmn.model.BpmnModel;
 import org.activiti.editor.constants.ModelDataJsonConstants;
 import org.activiti.editor.language.json.converter.BpmnJsonConverter;
+import org.activiti.engine.ActivitiException;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.repository.Deployment;
@@ -137,6 +138,7 @@ public class ActProcessServiceImpl implements ActProcessService {
      * @param category 类型
      * @return 结果
      */
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public AjaxResult saveNameDeplove(InputStream is, String fileName, String category) {
         ZipInputStream zipInputStream = null;
@@ -165,9 +167,9 @@ public class ActProcessServiceImpl implements ActProcessService {
      * @param ids 部署ids
      * @return 结果
      */
+    @Transactional(rollbackFor = Exception.class)
     @Override
-    public boolean deleteProcessDefinitionByDeploymentIds(String ids) {
-        boolean result = true;
+    public void deleteProcessDefinitionByDeploymentIds(String ids) {
         try {
             String[] deploymentIds = Convert.toStrArray(ids);
             for (String deploymentId : deploymentIds) {
@@ -175,10 +177,8 @@ public class ActProcessServiceImpl implements ActProcessService {
                 repositoryService.deleteDeployment(deploymentId, true);
             }
         } catch (Exception e) {
-            result = false;
-            throw e;
+            throw new ActivitiException("删除流程定义失败",e);
         }
-        return result;
     }
     //===========================================================================================
 

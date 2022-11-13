@@ -55,9 +55,8 @@ public interface ActProcessService {
      * 根据流程部署id，删除流程定义
      *
      * @param ids 部署ids
-     * @return boolean
      */
-    boolean deleteProcessDefinitionByDeploymentIds(String ids);
+    void deleteProcessDefinitionByDeploymentIds(String ids);
 
     /**
      * 查询运行中的流程

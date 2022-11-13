@@ -30,7 +30,7 @@
         <commons.fileupload.version>1.4</commons.fileupload.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
-        <oracle.version>10.2.0.4.0</oracle.version>
+        <oracle.version>19.3.0.0</oracle.version>
 
         <activiti.version>5.23.0</activiti.version>
         <aop.version>2.6.2</aop.version>

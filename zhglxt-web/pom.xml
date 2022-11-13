@@ -48,14 +48,11 @@
             <version>1.6.2</version>
         </dependency>
 
-        <!--oracle驱动-->
-        <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+        <!--oracle驱动(Oracle 19c)-->
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
-            <version>10.2.0.4.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/ojdbc14.jar</systemPath>
+            <groupId>com.oracle.ojdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>${oracle.version}</version>
         </dependency>
 
         <!-- 核心模块 -->
@@ -148,15 +145,15 @@
                 <version>3.3.1</version>
                 <configuration>
                     <!--打war时，同时把lib目录下的jar也打进去-->
-                    <webResources>
-                        <resource>
-                            <directory>${project.basedir}/src/main/resources/lib</directory>
-                            <targetPath>WEB-INF/lib/</targetPath>
-                            <includes>
-                                <include>**/*.jar</include>
-                            </includes>
-                        </resource>
-                    </webResources>
+<!--                    <webResources>-->
+<!--                        <resource>-->
+<!--                            <directory>${project.basedir}/src/main/resources/lib</directory>-->
+<!--                            <targetPath>WEB-INF/lib/</targetPath>-->
+<!--                            <includes>-->
+<!--                                <include>**/*.jar</include>-->
+<!--                            </includes>-->
+<!--                        </resource>-->
+<!--                    </webResources>-->
                     <!--打包配置-->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <warName>${project.artifactId}</warName>

@@ -3,6 +3,7 @@ package com.zhglxt.activiti.service.impl;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.zhglxt.activiti.constant.ActConstant;
 import com.zhglxt.activiti.entity.ModelEntityDto;
 import com.zhglxt.activiti.service.ActModelService;
 import com.zhglxt.common.core.entity.AjaxResult;
@@ -156,19 +157,17 @@ public class ActModelServiceImpl implements ActModelService {
      * @param ids 需要删除的数据ID
      * @return
      */
+    @Transactional(rollbackFor = Exception.class)
     @Override
-    public boolean deleteModelIds(String ids) {
-        boolean result = true;
+    public void deleteModelIds(String ids) {
         try {
             String[] modelIds = Convert.toStrArray(ids);
             for (String modelId : modelIds) {
                 repositoryService.deleteModel(modelId);
             }
         } catch (Exception e) {
-            result = false;
             throw new ActivitiException("删除模型失败，模型ID=" + ids, e);
         }
-        return result;
     }
 
     /**
@@ -188,7 +187,7 @@ public class ActModelServiceImpl implements ActModelService {
     @Override
     public List<Map<String, Object>> modelList(Map<String, Object> paramMap) {
         ModelQuery modelQuery = repositoryService.createModelQuery().latestVersion().orderByLastUpdateTime().desc();
-        if (StringUtils.isNotEmpty(paramMap.get("category").toString())) {
+        if (StringUtils.isNotEmpty(paramMap.get(ActConstant.ACT_CATEGORY).toString())) {
             modelQuery.modelCategory(paramMap.get("category").toString());
         }
         int firstResult = (Integer.parseInt(paramMap.get("pageNum").toString()) - 1) * Integer.parseInt(paramMap.get("pageSize").toString());

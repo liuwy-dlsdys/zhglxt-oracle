@@ -69,7 +69,15 @@ public class ActivitiConfig {
     public ProcessEngineConfiguration processEngineConfiguration(DataSource dataSource,
                                                                  PlatformTransactionManager transactionManager) {
         SpringProcessEngineConfiguration processEngineConfiguration = new SpringProcessEngineConfiguration();
+
         processEngineConfiguration.setDataSource(dataSource);
+
+        //指定数据库
+        processEngineConfiguration.setDatabaseType(dataType);
+
+        //Oracle 多用户下需要指定数据库登录名（并且需要大写），否则无法自动创建ACT表
+        /*processEngineConfiguration.setDatabaseSchema("ZHGLXT");*/
+
         /**
          * public static final String DB_SCHEMA_UPDATE_FALSE = "false";操作activiti23张表的时候，如果表不存在，就抛出异常，不能自动创建23张表
          *
@@ -79,15 +87,16 @@ public class ActivitiConfig {
          */
         processEngineConfiguration.setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
 
-        //指定数据库
-        processEngineConfiguration.setDatabaseType(dataType);
-
+        /** 事务管理 */
         processEngineConfiguration.setTransactionManager(transactionManager);
 
         // 流程图字体
         processEngineConfiguration.setActivityFontName("宋体");
         processEngineConfiguration.setAnnotationFontName("宋体");
         processEngineConfiguration.setLabelFontName("宋体");
+
+        /** 是否需要激活 activiti 的定时任务（需要的可以开启） */
+        /*processEngineConfiguration.setJobExecutorActivate(true);*/
 
         /**
          * 	这段代码表示是否使用activiti自带用户组织表，如果是，这里为true，如果不是，这里为false。

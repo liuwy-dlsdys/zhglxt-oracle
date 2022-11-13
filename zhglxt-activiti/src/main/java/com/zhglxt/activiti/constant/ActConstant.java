@@ -20,4 +20,7 @@ public class ActConstant {
 
     /** 流程-挂起状态 */
     public static final String ACT_STATE_SUSPEND = "suspend";
+
+    /** 流程-分类 */
+    public static final String ACT_CATEGORY = "category";
 }

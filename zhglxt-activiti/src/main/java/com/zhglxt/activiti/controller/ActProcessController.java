@@ -101,7 +101,8 @@ public class ActProcessController extends BaseController {
     @PostMapping("/remove")
     @ResponseBody
     public AjaxResult remove(String ids) {
-        return toAjax(actProcessService.deleteProcessDefinitionByDeploymentIds(ids));
+        actProcessService.deleteProcessDefinitionByDeploymentIds(ids);
+        return AjaxResult.success();
     }
 
     @GetMapping("/toRunningList")

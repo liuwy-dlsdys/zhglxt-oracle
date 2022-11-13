@@ -52,9 +52,8 @@ public interface ActModelService {
      * 批量删除模型信息
      *
      * @param ids 需要删除的ID列表
-     * @return boolean
      */
-    boolean deleteModelIds(String ids);
+    void deleteModelIds(String ids);
 
     /**
      * 获取资源文件信息

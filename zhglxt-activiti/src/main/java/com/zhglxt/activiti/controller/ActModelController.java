@@ -113,7 +113,8 @@ public class ActModelController extends BaseController {
     @PostMapping("/remove")
     @ResponseBody
     public AjaxResult remove(String ids) {
-        return toAjax(actModelService.deleteModelIds(ids));
+        actModelService.deleteModelIds(ids);
+        return AjaxResult.success();
     }
 
     @Log(title = "导出指定模型", businessType = BusinessType.EXPORT)

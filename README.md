@@ -31,7 +31,7 @@
 21. 丰富的演示示例，帮助开发者快速集成到项目中
 
 ## 技术选型
-1. 系统环境【JDK 1.8、Oracle11g、Tomcat 8】
+1. 系统环境【JDK 1.8、Oracle19c、Tomcat 8】
 2. 主框架【Spring Boot】
 3. 持久层【Apache MyBatis】
 4. 视图层【Bootstrap】
@@ -73,16 +73,15 @@
 22. DEMO管理：EasyExcel导入导出Demo、MarkDown在线编辑器
 
 ## 演示地址
-1. 演示地址：[zhglxt](http://1.117.224.178:8080/zhglxt "WEB应用系统") 用户名/密码：system / system
-2. 演示地址（企业官网）：[zhglxt-cms](http://1.117.224.178:8080/zhglxt/cms/index.html "企业官网")
-3. 演示地址（文档系统）：[zhglxt-docs](http://1.117.224.178:88/zhglxt-docs "文档系统")
+1. 演示地址：[zhglxt](http://8.134.117.219:8080/zhglxt "WEB应用系统") 用户名/密码：system / system
+2. 演示地址（企业官网）：[zhglxt-cms](http://8.134.117.219:8080/zhglxt/cms/index.html "企业官网")
 
 ## 客户端说明
 1.  支持大部分主流浏览器（如：IE9+浏览器、Google Chrome、火狐浏览器、360浏览器等等。。。)
 2.  支持手机、平板等主流设备
 
 ## 使用说明
-1. 安装好系统所需的运行、开发环境（JDK1.8+、Oracle11g+、maven3.6+、Git环境等...）
+1. 安装好系统所需的运行、开发环境（JDK1.8+、Oracle19c、maven3.6+、Git环境等...）
 2. 使用IntelliJ IDEA拉取并打开项目
    ![](https://dlsdys-gz.oss-cn-guangzhou.aliyuncs.com/zhglxt/helpImages/sys/1.jpg?versionId=CAEQDRiBgICrx._C0xciIGY5YjU5ZjI3ZmY4NDQxMjRhZjRjMmE0YmQxNDM5Y2E0)
 
