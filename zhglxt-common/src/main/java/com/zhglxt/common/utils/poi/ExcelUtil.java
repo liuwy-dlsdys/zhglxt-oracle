@@ -1,7 +1,6 @@
 package com.zhglxt.common.utils.poi;
 
 import com.zhglxt.common.annotation.Excel;
-import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.annotation.Excel.Type;
 import com.zhglxt.common.annotation.Excels;
 import com.zhglxt.common.config.GlobalConfig;
@@ -18,20 +17,55 @@ import com.zhglxt.common.utils.reflect.ReflectUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.RegExUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
-import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
+import org.apache.poi.hssf.usermodel.HSSFPicture;
+import org.apache.poi.hssf.usermodel.HSSFPictureData;
+import org.apache.poi.hssf.usermodel.HSSFShape;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ooxml.POIXMLDocumentPart;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.ClientAnchor;
+import org.apache.poi.ss.usermodel.DataValidation;
+import org.apache.poi.ss.usermodel.DataValidationConstraint;
+import org.apache.poi.ss.usermodel.DataValidationHelper;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Drawing;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Name;
+import org.apache.poi.ss.usermodel.PictureData;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.CellRangeAddressList;
 import org.apache.poi.util.IOUtils;
 import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
+import org.apache.poi.xssf.usermodel.XSSFDataValidation;
+import org.apache.poi.xssf.usermodel.XSSFDrawing;
+import org.apache.poi.xssf.usermodel.XSSFPicture;
+import org.apache.poi.xssf.usermodel.XSSFShape;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -39,7 +73,16 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
@@ -415,7 +458,7 @@ public class ExcelUtil<T>
                         {
                             val = dataFormatHandlerAdapter(val, attr);
                         }
-                        else if (ColumnType.IMAGE == attr.cellType() && StringUtils.isNotEmpty(pictures))
+                        else if (Excel.ColumnType.IMAGE == attr.cellType() && StringUtils.isNotEmpty(pictures))
                         {
                             PictureData image = pictures.get(row.getRowNum() + "_" + entry.getKey());
                             if (image == null)
@@ -665,6 +708,7 @@ public class ExcelUtil<T>
                     subMergedLastRowNum++;
                 }
             }
+
             int column = 0;
             for (Object[] os : fields)
             {
@@ -759,7 +803,7 @@ public class ExcelUtil<T>
 
     /**
      * 根据Excel注解创建表格头样式
-     * 
+     *
      * @param wb 工作薄对象
      * @return 自定义样式列表
      */
@@ -861,7 +905,7 @@ public class ExcelUtil<T>
      */
     public void setCellVo(Object value, Excel attr, Cell cell)
     {
-        if (ColumnType.STRING == attr.cellType())
+        if (Excel.ColumnType.STRING == attr.cellType())
         {
             String cellValue = Convert.toStr(value);
             // 对于任何以表达式触发字符 =-+@开头的单元格，直接使用tab字符作为前缀，防止CSV注入。
@@ -875,14 +919,14 @@ public class ExcelUtil<T>
             }
             cell.setCellValue(StringUtils.isNull(cellValue) ? attr.defaultValue() : cellValue + attr.suffix());
         }
-        else if (ColumnType.NUMERIC == attr.cellType())
+        else if (Excel.ColumnType.NUMERIC == attr.cellType())
         {
             if (StringUtils.isNotNull(value))
             {
                 cell.setCellValue(StringUtils.contains(Convert.toStr(value), ".") ? Convert.toDouble(value) : Convert.toInt(value));
             }
         }
-        else if (ColumnType.IMAGE == attr.cellType())
+        else if (Excel.ColumnType.IMAGE == attr.cellType())
         {
             ClientAnchor anchor = new XSSFClientAnchor(0, 0, 0, 0, (short) cell.getColumnIndex(), cell.getRow().getRowNum(), (short) (cell.getColumnIndex() + 1), cell.getRow().getRowNum() + 1);
             String imagePath = Convert.toStr(value);
@@ -940,8 +984,16 @@ public class ExcelUtil<T>
         }
         if (StringUtils.isNotEmpty(attr.prompt()) || attr.combo().length > 0)
         {
-            // 提示信息或只能选择不能输入的列内容.
-            setPromptOrValidation(sheet, attr.combo(), attr.prompt(), 1, 100, column, column);
+            if (attr.combo().length > 15 || StringUtils.join(attr.combo()).length() > 255)
+            {
+                // 如果下拉数大于15或字符串长度大于255，则使用一个新sheet存储，避免生成的模板下拉值获取不到
+                setXSSFValidationWithHidden(sheet, attr.combo(), attr.prompt(), 1, 100, column, column);
+            }
+            else
+            {
+                // 提示信息或只能选择不能输入的列内容.
+                setPromptOrValidation(sheet, attr.combo(), attr.prompt(), 1, 100, column, column);
+            }
         }
     }
 
@@ -1046,6 +1098,58 @@ public class ExcelUtil<T>
     }
 
     /**
+     * 设置某些列的值只能输入预制的数据,显示下拉框（兼容超出一定数量的下拉框）.
+     *
+     * @param sheet 要设置的sheet.
+     * @param textlist 下拉框显示的内容
+     * @param promptContent 提示内容
+     * @param firstRow 开始行
+     * @param endRow 结束行
+     * @param firstCol 开始列
+     * @param endCol 结束列
+     */
+    public void setXSSFValidationWithHidden(Sheet sheet, String[] textlist, String promptContent, int firstRow, int endRow, int firstCol, int endCol)
+    {
+        String hideSheetName = "combo_" + firstCol + "_" + endCol;
+        Sheet hideSheet = wb.createSheet(hideSheetName); // 用于存储 下拉菜单数据
+        for (int i = 0; i < textlist.length; i++)
+        {
+            hideSheet.createRow(i).createCell(0).setCellValue(textlist[i]);
+        }
+        // 创建名称，可被其他单元格引用
+        Name name = wb.createName();
+        name.setNameName(hideSheetName + "_data");
+        name.setRefersToFormula(hideSheetName + "!$A$1:$A$" + textlist.length);
+        DataValidationHelper helper = sheet.getDataValidationHelper();
+        // 加载下拉列表内容
+        DataValidationConstraint constraint = helper.createFormulaListConstraint(hideSheetName + "_data");
+        // 设置数据有效性加载在哪个单元格上,四个参数分别是：起始行、终止行、起始列、终止列
+        CellRangeAddressList regions = new CellRangeAddressList(firstRow, endRow, firstCol, endCol);
+        // 数据有效性对象
+        DataValidation dataValidation = helper.createValidation(constraint, regions);
+        if (StringUtils.isNotEmpty(promptContent))
+        {
+            // 如果设置了提示信息则鼠标放上去提示
+            dataValidation.createPromptBox("", promptContent);
+            dataValidation.setShowPromptBox(true);
+        }
+        // 处理Excel兼容性问题
+        if (dataValidation instanceof XSSFDataValidation)
+        {
+            dataValidation.setSuppressDropDownArrow(true);
+            dataValidation.setShowErrorBox(true);
+        }
+        else
+        {
+            dataValidation.setSuppressDropDownArrow(false);
+        }
+
+        sheet.addValidationData(dataValidation);
+        // 设置hiddenSheet隐藏
+        wb.setSheetHidden(wb.getSheetIndex(hideSheet), true);
+    }
+
+    /**
      * 解析导出值 0=男,1=女,2=未知
      * 
      * @param propertyValue 参数值
@@ -1147,7 +1251,7 @@ public class ExcelUtil<T>
 
     /**
      * 数据处理器
-     * 
+     *
      * @param value 数据值
      * @param excel 数据注解
      * @return
@@ -1541,7 +1645,7 @@ public class ExcelUtil<T>
 
     /**
      * 格式化不同类型的日期对象
-     * 
+     *
      * @param dateFormat 日期格式
      * @param val 被格式化的日期对象
      * @return 格式化后的日期字符
