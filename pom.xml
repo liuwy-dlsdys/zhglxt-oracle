@@ -5,13 +5,13 @@
 
     <groupId>com.zhglxt</groupId>
     <artifactId>zhglxt</artifactId>
-    <version>4.7.5</version>
+    <version>4.7.6</version>
 
     <name>zhglxt</name>
     <description>web应用系统</description>
 
     <properties>
-        <zhglxt.version>4.7.5</zhglxt.version>
+        <zhglxt.version>4.7.6</zhglxt.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
