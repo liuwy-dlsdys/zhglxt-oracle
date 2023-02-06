@@ -48,12 +48,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<include refid="selectJobLogVo"/>
 	</select>
 	
-	<select id="selectJobLogById" parameterType="Long" resultMap="SysJobLogResult">
+	<select id="selectJobLogById" parameterType="String" resultMap="SysJobLogResult">
 		<include refid="selectJobLogVo"/>
 		where job_log_id = #{jobLogId}
 	</select>
 	
-	<delete id="deleteJobLogById" parameterType="Long">
+	<delete id="deleteJobLogById" parameterType="String">
  		delete from sys_job_log where job_log_id = #{jobLogId}
  	</delete>
  	
@@ -69,9 +69,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </update>
  	
  	<insert id="insertJobLog" parameterType="SysJobLog">
- 	    <selectKey keyProperty="jobLogId" resultType="String" order="BEFORE">
-			SELECT seq_sys_job_log.NEXTVAL as jobLogId FROM DUAL
-		</selectKey>
  		insert into sys_job_log(
  			<if test="jobLogId != null and jobLogId != ''">job_log_id,</if>
  			<if test="jobName != null and jobName != ''">job_name,</if>

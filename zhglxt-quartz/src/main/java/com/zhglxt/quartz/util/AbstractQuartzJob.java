@@ -1,6 +1,8 @@
 package com.zhglxt.quartz.util;
 
 import java.util.Date;
+
+import com.zhglxt.common.utils.uuid.UUID;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -66,7 +68,7 @@ public abstract class AbstractQuartzJob implements Job
      * 执行后
      *
      * @param context 工作执行上下文对象
-     * @param sysScheduleJob 系统计划任务
+     * @param sysJob 系统计划任务
      */
     protected void after(JobExecutionContext context, SysJob sysJob, Exception e)
     {
@@ -74,6 +76,7 @@ public abstract class AbstractQuartzJob implements Job
         threadLocal.remove();
 
         final SysJobLog sysJobLog = new SysJobLog();
+        sysJobLog.setJobLogId(UUID.fastUUID().toString(true));
         sysJobLog.setJobName(sysJob.getJobName());
         sysJobLog.setJobGroup(sysJob.getJobGroup());
         sysJobLog.setInvokeTarget(sysJob.getInvokeTarget());

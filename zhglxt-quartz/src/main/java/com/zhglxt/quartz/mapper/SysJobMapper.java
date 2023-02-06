@@ -31,7 +31,7 @@ public interface SysJobMapper
      * @param jobId 调度ID
      * @return 角色对象信息
      */
-    public SysJob selectJobById(Long jobId);
+    public SysJob selectJobById(String jobId);
 
     /**
      * 通过调度ID删除调度任务信息
@@ -39,7 +39,7 @@ public interface SysJobMapper
      * @param jobId 调度ID
      * @return 结果
      */
-    public int deleteJobById(Long jobId);
+    public int deleteJobById(String jobId);
 
     /**
      * 批量删除调度任务信息
@@ -47,7 +47,7 @@ public interface SysJobMapper
      * @param ids 需要删除的数据ID
      * @return 结果
      */
-    public int deleteJobByIds(Long[] ids);
+    public int deleteJobByIds(String[] ids);
 
     /**
      * 修改调度任务信息

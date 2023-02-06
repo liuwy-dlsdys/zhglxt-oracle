@@ -26,7 +26,7 @@ public interface ISysJobService
      * @param jobId 调度任务ID
      * @return 调度任务对象信息
      */
-    public SysJob selectJobById(Long jobId);
+    public SysJob selectJobById(String jobId);
 
     /**
      * 暂停任务

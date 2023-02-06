@@ -47,16 +47,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<include refid="selectJobVo"/>
 	</select>
 	
-	<select id="selectJobById" parameterType="Long" resultMap="SysJobResult">
+	<select id="selectJobById" parameterType="String" resultMap="SysJobResult">
 		<include refid="selectJobVo"/>
 		where job_id = #{jobId}
 	</select>
 	
-	<delete id="deleteJobById" parameterType="Long">
+	<delete id="deleteJobById" parameterType="String">
  		delete from sys_job where job_id = #{jobId}
  	</delete>
  	
- 	<delete id="deleteJobByIds" parameterType="Long">
+ 	<delete id="deleteJobByIds" parameterType="String">
  		delete from sys_job where job_id in
  		<foreach collection="array" item="jobId" open="(" separator="," close=")">
  			#{jobId}
@@ -80,10 +80,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		where job_id = #{jobId}
 	</update>
  	
- 	<insert id="insertJob" parameterType="SysJob" useGeneratedKeys="true" keyProperty="jobId">
-		<selectKey keyProperty="jobId" resultType="String" order="BEFORE">
-			SELECT seq_sys_job.NEXTVAL as jobId FROM DUAL
-		</selectKey>
+ 	<insert id="insertJob" parameterType="SysJob">
  		insert into sys_job(
  			<if test="jobId != null and jobId != ''">job_id,</if>
  			<if test="jobName != null and jobName != ''">job_name,</if>

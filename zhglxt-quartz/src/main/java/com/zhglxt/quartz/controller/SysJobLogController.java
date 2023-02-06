@@ -42,7 +42,7 @@ public class SysJobLogController extends BaseController
 
     @RequiresPermissions("monitor:job:view")
     @GetMapping()
-    public String jobLog(@RequestParam(value = "jobId", required = false) Long jobId, ModelMap mmap)
+    public String jobLog(@RequestParam(value = "jobId", required = false) String jobId, ModelMap mmap)
     {
         if (StringUtils.isNotNull(jobId))
         {
@@ -84,7 +84,7 @@ public class SysJobLogController extends BaseController
 
     @RequiresPermissions("monitor:job:detail")
     @GetMapping("/detail/{jobLogId}")
-    public String detail(@PathVariable("jobLogId") Long jobLogId, ModelMap mmap)
+    public String detail(@PathVariable("jobLogId") String jobLogId, ModelMap mmap)
     {
         mmap.put("name", "jobLog");
         mmap.put("jobLog", jobLogService.selectJobLogById(jobLogId));
