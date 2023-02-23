@@ -118,7 +118,7 @@
 	    delete from sys_menu where menu_id = #{menuId} or parent_id = #{menuId}
 	</delete>
 
-	<select id="selectMenuById" parameterType="String" resultMap="SysMenuResult">
+	<select id="selectMenuById" resultMap="SysMenuResult">
 		SELECT t.menu_id, t.parent_id, t.menu_name, t.order_num, t.url, t.target, t.menu_type, t.visible, t.is_refresh, t.perms, t.icon, t.remark,
 			(SELECT menu_name FROM sys_menu WHERE menu_id = t.parent_id) parent_name
 		FROM sys_menu t
@@ -155,9 +155,6 @@
 	</update>
 
 	<insert id="insertMenu" parameterType="SysMenu">
-		<selectKey keyProperty="menuId" order="BEFORE" resultType="String">
-			select seq_sys_menu.nextval as menuId from DUAL
-		</selectKey>
 		insert into sys_menu(
 		<if test="menuId != null and menuId != ''">menu_id,</if>
 		<if test="parentId != null and parentId != ''">parent_id,</if>

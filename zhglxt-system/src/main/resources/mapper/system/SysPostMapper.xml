@@ -85,10 +85,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  		where post_id = #{postId}
 	</update>
  	
- 	<insert id="insertPost" parameterType="SysPost" useGeneratedKeys="true" keyProperty="postId">
- 	    <selectKey keyProperty="postId" order="BEFORE" resultType="String">
-			select seq_sys_post.nextval as postId from DUAL
-		</selectKey>
+ 	<insert id="insertPost" parameterType="SysPost">
  		insert into sys_post(
  			<if test="postId != null and postId != ''">post_id,</if>
  			<if test="postCode != null and postCode != ''">post_code,</if>

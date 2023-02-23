@@ -1,5 +1,7 @@
 package com.zhglxt.activiti.service.impl;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.zhglxt.activiti.entity.Act;
 import com.zhglxt.activiti.mapper.ActMapper;
 import com.zhglxt.activiti.util.UserUtils;
@@ -32,7 +34,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -79,7 +80,7 @@ public class ActTaskService {
      */
     @Transactional(rollbackFor = Exception.class)
     public String startProcess(String procDefKey, String businessTable, String businessId, String title) {
-        Map<String, Object> vars = new HashMap<>();
+        Map<String, Object> vars = Maps.newHashMap();
         return startProcess(procDefKey, businessTable, businessId, title, vars);
     }
 
@@ -102,7 +103,7 @@ public class ActTaskService {
 
         // 设置流程变量
         if (vars == null) {
-            vars = new HashMap<>();
+            vars = Maps.newHashMap();
         }
 
         // 设置流程标题
@@ -161,12 +162,12 @@ public class ActTaskService {
      * @return
      */
     public List<Map<String, Object>> histoicFlowList(Map<String, Object> paramMap) {
-        List<Map<String, Object>> arrayList = new ArrayList<>();
+        List<Map<String, Object>> arrayList = Lists.newArrayList();
         List<HistoricActivityInstance> list = historyService.createHistoricActivityInstanceQuery().processInstanceId(paramMap.get("procInsId").toString())
                 .orderByHistoricActivityInstanceStartTime().asc().orderByHistoricActivityInstanceEndTime().asc().list();
 
         boolean start = false;
-        Map<String, Integer> actMap = new HashMap<>();
+        Map<String, Integer> actMap = Maps.newHashMap();
 
         for (int i = 0; i < list.size(); i++) {
 
@@ -191,7 +192,7 @@ public class ActTaskService {
                     actMap.put(histIns.getActivityId(), actMap.size());
                 }
 
-                Map<String, Object> atMap = new HashMap<>();
+                Map<String, Object> atMap = Maps.newHashMap();
                 atMap.put("histIns", histIns);
                 // 获取流程发起人名称
                 if ("startEvent".equals(histIns.getActivityType())) {
@@ -236,7 +237,7 @@ public class ActTaskService {
                 }
                 //任务历时
                 if (StringUtils.isNotBlank(histIns.getEndTime())) {
-                    String taskFor = DateUtils.getDatePoor(histIns.getEndTime(), histIns.getStartTime());
+                    String taskFor = DateUtils.timeDistance(histIns.getEndTime(), histIns.getStartTime());
                     atMap.put("taskFor", taskFor);
                 }
                 arrayList.add(atMap);
@@ -270,7 +271,7 @@ public class ActTaskService {
      */
     public List<Map<String, Object>> todoList(Map<String, Object> paramMap) {
         SysUser user = ShiroUtils.getSysUser();
-        List<Map<String, Object>> resultList = new ArrayList<>();
+        List<Map<String, Object>> resultList = Lists.newArrayList();
 
         // =============== 已经签收的任务  ===============
         TaskQuery todoTaskQuery = taskService.createTaskQuery().taskAssignee(user.getLoginName()).active()
@@ -307,11 +308,11 @@ public class ActTaskService {
             taskMap.put("assignee", task.getAssignee());
             taskMap.put("createTime", task.getCreateTime());
 
-            HashMap<String, Object> varsMap =new HashMap<>();
+            HashMap<String, Object> varsMap = Maps.newHashMap();
             varsMap.put("apply", task.getProcessVariables().get("apply"));
             varsMap.put("title", task.getProcessVariables().get("title"));
 
-            HashMap<String, Object> procDefMap = new HashMap<>();
+            HashMap<String, Object> procDefMap = Maps.newHashMap();
             RepositoryService repositoryService = SpringContextHolder.getBean(RepositoryService.class);
             ProcessDefinition singleResult = repositoryService.createProcessDefinitionQuery().processDefinitionId(task.getProcessDefinitionId()).singleResult();
             procDefMap.put("name", singleResult.getName());
@@ -349,8 +350,8 @@ public class ActTaskService {
         // 查询列表
         List<Task> toClaimList = toClaimQuery.list();
         for (Task task : toClaimList) {
-            HashMap<String, Object> maps = new HashMap<>();
-            HashMap<String, Object> taskMap = new HashMap<>();
+            HashMap<String, Object> maps = Maps.newHashMap();
+            HashMap<String, Object> taskMap = Maps.newHashMap();
             taskMap.put("id", task.getId());
             taskMap.put("executionId", task.getExecutionId());
             taskMap.put("processInstanceId", task.getProcessInstanceId());
@@ -360,11 +361,11 @@ public class ActTaskService {
             taskMap.put("assignee", task.getAssignee());
             taskMap.put("createTime", task.getCreateTime());
 
-            HashMap<String, Object> varsMap = new HashMap<>();
+            HashMap<String, Object> varsMap = Maps.newHashMap();
             varsMap.put("apply", task.getProcessVariables().get("apply"));
             varsMap.put("title", task.getProcessVariables().get("title"));
 
-            HashMap<String, Object> procDefMap = new HashMap<>();
+            HashMap<String, Object> procDefMap = Maps.newHashMap();
             RepositoryService repositoryService = SpringContextHolder.getBean(RepositoryService.class);
             ProcessDefinition singleResult = repositoryService.createProcessDefinitionQuery().processDefinitionId(task.getProcessDefinitionId()).singleResult();
             procDefMap.put("name", singleResult.getName());

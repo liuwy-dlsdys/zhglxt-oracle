@@ -1,12 +1,12 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.page.TableDataInfo;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.poi.ExcelUtil;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.entity.SysConfig;
 import com.zhglxt.system.service.ISysConfigService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -14,7 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -75,9 +79,10 @@ public class SysConfigController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysConfig config) {
-        if (UserConstants.CONFIG_KEY_NOT_UNIQUE.equals(configService.checkConfigKeyUnique(config))) {
+        if (!configService.checkConfigKeyUnique(config)) {
             return error("新增参数'" + config.getConfigName() + "'失败，参数键名已存在");
         }
+        config.setConfigId(UUID.fastUUID().toString(true));
         config.setCreateBy(getLoginName());
         return toAjax(configService.insertConfig(config));
     }
@@ -100,7 +105,7 @@ public class SysConfigController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(@Validated SysConfig config) {
-        if (UserConstants.CONFIG_KEY_NOT_UNIQUE.equals(configService.checkConfigKeyUnique(config))) {
+        if (!configService.checkConfigKeyUnique(config)) {
             return error("修改参数'" + config.getConfigName() + "'失败，参数键名已存在");
         }
         config.setUpdateBy(getLoginName());
@@ -136,7 +141,7 @@ public class SysConfigController extends BaseController {
      */
     @PostMapping("/checkConfigKeyUnique")
     @ResponseBody
-    public String checkConfigKeyUnique(SysConfig config) {
+    public boolean checkConfigKeyUnique(SysConfig config) {
         return configService.checkConfigKeyUnique(config);
     }
 }

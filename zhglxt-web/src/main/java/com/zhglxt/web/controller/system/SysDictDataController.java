@@ -8,6 +8,7 @@ import com.zhglxt.common.core.entity.sys.SysDictData;
 import com.zhglxt.common.core.page.TableDataInfo;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.poi.ExcelUtil;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.service.ISysDictDataService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +74,7 @@ public class SysDictDataController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysDictData dict) {
+        dict.setDictCode(UUID.fastUUID().toString(true));
         dict.setCreateBy(getLoginName());
         return toAjax(dictDataService.insertDictData(dict));
     }

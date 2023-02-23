@@ -1,7 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
@@ -11,6 +10,7 @@ import com.zhglxt.common.core.entity.sys.SysRole;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.StringUtils;
 import com.zhglxt.common.utils.WebUtil;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.service.ISysDeptService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,9 +75,10 @@ public class SysDeptController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysDept dept) {
-        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept))) {
+        if (!deptService.checkDeptNameUnique(dept)) {
             return error("新增部门'" + dept.getDeptName() + "'失败，部门名称已存在");
         }
+        dept.setDeptId(UUID.fastUUID().toString(true));
         dept.setCreateBy(getLoginName());
         return toAjax(deptService.insertDept(dept));
     }
@@ -90,7 +91,7 @@ public class SysDeptController extends BaseController {
     public String edit(@PathVariable("deptId") String deptId, ModelMap mmap) {
         deptService.checkDeptDataScope(deptId);
         SysDept dept = deptService.selectDeptById(deptId);
-        if (StringUtils.isNotNull(dept) && "100".equals(deptId)) {
+        if (StringUtils.isNotNull(dept) && deptId.equals("100")) {
             dept.setParentName("无");
         }
         mmap.put("dept", dept);
@@ -108,7 +109,7 @@ public class SysDeptController extends BaseController {
         String deptId = dept.getDeptId();
         deptService.checkDeptDataScope(deptId);
 
-        if (UserConstants.DEPT_NAME_NOT_UNIQUE.equals(deptService.checkDeptNameUnique(dept))) {
+        if (!deptService.checkDeptNameUnique(dept)) {
             return error("修改部门'" + dept.getDeptName() + "'失败，部门名称已存在");
         } else if (dept.getParentId().equals(deptId)) {
             return error("修改部门'" + dept.getDeptName() + "'失败，上级部门不能是自己");
@@ -142,7 +143,7 @@ public class SysDeptController extends BaseController {
      */
     @PostMapping("/checkDeptNameUnique")
     @ResponseBody
-    public String checkDeptNameUnique(SysDept dept) {
+    public boolean checkDeptNameUnique(SysDept dept) {
         return deptService.checkDeptNameUnique(dept);
     }
 

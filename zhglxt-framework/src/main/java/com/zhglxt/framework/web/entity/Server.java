@@ -1,4 +1,4 @@
-package com.zhglxt.framework.web.domain;
+package com.zhglxt.framework.web.entity;
 
 import java.net.UnknownHostException;
 import java.util.LinkedList;
@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Properties;
 import com.zhglxt.common.utils.Arith;
 import com.zhglxt.common.utils.IpUtils;
-import com.zhglxt.framework.web.domain.server.Cpu;
-import com.zhglxt.framework.web.domain.server.Jvm;
-import com.zhglxt.framework.web.domain.server.Mem;
-import com.zhglxt.framework.web.domain.server.Sys;
-import com.zhglxt.framework.web.domain.server.SysFile;
+import com.zhglxt.framework.web.entity.server.Cpu;
+import com.zhglxt.framework.web.entity.server.Jvm;
+import com.zhglxt.framework.web.entity.server.Mem;
+import com.zhglxt.framework.web.entity.server.Sys;
+import com.zhglxt.framework.web.entity.server.SysFile;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.CentralProcessor.TickType;

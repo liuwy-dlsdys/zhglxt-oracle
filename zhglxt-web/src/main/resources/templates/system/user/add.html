@@ -177,9 +177,6 @@
                         name: function () {
                             return $.common.trim($("#loginName").val());
                         }
-                    },
-                    dataFilter: function (data, type) {
-                        return $.validate.unique(data);
                     }
                 }
             },
@@ -187,7 +184,7 @@
                 minlength: 5,
                 maxlength: 20
             },
-            /*email:{
+            email:{
                 email:true,
                 remote: {
                     url: prefix + "/checkEmailUnique",
@@ -197,9 +194,6 @@
                         name: function () {
                             return $.common.trim($("#email").val());
                         }
-                    },
-                    dataFilter: function (data, type) {
-                        return $.validate.unique(data);
                     }
                 }
             },
@@ -213,12 +207,9 @@
                         name: function () {
                             return $.common.trim($("#phonenumber").val());
                         }
-                    },
-                    dataFilter: function (data, type) {
-                        return $.validate.unique(data);
                     }
                 }
-            },*/
+            },
         },
         messages: {
             "loginName": {

@@ -1,4 +1,4 @@
-package com.zhglxt.framework.web.domain.server;
+package com.zhglxt.framework.web.entity.server;
 
 /**
  * 系统文件相关信息

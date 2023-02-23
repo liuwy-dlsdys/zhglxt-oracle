@@ -87,9 +87,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="insertDept" parameterType="SysDept">
-	    <selectKey keyProperty="deptId" order="BEFORE" resultType="String">
-			select seq_sys_dept.nextval as deptId from DUAL
-		</selectKey>
  		insert into sys_dept(
  			<if test="deptId != null and deptId != ''">dept_id,</if>
  			<if test="parentId != null and parentId != ''">parent_id,</if>
@@ -151,7 +148,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update sys_dept set del_flag = '2' where dept_id = #{deptId}
 	</delete>
 	
-	<update id="updateDeptStatusNormal" parameterType="Long">
+	<update id="updateDeptStatusNormal" parameterType="String">
  	    update sys_dept set status = '0' where dept_id in 
  	    <foreach collection="array" item="deptId" open="(" separator="," close=")">
         	#{deptId}

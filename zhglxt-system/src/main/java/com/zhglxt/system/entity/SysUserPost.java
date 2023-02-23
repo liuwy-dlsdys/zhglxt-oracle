@@ -14,7 +14,7 @@ public class SysUserPost
     private String userId;
     
     /** 岗位ID */
-    private Long postId;
+    private String postId;
 
     public String getUserId()
     {
@@ -26,12 +26,12 @@ public class SysUserPost
         this.userId = userId;
     }
 
-    public Long getPostId()
+    public String getPostId()
     {
         return postId;
     }
 
-    public void setPostId(Long postId)
+    public void setPostId(String postId)
     {
         this.postId = postId;
     }

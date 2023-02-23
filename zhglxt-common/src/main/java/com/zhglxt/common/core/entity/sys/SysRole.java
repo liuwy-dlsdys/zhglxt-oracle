@@ -48,10 +48,10 @@ public class SysRole extends BaseEntity
     private boolean flag = false;
 
     /** 菜单组 */
-    private Long[] menuIds;
+    private String[] menuIds;
 
     /** 部门组（数据权限） */
-    private Long[] deptIds;
+    private String[] deptIds;
 
     /** 角色菜单权限 */
     private Set<String> permissions;
@@ -161,22 +161,22 @@ public class SysRole extends BaseEntity
         this.flag = flag;
     }
 
-    public Long[] getMenuIds()
+    public String[] getMenuIds()
     {
         return menuIds;
     }
 
-    public void setMenuIds(Long[] menuIds)
+    public void setMenuIds(String[] menuIds)
     {
         this.menuIds = menuIds;
     }
 
-    public Long[] getDeptIds()
+    public String[] getDeptIds()
     {
         return deptIds;
     }
 
-    public void setDeptIds(Long[] deptIds)
+    public void setDeptIds(String[] deptIds)
     {
         this.deptIds = deptIds;
     }

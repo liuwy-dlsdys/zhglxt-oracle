@@ -93,11 +93,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
  	
  	<insert id="insertDictData" parameterType="SysDictData">
- 	    <selectKey keyProperty="dictCode" resultType="Long" order="BEFORE">
-			SELECT seq_sys_dict_data.NEXTVAL as dictCode FROM DUAL
-		</selectKey>
  		insert into sys_dict_data(
- 		    <if test="dictCode != null and dictCode != 0">dict_code,</if>
+ 		    <if test="dictCode != null and dictCode != ''">dict_code,</if>
  			<if test="dictSort != null">dict_sort,</if>
  			<if test="dictLabel != null and dictLabel != ''">dict_label,</if>
  			<if test="dictValue != null and dictValue != ''">dict_value,</if>

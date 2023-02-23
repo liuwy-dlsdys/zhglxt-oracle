@@ -19,7 +19,7 @@ public class SysConfig extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 参数主键 */
-    @Excel(name = "参数主键", cellType = ColumnType.NUMERIC)
+    @Excel(name = "参数主键")
     private String configId;
 
     /** 参数名称 */

@@ -1,8 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
-import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.sys.SysRole;
@@ -10,6 +8,7 @@ import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.common.core.page.TableDataInfo;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.poi.ExcelUtil;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.framework.shiro.util.AuthorizationUtils;
 import com.zhglxt.system.entity.SysUserRole;
 import com.zhglxt.system.service.ISysRoleService;
@@ -19,7 +18,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -80,11 +83,12 @@ public class SysRoleController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysRole role) {
-        if (UserConstants.ROLE_NAME_NOT_UNIQUE.equals(roleService.checkRoleNameUnique(role))) {
+        if (!roleService.checkRoleNameUnique(role)) {
             return error("新增角色'" + role.getRoleName() + "'失败，角色名称已存在");
-        } else if (UserConstants.ROLE_KEY_NOT_UNIQUE.equals(roleService.checkRoleKeyUnique(role))) {
+        } else if (!roleService.checkRoleKeyUnique(role)) {
             return error("新增角色'" + role.getRoleName() + "'失败，角色权限已存在");
         }
+        role.setRoleId(UUID.fastUUID().toString(true));
         role.setCreateBy(getLoginName());
         AuthorizationUtils.clearAllCachedAuthorizationInfo();
         return toAjax(roleService.insertRole(role));
@@ -113,11 +117,11 @@ public class SysRoleController extends BaseController {
         //管理员用户&角色不允许操作
 //    	  roleService.checkRoleAllowed(role);
 //        roleService.checkRoleDataScope(role.getRoleId());
-//        if (UserConstants.ROLE_NAME_NOT_UNIQUE.equals(roleService.checkRoleNameUnique(role)))
+//        if (!roleService.checkRoleNameUnique(role))
 //        {
 //            return error("修改角色'" + role.getRoleName() + "'失败，角色名称已存在");
 //        }
-//        else if (UserConstants.ROLE_KEY_NOT_UNIQUE.equals(roleService.checkRoleKeyUnique(role)))
+//        else if (!roleService.checkRoleKeyUnique(role))
 //        {
 //            return error("修改角色'" + role.getRoleName() + "'失败，角色权限已存在");
 //        }
@@ -167,7 +171,7 @@ public class SysRoleController extends BaseController {
      */
     @PostMapping("/checkRoleNameUnique")
     @ResponseBody
-    public String checkRoleNameUnique(SysRole role) {
+    public boolean checkRoleNameUnique(SysRole role) {
         return roleService.checkRoleNameUnique(role);
     }
 
@@ -176,7 +180,7 @@ public class SysRoleController extends BaseController {
      */
     @PostMapping("/checkRoleKeyUnique")
     @ResponseBody
-    public String checkRoleKeyUnique(SysRole role) {
+    public boolean checkRoleKeyUnique(SysRole role) {
         return roleService.checkRoleKeyUnique(role);
     }
 

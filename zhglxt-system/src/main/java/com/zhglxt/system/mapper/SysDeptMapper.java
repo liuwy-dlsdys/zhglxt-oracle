@@ -99,7 +99,7 @@ public interface SysDeptMapper
      * 
      * @param deptIds 部门ID组
      */
-    public void updateDeptStatusNormal(Long[] deptIds);
+    public void updateDeptStatusNormal(String[] deptIds);
 
     /**
      * 根据ID查询所有子部门

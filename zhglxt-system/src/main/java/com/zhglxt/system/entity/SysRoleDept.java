@@ -14,7 +14,7 @@ public class SysRoleDept
     private String roleId;
     
     /** 部门ID */
-    private Long deptId;
+    private String deptId;
 
     public String getRoleId()
     {
@@ -26,12 +26,12 @@ public class SysRoleDept
         this.roleId = roleId;
     }
 
-    public Long getDeptId()
+    public String getDeptId()
     {
         return deptId;
     }
 
-    public void setDeptId(Long deptId)
+    public void setDeptId(String deptId)
     {
         this.deptId = deptId;
     }

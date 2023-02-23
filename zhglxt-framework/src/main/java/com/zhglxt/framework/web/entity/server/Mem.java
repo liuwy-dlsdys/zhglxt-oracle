@@ -1,4 +1,4 @@
-package com.zhglxt.framework.web.domain.server;
+package com.zhglxt.framework.web.entity.server;
 
 import com.zhglxt.common.utils.Arith;
 

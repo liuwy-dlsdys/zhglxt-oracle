@@ -6,7 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.zhglxt.common.core.controller.BaseController;
-import com.zhglxt.framework.web.domain.Server;
+import com.zhglxt.framework.web.entity.Server;
 
 /**
  * 服务器监控

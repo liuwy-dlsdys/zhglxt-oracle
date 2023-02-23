@@ -57,6 +57,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				AND to_char(create_time, 'yyyy-mm-dd') &lt;= #{params.endTime}
 			</if>
 		</where>
+        ORDER BY create_time ASC
     </select>
 
     <select id="selectConfigById" parameterType="String" resultMap="SysConfigResult">
@@ -70,9 +71,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </select>
     
     <insert id="insertConfig" parameterType="SysConfig">
-        <selectKey keyProperty="configId" resultType="String" order="BEFORE">
-			SELECT seq_sys_config.NEXTVAL as configId FROM DUAL
-		</selectKey>
         insert into sys_config (
             <if test="configId != null and configId != '' ">config_id,</if>
 			<if test="configName != null and configName != '' ">config_name,</if>

@@ -1,8 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
-import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.Ztree;
@@ -10,6 +8,7 @@ import com.zhglxt.common.core.entity.sys.SysDictType;
 import com.zhglxt.common.core.page.TableDataInfo;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.poi.ExcelUtil;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.service.ISysDictTypeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,9 +78,10 @@ public class SysDictTypeController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysDictType dict) {
-        if (UserConstants.DICT_TYPE_NOT_UNIQUE.equals(dictTypeService.checkDictTypeUnique(dict))) {
+        if (!dictTypeService.checkDictTypeUnique(dict)) {
             return error("新增字典'" + dict.getDictName() + "'失败，字典类型已存在");
         }
+        dict.setDictId(UUID.fastUUID().toString(true));
         dict.setCreateBy(getLoginName());
         return toAjax(dictTypeService.insertDictType(dict));
     }
@@ -104,7 +104,7 @@ public class SysDictTypeController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(@Validated SysDictType dict) {
-        if (UserConstants.DICT_TYPE_NOT_UNIQUE.equals(dictTypeService.checkDictTypeUnique(dict))) {
+        if (!dictTypeService.checkDictTypeUnique(dict)) {
             return error("修改字典'" + dict.getDictName() + "'失败，字典类型已存在");
         }
         dict.setUpdateBy(getLoginName());
@@ -148,7 +148,7 @@ public class SysDictTypeController extends BaseController {
      */
     @PostMapping("/checkDictTypeUnique")
     @ResponseBody
-    public String checkDictTypeUnique(SysDictType dictType) {
+    public boolean checkDictTypeUnique(SysDictType dictType) {
         return dictTypeService.checkDictTypeUnique(dictType);
     }
 
@@ -156,7 +156,8 @@ public class SysDictTypeController extends BaseController {
      * 选择字典树
      */
     @GetMapping("/selectDictTree/{columnId}/{dictType}")
-    public String selectDeptTree(@PathVariable("columnId") Long columnId, @PathVariable("dictType") String dictType, ModelMap mmap) {
+    public String selectDeptTree(@PathVariable("columnId") Long columnId, @PathVariable("dictType") String dictType,
+                                 ModelMap mmap) {
         mmap.put("columnId", columnId);
         mmap.put("dict", dictTypeService.selectDictTypeByType(dictType));
         return prefix + "/tree";

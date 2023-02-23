@@ -1,8 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
-import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.Ztree;
@@ -10,6 +8,7 @@ import com.zhglxt.common.core.entity.sys.SysMenu;
 import com.zhglxt.common.core.entity.sys.SysRole;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.ShiroUtils;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.framework.shiro.util.AuthorizationUtils;
 import com.zhglxt.system.service.ISysMenuService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -77,7 +76,7 @@ public class SysMenuController extends BaseController {
     @GetMapping("/add/{parentId}")
     public String add(@PathVariable("parentId") String parentId, ModelMap mmap) {
         SysMenu menu = null;
-        if (!"0".equals(parentId)) {
+        if (!parentId.equals("0")) {
             menu = menuService.selectMenuById(parentId);
         } else {
             menu = new SysMenu();
@@ -96,9 +95,10 @@ public class SysMenuController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysMenu menu) {
-        if (UserConstants.MENU_NAME_NOT_UNIQUE.equals(menuService.checkMenuNameUnique(menu))) {
+        if (!menuService.checkMenuNameUnique(menu)) {
             return error("新增菜单'" + menu.getMenuName() + "'失败，菜单名称已存在");
         }
+        menu.setMenuId(UUID.fastUUID().toString(true));
         menu.setCreateBy(getLoginName());
         AuthorizationUtils.clearAllCachedAuthorizationInfo();
         return toAjax(menuService.insertMenu(menu));
@@ -122,7 +122,7 @@ public class SysMenuController extends BaseController {
     @PostMapping("/edit")
     @ResponseBody
     public AjaxResult editSave(@Validated SysMenu menu) {
-        if (UserConstants.MENU_NAME_NOT_UNIQUE.equals(menuService.checkMenuNameUnique(menu))) {
+        if (!menuService.checkMenuNameUnique(menu)) {
             return error("修改菜单'" + menu.getMenuName() + "'失败，菜单名称已存在");
         }
         menu.setUpdateBy(getLoginName());
@@ -143,7 +143,7 @@ public class SysMenuController extends BaseController {
      */
     @PostMapping("/checkMenuNameUnique")
     @ResponseBody
-    public String checkMenuNameUnique(SysMenu menu) {
+    public boolean checkMenuNameUnique(SysMenu menu) {
         return menuService.checkMenuNameUnique(menu);
     }
 

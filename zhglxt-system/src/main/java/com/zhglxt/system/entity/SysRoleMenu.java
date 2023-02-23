@@ -14,7 +14,7 @@ public class SysRoleMenu
     private String roleId;
     
     /** 菜单ID */
-    private Long menuId;
+    private String menuId;
 
     public String getRoleId()
     {
@@ -26,12 +26,12 @@ public class SysRoleMenu
         this.roleId = roleId;
     }
 
-    public Long getMenuId()
+    public String getMenuId()
     {
         return menuId;
     }
 
-    public void setMenuId(Long menuId)
+    public void setMenuId(String menuId)
     {
         this.menuId = menuId;
     }

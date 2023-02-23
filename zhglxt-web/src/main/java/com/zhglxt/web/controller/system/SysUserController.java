@@ -1,7 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.constant.UserConstants;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.sys.SysRole;
@@ -10,6 +9,7 @@ import com.zhglxt.common.core.page.TableDataInfo;
 import com.zhglxt.common.core.text.Convert;
 import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.ShiroUtils;
+import com.zhglxt.common.utils.StringUtils;
 import com.zhglxt.common.utils.poi.ExcelUtil;
 import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.framework.shiro.service.SysPasswordService;
@@ -23,7 +23,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -114,15 +118,13 @@ public class SysUserController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysUser user) {
-        if (UserConstants.USER_NAME_NOT_UNIQUE.equals(userService.checkLoginNameUnique(user))) {
+        if (!userService.checkLoginNameUnique(user)) {
             return error("新增用户'" + user.getLoginName() + "'失败，登录账号已存在");
-        } /*else if (StringUtils.isNotEmpty(user.getPhonenumber())
-                && UserConstants.USER_PHONE_NOT_UNIQUE.equals(userService.checkPhoneUnique(user))) {
+        } else if (StringUtils.isNotEmpty(user.getPhonenumber()) && !userService.checkPhoneUnique(user)) {
             return error("新增用户'" + user.getLoginName() + "'失败，手机号码已存在");
-        } else if (StringUtils.isNotEmpty(user.getEmail())
-                && UserConstants.USER_EMAIL_NOT_UNIQUE.equals(userService.checkEmailUnique(user))) {
+        } else if (StringUtils.isNotEmpty(user.getEmail()) && !userService.checkEmailUnique(user)) {
             return error("新增用户'" + user.getLoginName() + "'失败，邮箱账号已存在");
-        }*/
+        }
         user.setUserId(UUID.fastUUID().toString(true));
         user.setSalt(ShiroUtils.randomSalt());
         user.setPassword(passwordService.encryptPassword(user.getLoginName(), user.getPassword(), user.getSalt()));
@@ -157,16 +159,15 @@ public class SysUserController extends BaseController {
         userService.checkUserDataScope(user.getUserId());
 
         //数据校验
-        if (UserConstants.USER_NAME_NOT_UNIQUE.equals(userService.checkLoginNameUnique(user)))
+        if (!userService.checkLoginNameUnique(user))
         {
             return error("修改用户'" + user.getLoginName() + "'失败，登录账号已存在");
-        } /*else if (StringUtils.isNotEmpty(user.getPhonenumber())
-                && UserConstants.USER_PHONE_NOT_UNIQUE.equals(userService.checkPhoneUnique(user))) {
+        }
+        else if (StringUtils.isNotEmpty(user.getPhonenumber()) && !userService.checkPhoneUnique(user)) {
             return error("修改用户'" + user.getLoginName() + "'失败，手机号码已存在");
-        } else if (StringUtils.isNotEmpty(user.getEmail())
-                && UserConstants.USER_EMAIL_NOT_UNIQUE.equals(userService.checkEmailUnique(user))) {
+        } else if (StringUtils.isNotEmpty(user.getEmail()) && !userService.checkEmailUnique(user)) {
             return error("修改用户'" + user.getLoginName() + "'失败，邮箱账号已存在");
-        }*/
+        }
 
         user.setUpdateBy(getLoginName());
         AuthorizationUtils.clearAllCachedAuthorizationInfo();
@@ -243,7 +244,7 @@ public class SysUserController extends BaseController {
      */
     @PostMapping("/checkLoginNameUnique")
     @ResponseBody
-    public String checkLoginNameUnique(SysUser user) {
+    public boolean checkLoginNameUnique(SysUser user) {
         return userService.checkLoginNameUnique(user);
     }
 
@@ -252,7 +253,7 @@ public class SysUserController extends BaseController {
      */
     @PostMapping("/checkPhoneUnique")
     @ResponseBody
-    public String checkPhoneUnique(SysUser user) {
+    public boolean checkPhoneUnique(SysUser user) {
         return userService.checkPhoneUnique(user);
     }
 
@@ -261,7 +262,7 @@ public class SysUserController extends BaseController {
      */
     @PostMapping("/checkEmailUnique")
     @ResponseBody
-    public String checkEmailUnique(SysUser user) {
+    public boolean checkEmailUnique(SysUser user) {
         return userService.checkEmailUnique(user);
     }
 

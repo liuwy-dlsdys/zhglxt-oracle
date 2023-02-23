@@ -85,9 +85,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
  	
  	<insert id="insertDictType" parameterType="SysDictType">
- 	    <selectKey keyProperty="dictId" resultType="String" order="BEFORE">
-			SELECT seq_sys_dict_type.NEXTVAL as dictId FROM DUAL
-		</selectKey>
  		insert into sys_dict_type(
  		    <if test="dictId != null and dictId != ''">dict_id,</if>
  			<if test="dictName != null and dictName != ''">dict_name,</if>
