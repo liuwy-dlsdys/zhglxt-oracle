@@ -11,7 +11,7 @@
  Target Server Version : 190000 (Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production)
  File Encoding         : 65001
 
- Date: 23/02/2023 20:05:07
+ Date: 08/03/2023 12:27:36
 */
 
 
@@ -1084,6 +1084,8 @@ COMMENT ON TABLE "ZHGLXT"."CMS_ARTICLE" IS '文章表';
 -- ----------------------------
 -- Records of CMS_ARTICLE
 -- ----------------------------
+INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('f88b9abdcf414b2cb9afea4d0f11f39f', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '失败不是一种过错', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1609159002670.jpg', NULL, '70', '失败不是自己的错，不要把自己打入十八层地狱，可能方法错、选择错、观念错，但是失败只是还没成功而已，不需要认为自己是个失败者，失败的是还没达成（或错过）你要达成的...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-28 20:28:24', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-28 20:47:38', 'SYYYY-MM-DD HH24:MI:SS'), '失败不是一种过错');
+INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('fb2367bb887c4a5192f26c268df2a6ca', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '超越自我，才是真我风采', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998631474.jpg', NULL, '10', '在城市的高速发展路上，社会上有了方方面面的变化，从以前的农耕社会进步到现在资本社会，人的生活方式上也发生了改变，改变的背后还有一股股的压力，这些压力一方面在推动社会的前进，同时不知不觉中把人...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2021-01-04 20:40:16', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-01-04 21:05:04', 'SYYYY-MM-DD HH24:MI:SS'), '超越自我，才是真我风采');
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('0461d49f0fb8442b8855277ef5987a52', '292cba294f8b4a0eba62452aa21b6ef5', '26615be24f8040f18bf7c086c9676408', '2019.08.08', NULL, NULL, NULL, NULL, '30', 'xx集团成立', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2021-03-30 16:26:52', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-30 19:59:47', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('1829d3c253eb42bfa1e228d4aa1894cf', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '跨出你的第一步', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998213442.jpg', NULL, '50', '碰上自己想做的事情就去做、想达成的目标就去冲，不要给自己太多理由来逃避，或许会担心害怕，毕竟是自己从来没面对过这些问题，但重点是你敢不敢跨出第一步，当你用着必死...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-26 23:58:08', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-27 18:57:21', 'SYYYY-MM-DD HH24:MI:SS'), '跨出你的第一步');
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('1cd8420837cd457bb5273549215685fc', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '目标不同美丽不同', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998631872.jpg', NULL, '30', '如你所说，每个人目标不同，选择方向都不同，你有美丽的风景，而我的景色也不差，只是当我们走过这些景点的时候，要确信自己的心血是值得的，不是跟着别人而走的，但话说回...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-26 22:16:03', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-27 18:56:54', 'SYYYY-MM-DD HH24:MI:SS'), '目标不同美丽不同');
@@ -1098,8 +1100,6 @@ INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('ad1e4af494624d0791643c9f0ddbd124', '
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('af97301ee4f1448e98b6ef61e667106e', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '海伦.凯勒带给我们的启示', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998631617.jpg', NULL, '20', '如果你耳朵听不见、眼睛看不到，要怎样有勇气活下去？就是有人活下去了，那个人就是海伦．凯勒。 海伦．凯勒一出生就听不见、看不到，所以学习对她来说是非常困难的，但是...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-26 22:15:25', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-27 18:56:43', 'SYYYY-MM-DD HH24:MI:SS'), '海伦.凯勒带给我们的启示');
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('c0635501f7ac45d7b66255d287c3193a', '292cba294f8b4a0eba62452aa21b6ef5', '22be2c4656ed47388c2a6f2160a87879', '不要说从头我们该看以后', NULL, NULL, '/zhglxt/userfiles/system/images/cms/news/1608999471597.jpg', NULL, '20', '面对到不同的问题，我们无法做到尽善尽美，有时候选择错一个方法，有时候踏错了一步伐，这些都会发生，不过人生嘛，总是在错误中学习成长的，你没有用错方法、踏错步伐，你...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-27 00:19:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-29 16:15:04', 'SYYYY-MM-DD HH24:MI:SS'), '不要说从头我们该看以后');
 INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('c1c66a2fee6347f5a4021ce953b89694', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '尽力而为的美好', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998213295.jpg', NULL, '40', '决定一个目标就该去冲、去闯，但内心请记得保持着一种态度，那就是尽力而为的态度，或许能顺利的达成目标，那就可喜可贺，但若没达成目标，请也给自己一些掌声，因为你尽力...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-26 23:39:42', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-27 18:57:10', 'SYYYY-MM-DD HH24:MI:SS'), '尽力而为的美好');
-INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('f88b9abdcf414b2cb9afea4d0f11f39f', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '失败不是一种过错', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1609159002670.jpg', NULL, '70', '失败不是自己的错，不要把自己打入十八层地狱，可能方法错、选择错、观念错，但是失败只是还没成功而已，不需要认为自己是个失败者，失败的是还没达成（或错过）你要达成的...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2020-12-28 20:28:24', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-28 20:47:38', 'SYYYY-MM-DD HH24:MI:SS'), '失败不是一种过错');
-INSERT INTO "ZHGLXT"."CMS_ARTICLE" VALUES ('fb2367bb887c4a5192f26c268df2a6ca', '292cba294f8b4a0eba62452aa21b6ef5', '65c7cbe937cd4b688b48b9a5cccc0450', '超越自我，才是真我风采', NULL, NULL, '/zhglxt/userfiles/system/images/cms/solution/1608998631474.jpg', NULL, '10', '在城市的高速发展路上，社会上有了方方面面的变化，从以前的农耕社会进步到现在资本社会，人的生活方式上也发生了改变，改变的背后还有一股股的压力，这些压力一方面在推动社会的前进，同时不知不觉中把人...', NULL, NULL, NULL, NULL, '0', 'system', TO_DATE('2021-01-04 20:40:16', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-01-04 21:05:04', 'SYYYY-MM-DD HH24:MI:SS'), '超越自我，才是真我风采');
 
 -- ----------------------------
 -- Table structure for CMS_ARTICLE_DATA
@@ -1139,22 +1139,22 @@ COMMENT ON TABLE "ZHGLXT"."CMS_ARTICLE_DATA" IS '文章详细表';
 -- ----------------------------
 -- Records of CMS_ARTICLE_DATA
 -- ----------------------------
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f20851d30fe1498ca1cf7eb90deedabc', '1cd8420837cd457bb5273549215685fc', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">目标不同美丽不同</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">如你所说，每个人目标不同，选择方向都不同，你有美丽的风景，而我的景色也不差，只是当我们走过这些景点的时候，要确信自己的心血是值得的，不是跟着别人而走的，但话说回来，你选择自己的路还是跟随别人的路，其实都是自己的选择，旁人、路人甚至亲人都无法帮你下决定，可是你一定得对自己人生负责。<br><br>追求什么必然会失去些什么，我选择的走一条路，必然会失去其他的道路，你也相同，不一定有什么是对跟错，只是价值观不同罢了；可是在选择的时候，我们得知道选择这条路之后，到底会失去什么，并非有目标就冲就闯，因为你要思考这个梦想或目标，值不值得你花费你的人生、精神、体力去换取，甚至还要花费其他的东西。</div>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f3a96788e53348038a8bae415db8fd01', '43598709c98648e5b9124139040bd500', '<p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none;"><span style="font-size: 24px;"><b>企业简介</b></span></p><p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none; text-indent: 2em;"><br></p><p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none; text-indent: 2em;"><br></p><p style="list-style-type: none; margin-bottom: 0px; padding: 0px; border: 0px; transition: color 0.2s ease 0s, background 0.4s ease 0s; color: rgb(102, 102, 102); font-family: &quot;microsoft yahei&quot;; font-size: 14px; text-align: justify;"><span style="color: rgb(96, 96, 96); font-family: Arial, sans-serif; font-size: 12px; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(96, 96, 96); font-family: Arial, sans-serif; font-size: 12px; text-align: left;">&nbsp;</span></p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;"><img style="width: 25%; float: left;" src="/zhglxt/profile/cms/upload/2021/07/07/af3be62b84ab4291a418cef63ff50140.jpg" data-filename="/profile/cms/upload/2021/07/07/af3be62b84ab4291a418cef63ff50140.jpg" class="note-float-left">世界上美丽的东西千千万万，却没有一样比年轻更为美丽；世界上珍贵的东西数也数不清，却没有一样比青春更为宝贵。我们是多么值得骄傲多么让人羡慕啊！而我们若只是挥霍光阴，只是享受，不去奋斗拼搏，那我们真的算拥有青春吗答案是否定的，我们仅有发愤图强，努力耕耘才能做到无愧于青春，无愧于人生，才能拥有一个充实而完美的青春。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　奋斗的青春是完美的风景正是那千万颗在青春中奋斗的心，以及那千万双在天空中高飞的振翅，装扮着最完美最美丽最珍贵的人生季节—青春。将青春变成人生最完美生活的出发点。“恰同学少年，风华正茂，书生意气，挥斥方遒。”昭示着一代伟人奋斗的青春。他们的青春因充满奋斗和活力而洋溢着完美，而今，青春正我在我们手中，我们不能容忍青春在我们手中白白流逝，我们不能在叹息声中虚度光阴，我们不能在叹息声中了结生命，那么就让我们在青春时节奋发吧！让青春之花永远绽放在我们心中，书写一卷有声有色的人生。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　青春在奋斗中展现美丽，青春的美丽永远展此刻她的奋斗拼搏之中。就像雄鹰的美丽是展此刻他搏风击雨中，如苍天之魂的翱翔中，正拥有青春的我们，何不以勇锐盖过怯懦，以进取压倒苟安，扬起奋斗的帆吧！在波涛汹涌的大海中不断前行，展示我们子一代人青春的壮美与力量，让我们就像雄鹰一样搏击长空吧！让青春之歌扬出昂扬的旋律，让我们的声明发出耀眼的光芒。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　奋斗抒写无悔青春，在漫漫人生道路上，青春虽然只是一小段，但当你白发苍苍回首时，你会发现以往拥有的青春依然会在记忆中闪烁着动人的光彩。青春无悔该是我们每个人的追求，我们仅有把握好青春的每一天，在激流中涌进不断拼搏，我们才能够骄傲地说：“我的青春是无悔的！”</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　雷锋说：“青春啊，永远是完美的，可是真正的青春只属于那些永远力争上游的人，永远忘我劳动的人，永远谦虚的人！”所以唯有奋斗，为自我的梦想不断前行，朝着我们自我的目标不断迈进，我们才能拥有一个真正而又无悔的青春。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　青春的世界里，不需要固结你的思想，仅有追寻完美的梦想，人前方荆棘丛生，我们都要持之以恒。让我们像江河一样，向着大海不断奔流吧！在漫漫的人生道路上，谱写青春的音符，留下奋斗的足迹。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　用我们的奋斗和梦想扬起青春的船帆，当我们努力拼搏地摇浆时，成功的闸门也会慢慢地再为我们打开，我们将享受一份青春的完美，收获一份成功的喜悦。</p>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f45cfcfebde74453af45d6af8904900a', 'af97301ee4f1448e98b6ef61e667106e', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">海伦.凯勒带给我们的启示</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;;">如果你耳朵听不见、眼睛看不到，要怎样有勇气活下去？就是有人活下去了，那个人就是海伦．凯勒。<br><br>海伦．凯勒一出生就听不见、看不到，所以学习对她来说是非常困难的，但是她却成功了，要感谢很多在这段求学路程上帮助海伦．凯勒的人，例如：她的妈妈、她的老师、还有她自己的努力付出。<br>她勇敢活下来的精神令我非常敬佩，她坚强的毅力让我想效法学习，真令我赞叹不已！<br><br>在我们之前，已经有许多的人靠着坚强的毅力完成了令大家意想不到的好成绩，只要努力上进，不管是谁都能有<a href="https://www.51flash.com/lizhi/lizhimingyan/21583.html" style="color: rgb(19, 110, 194);">成功</a>的一天。<br><br>海伦．凯勒成功的原因，只有一个，那就是相信自己，努力追求理想。俗话说的好：”天下无难事，只怕有心人。”意思就是说，天下没有做不到的事，只看您有没有努力，不要光只是嘴巴说说而已。</div>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('04c05db767384618a66165b18b743d88', 'ad1e4af494624d0791643c9f0ddbd124', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">踏出梦想第一步</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">一件事情，没有踏出第一步（开个头），那你就永远没有前进的机会，可能许许多多因素让你顾虑、担心，这都是一定会有的现象，但是你会不会因为这些担心的事情而把自己绑再原地而不愿意前进呢？一个目标，你必须踏出第一步，才有可能到达目的地，也才有机会去完成你要完成的事情，没有第一步，以后几千几万步都是空谈的天马行空。<br><br>一个目标、一个想法无论过程会有什么挑战，前提是你要自己把第一步跨出去，路途是好是坏是辛苦是甜美都无法预料，你认为会很辛苦、很难熬的路程，它同样有让你回味无穷的山林美景；一段你认为很美好很平稳的旅途，它也可能会有突然的暴风雨甚至下大雪的可能，你不需要担心东担心西，把工具准备好、心态调适好，然后就出发吧，你该有的不是担心，而是勇气。</div>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('07615c6f67cf4e48a15f210d6dd12519', '0461d49f0fb8442b8855277ef5987a52', '<p>注册成立xx集团</p>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('4163a2dc75bb4a1b86c0b1828bf0941a', '290ee3960c16499a82131e760b448610', '<h3 style="font-family: 微软雅黑; font-weight: bold; color: rgb(51, 51, 51); margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 16px; text-align: center; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><dt style="line-height: 1.42857; font-weight: 400; list-style-position: outside; list-style-type: none; margin: 0px; padding: 5px 0px 20px 50px; border: 0px; background: url(&quot;https://file.caixin.com/images/channel/aboutus/images/add.gif&quot;) no-repeat rgb(248, 248, 248); height: 40px; color: rgb(40, 40, 40); font-size: 14px; text-align: start;">地址：xx市xx区xx路xx号xx楼xx层，邮政编码：xxxxx</dt><dd style="line-height: 26px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; list-style-position: outside; list-style-type: none; padding: 5px 0px 0px 50px; border: 0px; background: url(&quot;https://file.caixin.com/images/channel/aboutus/images/ico_04.jpg&quot;) no-repeat rgb(248, 248, 248); color: rgb(40, 40, 40); font-size: 14px; font-weight: 400; text-align: start;"><p style="margin-bottom: 0px; padding: 0px; border: 0px;">总机：010-8590-xxx/xxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">传真：010-8590-xxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">客服热线：400-696-0110/010-xxxxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">网站广告热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">杂志广告热线：010-8590-xxxx/xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">网站市场热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">会议合作热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">培训合作热线：010-8590-xxxx/xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">媒体合作热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">渠道合作热线：010-8564-xxxx</p></dd></h3>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('6f89661448d44cf5b6ac0f5fc54f9d47', '3a2db050ac3a4433a5f233b32767a437', '<p>荣获xx省“xxx”企业称号<br></p>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('7d361f38ab364a439ca945e51cb55363', '7752d4a2a6db478ead2b88e24593866c', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">自我提高的方法</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;;">在成长生活中，我一直在寻找能够提升自我的方法途径。我已经找到了14个最好的技巧可以帮助你更好的提升自我。其中有一些简单方法步骤你可以立即开始去做，还有一些更大的计划你需要更多的努力去完成。<br><br><strong>1.每天读书。</strong><br><br>书是智慧的源泉。你读的书越多，你就会变得更加有智慧。都有什么书可以让你提高自己呢？我看过的《正能量》、《高效能人士的7个习惯》、《从优秀到卓越》等等都是很好的<a href="https://www.51flash.com/lizhi/lizhishuji/" style="color: rgb(19, 110, 194);">励志书籍</a>，可以帮助你认识自己，同时<a href="https://www.51flash.com/lizhi/lizhishuji/94.html" style="color: rgb(19, 110, 194);">正确认识自己是一种能力</a>。<br><br><strong>2.学习新的语言。</strong><br><br>学习一门新的语言是一项挑战，你可以通过学习语言来了解不同的文化背景，丰富自己的知识。前一阵俄罗斯大选时，我就学习了俄语的一些基本语句，很有意思。你还在苦苦学习英语么？为什么不去学习新的语言呢，也许有更适合你的语言等着你去发掘。<br><br><strong>3.打造你的灵感空间。</strong><br><br>你的生活环境会影响你的情绪，如果你生活在一个充满灵感的环境中，你每天都会富有创造力和激情。如果你的房间还是一团糟的话，是时候改造它了。从小事做起，先整理你的桌面吧。<br><br><strong>4.战胜你的恐惧。</strong><br><br>不得不说的是，每个人都有他害怕的东西。有人害怕在众人面前演讲，害怕成功，害怕冒险，害怕鬼怪，甚至是害怕毛毛虫。你也有害怕的东西吧？为什么不花时间去战胜你的恐惧呢？这会帮助你成长的。<br><br><strong>5.升级你的技能。</strong><br><br>如果你玩过角色扮演游戏的话，你应该了解升级的概念——通过增加经验值，你会变得更加强壮，更加厉害。我们的生活就好似一场真实的角色扮演游戏，只不过你不能任意存档或者读档（这就是现实与虚拟的区别）。我总是在学习新的知识，不断升级我的技能，在过去的一年里，我为自己增添了很多技能。这些新技能也是战胜强大“Boss”（生活中的困难）的最大资本。你会为自己升级哪些技能呢？ 可以看看这篇<a href="https://www.51flash.com/lizhi/xuexifangfa/379.html" style="color: rgb(19, 110, 194);">激发创造力的三个小练习</a>。<br><br><strong>6.给未来的自己写一封信。</strong><br><br>5年后的自己会是什么样的呢？你可以写一封信给5年后的自己，我想你一定有很多话要说：“告诉自己要好好学习，珍惜时间……不要做浪费时间的事情”亦或是“珍惜身边的朋友，亲人……” 好吧，既然这样，为什么不从现在开始珍惜生活呢？要知道，现在的每一步都在书写自己的历史。我想5年后的自己应该不仅仅是身体上的成长，思想与心灵也应该更加成熟。<br><br><strong>7.承认自己的缺点。</strong><br><br>每个人都有缺点，但重点是了解它们，承认它们，并且重视它们。你的缺点是什么呢？不用告诉我，用自己的行动去改掉吧！<br><br><strong>8.立即行动。</strong><br><br>我承认天枰座的我确实有时会变得非常犹豫，不知道该怎么选择。<a href="https://www.51flash.com/lizhi/lizhiwenzhang/" target="_blank" style="color: rgb(19, 110, 194);">励志文章</a>&nbsp;<a href="https://www.51flash.com/" target="_blank" style="color: rgb(19, 110, 194);">www.51fLash.com</a>&nbsp;后来，我找到了克服犹豫的秘诀——立即行动。通常一件事我会在60秒内果断下决定，然后立即执行。这样我就不会给自己任何时间去犹豫不决。自从我养成了立即行动的习惯，我的效率变得更高了，我节省了一大笔时间去做事情，而不是去想，去犹豫。我认为，<a href="https://www.51flash.com/lizhi/lizhigushi/397.html" style="color: rgb(19, 110, 194);">立即行动</a>的习惯是每个人都应该努力培养的，这会给你的生活带来巨大的改变。<br><br><strong>9.向你佩服的人学习。</strong><br><br>每个人在生活中都有自己佩服的人，他们可以是伟大人物，也可以是你的朋友，你的亲人，甚至是一个陌生人。我在参加运动会的时候，非常佩服5000米比赛的第一名，每一次他从我身边跑过，我为他坚定地眼神所折服。尽管他大口喘着粗气，汗流浃背，但是他还是没有放慢脚步。我想，这种坚毅的眼神正是我所缺少的，我要向他学习。你也有佩服的人吧？你之所以佩服那个人，是因为他们身上拥有某种你没有的东西，而这种东西正是你所缺少的。所以，向你佩服的人学习，从他们身上获得新的能力。<br><br><strong>10.减少在QQ上的时间。</strong><br><br>我已经认识到自己养成了一个不好的习惯，那就是每次打开电脑第一件事就是挂上QQ，我的很多朋友也有这个习惯。当你挂着QQ的时候，你会不时的收到聊天信息，打断你正在进行的工作。每当你停下手头工作去查看QQ消息的时候，你的时间被浪费了，而重新进行工作又需要一定的“转换时间”。<br><br><strong>11.培养一个新的习惯。</strong><br><br>30天可以培养一个新的习惯，我在用Any.Do这个软件管理时间时，我设定了培养新习惯的计划。将一个任务设定成每日重复，每天只需完成这个任务，这样30天后我就养成了新的习惯。现在，我通过每日习惯计划已经养成了每天做50个俯卧撑；每天早上读一个小时英语；每天听写VOA英语；每天6：30起床…… 习惯一旦养成，就很容易做到了。<br><br><strong>12.让过去的过去。</strong><br><br>你是否曾经有过一些不愉快的事情呢？如果有的话，是时候让它们随风而去了。记着那些事情只会阻挡你前进的步伐。你是否有时会焦虑呢？不如看看这篇《如何消除焦虑情绪 》。<br><br><strong>13.送人玫瑰手有余香。</strong><br><br>你对别人好，别人也会对你好。事实上，我们很多人并不能够做到这一点。我们看到别人的缺点，总是想以一个长者的身份教育别人，但是殊不知每个人都有自己的生活，你不能将你的意志强加于别人身上。试着尊重他人的想法与生活习惯，更多的帮助他们，你会发现与人相处好其实很简单。<br><br><strong>14.好好休息。</strong><br><br>个人提升不是一朝一夕就能完成的，它需要我们持之以恒的努力与<a href="https://www.51flash.com/339.html" style="color: rgb(19, 110, 194);">勤奋</a>。当我们看书累了的时候，要懂得休息，听听轻音乐，舒缓心情。散散步，亲近大自然。只有休息好了，我们才能更好的前行。</div>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('7da2f93f3b0b4a77a220a328b3024ee3', 'c0635501f7ac45d7b66255d287c3193a', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">不要说从头我们该看以后</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">面对到不同的问题，我们无法做到尽善尽美，有时候选择错一个方法，有时候踏错了一步伐，这些都会发生，不过人生嘛，总是在错误中学习成长的，你没有用错方法、踏错步伐，你又能如何知道原来还有更好的方式去处理这些问题，只是错了就错了，一直想着如果以前怎么做、怎么做就不会发生这种后果的话，你又如何能面对以后的人生。<br><br>以前的种种就放给过去吧！过去的所有请告诉自己不要后悔也不要用以后的人生来浪费，你只要能从过去的经历学得以后面对人生的经验，那过去的选择错或对，已经发生，无法改变也不可能让你重新来过，但我们必须看着以后的人生，从以前的错误选择、错误决定中得到教训，让过去的不好变成以后的好。<div class="google-auto-placed ap_container" style="width: 625px; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8774499223795406" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 0px;"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 625px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 625px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="625" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?guci=2.2.0.0.2.2.0.0&amp;client=ca-pub-8774499223795406&amp;output=html&amp;h=280&amp;adk=3433591129&amp;adf=2201363562&amp;pi=t.aa~a.2318691080~i.4~rp.1&amp;w=625&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1595866995&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=1273901384&amp;psa=1&amp;ad_type=text_image&amp;format=625x280&amp;url=https%3A%2F%2Fwww.51flash.com%2Flizhi%2Flizhiwenzhang%2F18688.html&amp;flash=0&amp;fwr=0&amp;pra=3&amp;rh=157&amp;rw=625&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;adsid=NT&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfSx7Imlzc3Vlck9yaWdpbiI6Imh0dHBzOi8vYXR0ZXN0YXRpb24uYW5kcm9pZC5jb20iLCJzdGF0ZSI6MH1d&amp;dt=1609158713942&amp;bpp=2&amp;bdt=382&amp;idt=-M&amp;shv=r20201203&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Db5d8dd43eb9ff308-22ed457c57c50042%3AT%3D1608994850%3ART%3D1608994850%3AS%3DALNI_MYx013sFaO3tNHaWDu2Xkdd4gH9oA&amp;prev_fmts=0x0%2C980x280&amp;nras=2&amp;correlator=479957863216&amp;frm=20&amp;pv=1&amp;ga_vid=1081928679.1609158714&amp;ga_sid=1609158714&amp;ga_hid=1709791312&amp;ga_fc=0&amp;u_tz=480&amp;u_his=1&amp;u_java=0&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1004&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=484&amp;ady=916&amp;biw=1903&amp;bih=843&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=2262205358601054&amp;pem=291&amp;ref=https%3A%2F%2Fwww.51flash.com%2Flizhi%2Flizhiwenzhang%2Flist_2.html&amp;rx=0&amp;eae=0&amp;fc=1408&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1004%2C1920%2C843&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=8328&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;xpc=xoe9VZngnX&amp;p=https%3A//www.51flash.com&amp;dtd=9" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CL7IuqzX8O0CFVDL3godzksGrw" data-load-complete="true" style="left: 0px; position: absolute; top: 0px; border-width: 0px; border-style: initial; width: 625px; height: 280px;"></iframe></ins></ins></ins></div><br><br>我们常常都会花费很多时间在懊恼过去犯下的错，但懊恼无法改变过去已经发生的事实，只会让自己浪费更多更多时间在错误的事情上，你能选择记着过去的错误，然后一直在后悔、懊恼的回圈下让往后的人生都笼罩黑暗的色彩，但更可以亲自改变未来，用以前的经验跟教训让自己能找到更好更适合的选择来面对，只是你放下了对于过去的后悔了吗？<br><br>心里不要总想着如果可以从头再来，那有多好。因为你每想一次，就是浪费一次时间，浪费一次面对未来的机会，过去不能从头再来，但我们能把握未来，以前的已经过去，事情都过了，自己就不要还把自己的心放在过去的那些事情上，错或对搞清楚就好，接着从对的事情上累积经验，从错误的过程中学习新的体验。<br><br>自己要给自己面对未来的机会，以前的就过去了，不要跟自己过不去，虽然你不一定可以轻松的面对以前的错误，只是要记得以后的<font color="#136ec2">人生</font>才是你该好好掌握的，过去不能从头开始，但以后却能从新走起。<br></div><div><br></div>', NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('9d6b4a41303b4ad185afe894c2ade954', '8d9861ed2e294d2793ad912e346e168f', '<p><font face="微软雅黑"><span style="font-size: 14px;">荣获xxx颁发的“技术创新先进企业"</span></font><br></p>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('1487fb94018f47f0a75c35a2f7314fcd', '1829d3c253eb42bfa1e228d4aa1894cf', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">跨出你的第一步</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">碰上自己想做的事情就去做、想达成的目标就去冲，不要给自己太多理由来逃避，或许会担心害怕，毕竟是自己从来没面对过这些问题，但重点是你敢不敢跨出第一步，当你用着必死的决心，豁达的走出这条路的第一步，那其实问题也已经减少一半，怕就怕许多人都把各种理由当成可以逃避的借口，连第一步都不愿意给自己机会，随时都想着用理由来让自己放弃第一步的跨出。<br><br>我们毕竟都是会担心害怕，怕遇上无法预料的问题、怕遇上没处理过的事情，但这些问题在你未跨出第一步的时候，其实根本都不会发生，只是你用来逃避问题的理由罢了，然而当你跨出第一步了，那你也不需要担心任何问题，因为船到桥头自然直啊！你有勇气跨出第一步，就也会有勇气解决以后的任何<a href="https://www.51flash.com/zheligushi/17495.html" style="color: rgb(19, 110, 194);">问题</a>，可是你必须给自己机会挑战新的道路跟方向。</div>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('2412fb8814aa46f8bac6907b4b6a2609', 'f88b9abdcf414b2cb9afea4d0f11f39f', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">失败不是一种过错</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">失败不是自己的错，不要把自己打入十八层地狱，可能方法错、选择错、观念错，但是失败只是还没成功而已，不需要认为自己是个失败者，失败的是还没达成（或错过）你要达成的目标（事情），不是你自己本身是个失败，若将自己人生套上失败的紧箍咒，让负面情绪持续影响着你，以后将会导致更多的失败而已。<br><br>失败不是自己的错，这点一定要记住，不要事情已经失败还把自己的信心都赔上去，思考一下到底是选择错误的方式所造成的，还是因为自己的观念错误而导致，改变过去错误的方法，但不要消灭自己的自信，许多人失败就把自己认定为失败者，可是你的失败只是面对这件事情而失败，不是你的人生都失败。</div>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('3d3f80519bef469e88c47da207f9e954', '4e000d5edb5e48e4bbf7d04ef9d8f616', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">不能决定未来那就决定当下</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">不管过去你做了多少选择跟决定，你无法预料下一秒到底会发生什么事情，就算你步步为营的经营着人生，同样的风风雨雨还是可能会在你无意中来袭，这些突发状况可能好、可能不好，有时候你表面以为是倒楣的事情，却可能在背后替你挡下大灾难，也可能表面看上去是好事，结果实际上失去的远比得到的还要多；只是不管以后，你要管的只有现在。<br><br>你无法知道你的选择或决定对未来会产生什么影响，但是每个选择总有好坏之分，你选择好的方向，虽然过程可能会很辛苦，但结果还有对于以后的影响，一定是有帮助的；但若只因为想要轻松愉快甚至想自私的得到不该有的富有，或许当下轻松了、能享受了，但以后肯定会由盛转衰，毕竟你已经享受了美好的结果，那以后只剩下辛苦的耕耘。</div>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('4d3d8984f4814a7e86f676d1dbc0f0ea', 'c1c66a2fee6347f5a4021ce953b89694', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">尽力而为的美好</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">决定一个目标就该去冲、去闯，但内心请记得保持着一种态度，那就是尽力而为的态度，或许能顺利的达成目标，那就可喜可贺，但若没达成目标，请也给自己一些掌声，因为你尽力了，可能是环境不对、心态不对或是方法任何因素的问题，但你自己知道你已经尽力在当下用最极限的努力去迈向目标，只是还没成功而已。<br><br>还没成功不代表失败，只是我们还在成功的路上尚未到达终点，不要因此把自己的自信抹灭掉，也不需要认为自己输掉什么或失去什么，这次或许没达到目标，但肯定的是我们离成功又再靠近许多，或许看着别人成功会羡慕、或许压力会变大，只是已经尽力的自己也该值得鼓励，没成功不需要把自己打入十八层地狱。</div>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('ac033eb0887548249eb1f1d433755adf', '3f757e65b304439b82a76f028b82a914', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">面对人生微笑着苦中作乐</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">我不喜欢把自己的人生看成是悲剧，人生苦短，快乐不多，而且常常还得面临不同人带来的许多的痛苦跟伤害，但是你能做的有很多，行为可以带来美好、心态也行，别人给的伤害或痛苦，不需要把自己的人生给陪葬了，因为别人给的好或坏，我们无法决定，可是自己是可以选择用什么方式去面对它。<br><br>逆境当然是痛苦的，我们无法避免它的不发生，只不过既然得面对，你的做法是什么？是一把鼻涕一把眼泪拖着沉重的脚步前进，然后把自己的人生都浪费殆尽，还是在逆境中也能给自己想要的快乐跟美好；环境的不美好，来不及改变也无法改变了，可是自己的心态却还来得及选择要用什么样的方式来面对。</div>', NULL, NULL, NULL);
 INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('b88d426d1b3d48acb3c89f7490d7521c', 'fb2367bb887c4a5192f26c268df2a6ca', '<h1 style="text-align: center; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-size: 28px; font-family: &quot;microsoft yahei&quot;, simsun, tahoma; color: rgb(37, 37, 37);">超越自我，才是真我风采</h1><p style="margin: 25px auto 0px; padding: 0px; color: rgb(37, 37, 37); font-family: &quot;Microsoft Yahei&quot;, Arial; font-size: 16px;"><span style="font-size: 14px;">在城市的高速发展路上，社会上有了方方面面的变化，从以前的农耕社会进步到现在资本社会，人的</span><a href="https://www.bidushe.com/jingdian/suibi/" style="color: rgb(37, 37, 37);"><span style="font-size: 14px;">生活</span></a><span style="font-size: 14px;">方式上也发生了改变，改变的背后还有一股股的压力，这些压力一方面在推动社会的前进，同时不知不觉中把人们压得喘不过气来，当中尤以社会精英为甚。压力与社会发展共生，这是规律，作为现代人谁也躲不开、避不过。只有我们用自信和智勇，用一个健康的心态，积极面对，才能迎面解决掉一切这些遇到的难题。</span></p><p style="margin: 25px auto 0px; padding: 0px; color: rgb(37, 37, 37); font-family: &quot;Microsoft Yahei&quot;, Arial; font-size: 16px;"><span style="font-size: 14px;">失败者往往是在最后时刻未能坚持住而放弃努力，与成功失之交臂。要想拥有未来，要有勇气，要有智慧，要有耐心和毅力，许多名人就是因为靠坚持而取得最后的胜利！勾践饱受屈辱三年，回国后更有卧薪尝胆之举，总算光复越国，以报国仇。可见，能否坚持是取得胜利的最后一道障碍。在最黑暗的时刻，也就是光明就要到来的时刻，越在这样的时刻，越需要坚持，因为坚持就是胜利！只要平常遇到难题始终坚持住，往往未来就掌握在自己手里。</span></p><p style="margin: 25px auto 0px; padding: 0px; color: rgb(37, 37, 37); font-family: &quot;Microsoft Yahei&quot;, Arial; font-size: 16px;"><span style="font-size: 14px;">无数的故事告诉着我们，未来之路的脉搏必须自己抓住，不能把掌舵的位置让给其他人，哪怕只是一分，一秒，只有把路掌握在自己的手里才是</span><a href="https://www.bidushe.com/jingdian/ganwu/" style="color: rgb(37, 37, 37);"><span style="font-size: 14px;">人生</span></a><span style="font-size: 14px;">真正的前进，一种敢于和命运做斗争的表现，虽然一个人走会很艰难，但是，人生里所谓的路是自己的路，路是靠自己走出来的。</span></p><p style="margin: 25px auto 0px; padding: 0px; color: rgb(37, 37, 37); font-family: &quot;Microsoft Yahei&quot;, Arial; font-size: 16px;"><span style="font-size: 14px;">人在现实里努力打滚，往往也会积累很多的压力，化解压力是艰难的，有时甚至是痛苦的。但这只能靠自己，别人是帮不上忙的。因为，许多压力是自己争来的。比如是选某种职业，竞争了某个岗位，想把自己的工作做到最好，想人生更上一层楼，想为社会作出更大的贡献，等等，都会给自己带来莫大的压力。关键是把握好这个度，过度了自然就会使精神受损，身体受损。一个人不去努力，不想怎么超越自我，终会被社会淘汰；而工作压力过大，操劳过度则有损健康。如何在忙与闲、重与轻间把握好尺度，是人生的一大课题。在我们为未来之路而勇往直前时，我们不能对身体的健康有所疏忽，不然当我们成功之时，却没有了精力去享受我们成功的喜悦，那将是很可悲的。而且，当我们在追求自我、展示自我、超越自我之时，我们也不能忘记要去注意自己的身体。如果我们的健康系统被破坏了，我们也将难以拥有坚持不懈的力量去抵达成功。</span></p>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f20851d30fe1498ca1cf7eb90deedabc', '1cd8420837cd457bb5273549215685fc', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">目标不同美丽不同</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">如你所说，每个人目标不同，选择方向都不同，你有美丽的风景，而我的景色也不差，只是当我们走过这些景点的时候，要确信自己的心血是值得的，不是跟着别人而走的，但话说回来，你选择自己的路还是跟随别人的路，其实都是自己的选择，旁人、路人甚至亲人都无法帮你下决定，可是你一定得对自己人生负责。<br><br>追求什么必然会失去些什么，我选择的走一条路，必然会失去其他的道路，你也相同，不一定有什么是对跟错，只是价值观不同罢了；可是在选择的时候，我们得知道选择这条路之后，到底会失去什么，并非有目标就冲就闯，因为你要思考这个梦想或目标，值不值得你花费你的人生、精神、体力去换取，甚至还要花费其他的东西。</div>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f3a96788e53348038a8bae415db8fd01', '43598709c98648e5b9124139040bd500', '<p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none;"><span style="font-size: 24px;"><b>企业简介</b></span></p><p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none; text-indent: 2em;"><br></p><p align="center" style="margin-bottom: 0px; padding: 0px; list-style: none; text-indent: 2em;"><br></p><p style="list-style-type: none; margin-bottom: 0px; padding: 0px; border: 0px; transition: color 0.2s ease 0s, background 0.4s ease 0s; color: rgb(102, 102, 102); font-family: &quot;microsoft yahei&quot;; font-size: 14px; text-align: justify;"><span style="color: rgb(96, 96, 96); font-family: Arial, sans-serif; font-size: 12px; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgb(96, 96, 96); font-family: Arial, sans-serif; font-size: 12px; text-align: left;">&nbsp;</span></p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;"><img style="width: 25%; float: left;" src="/zhglxt/profile/cms/upload/2021/07/07/af3be62b84ab4291a418cef63ff50140.jpg" data-filename="/profile/cms/upload/2021/07/07/af3be62b84ab4291a418cef63ff50140.jpg" class="note-float-left">世界上美丽的东西千千万万，却没有一样比年轻更为美丽；世界上珍贵的东西数也数不清，却没有一样比青春更为宝贵。我们是多么值得骄傲多么让人羡慕啊！而我们若只是挥霍光阴，只是享受，不去奋斗拼搏，那我们真的算拥有青春吗答案是否定的，我们仅有发愤图强，努力耕耘才能做到无愧于青春，无愧于人生，才能拥有一个充实而完美的青春。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　奋斗的青春是完美的风景正是那千万颗在青春中奋斗的心，以及那千万双在天空中高飞的振翅，装扮着最完美最美丽最珍贵的人生季节—青春。将青春变成人生最完美生活的出发点。“恰同学少年，风华正茂，书生意气，挥斥方遒。”昭示着一代伟人奋斗的青春。他们的青春因充满奋斗和活力而洋溢着完美，而今，青春正我在我们手中，我们不能容忍青春在我们手中白白流逝，我们不能在叹息声中虚度光阴，我们不能在叹息声中了结生命，那么就让我们在青春时节奋发吧！让青春之花永远绽放在我们心中，书写一卷有声有色的人生。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　青春在奋斗中展现美丽，青春的美丽永远展此刻她的奋斗拼搏之中。就像雄鹰的美丽是展此刻他搏风击雨中，如苍天之魂的翱翔中，正拥有青春的我们，何不以勇锐盖过怯懦，以进取压倒苟安，扬起奋斗的帆吧！在波涛汹涌的大海中不断前行，展示我们子一代人青春的壮美与力量，让我们就像雄鹰一样搏击长空吧！让青春之歌扬出昂扬的旋律，让我们的声明发出耀眼的光芒。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　奋斗抒写无悔青春，在漫漫人生道路上，青春虽然只是一小段，但当你白发苍苍回首时，你会发现以往拥有的青春依然会在记忆中闪烁着动人的光彩。青春无悔该是我们每个人的追求，我们仅有把握好青春的每一天，在激流中涌进不断拼搏，我们才能够骄傲地说：“我的青春是无悔的！”</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　雷锋说：“青春啊，永远是完美的，可是真正的青春只属于那些永远力争上游的人，永远忘我劳动的人，永远谦虚的人！”所以唯有奋斗，为自我的梦想不断前行，朝着我们自我的目标不断迈进，我们才能拥有一个真正而又无悔的青春。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　青春的世界里，不需要固结你的思想，仅有追寻完美的梦想，人前方荆棘丛生，我们都要持之以恒。让我们像江河一样，向着大海不断奔流吧！在漫漫的人生道路上，谱写青春的音符，留下奋斗的足迹。</p><p style="margin-bottom: 12px; padding: 0px; border: 0px; color: rgb(51, 51, 51); line-height: 30px; font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">　　用我们的奋斗和梦想扬起青春的船帆，当我们努力拼搏地摇浆时，成功的闸门也会慢慢地再为我们打开，我们将享受一份青春的完美，收获一份成功的喜悦。</p>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('f45cfcfebde74453af45d6af8904900a', 'af97301ee4f1448e98b6ef61e667106e', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">海伦.凯勒带给我们的启示</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;;">如果你耳朵听不见、眼睛看不到，要怎样有勇气活下去？就是有人活下去了，那个人就是海伦．凯勒。<br><br>海伦．凯勒一出生就听不见、看不到，所以学习对她来说是非常困难的，但是她却成功了，要感谢很多在这段求学路程上帮助海伦．凯勒的人，例如：她的妈妈、她的老师、还有她自己的努力付出。<br>她勇敢活下来的精神令我非常敬佩，她坚强的毅力让我想效法学习，真令我赞叹不已！<br><br>在我们之前，已经有许多的人靠着坚强的毅力完成了令大家意想不到的好成绩，只要努力上进，不管是谁都能有<a href="https://www.51flash.com/lizhi/lizhimingyan/21583.html" style="color: rgb(19, 110, 194);">成功</a>的一天。<br><br>海伦．凯勒成功的原因，只有一个，那就是相信自己，努力追求理想。俗话说的好：”天下无难事，只怕有心人。”意思就是说，天下没有做不到的事，只看您有没有努力，不要光只是嘴巴说说而已。</div>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('07615c6f67cf4e48a15f210d6dd12519', '0461d49f0fb8442b8855277ef5987a52', '<p>注册成立xx集团</p>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('4163a2dc75bb4a1b86c0b1828bf0941a', '290ee3960c16499a82131e760b448610', '<h3 style="font-family: 微软雅黑; font-weight: bold; color: rgb(51, 51, 51); margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 16px; text-align: center; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><dt style="line-height: 1.42857; font-weight: 400; list-style-position: outside; list-style-type: none; margin: 0px; padding: 5px 0px 20px 50px; border: 0px; background: url(&quot;https://file.caixin.com/images/channel/aboutus/images/add.gif&quot;) no-repeat rgb(248, 248, 248); height: 40px; color: rgb(40, 40, 40); font-size: 14px; text-align: start;">地址：xx市xx区xx路xx号xx楼xx层，邮政编码：xxxxx</dt><dd style="line-height: 26px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; list-style-position: outside; list-style-type: none; padding: 5px 0px 0px 50px; border: 0px; background: url(&quot;https://file.caixin.com/images/channel/aboutus/images/ico_04.jpg&quot;) no-repeat rgb(248, 248, 248); color: rgb(40, 40, 40); font-size: 14px; font-weight: 400; text-align: start;"><p style="margin-bottom: 0px; padding: 0px; border: 0px;">总机：010-8590-xxx/xxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">传真：010-8590-xxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">客服热线：400-696-0110/010-xxxxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">网站广告热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">杂志广告热线：010-8590-xxxx/xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">&nbsp;</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">网站市场热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">会议合作热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">培训合作热线：010-8590-xxxx/xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">媒体合作热线：010-8590-xxxx</p><p style="margin-bottom: 0px; padding: 0px; border: 0px;">渠道合作热线：010-8564-xxxx</p></dd></h3>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('6f89661448d44cf5b6ac0f5fc54f9d47', '3a2db050ac3a4433a5f233b32767a437', '<p>荣获xx省“xxx”企业称号<br></p>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('7d361f38ab364a439ca945e51cb55363', '7752d4a2a6db478ead2b88e24593866c', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">自我提高的方法</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;;">在成长生活中，我一直在寻找能够提升自我的方法途径。我已经找到了14个最好的技巧可以帮助你更好的提升自我。其中有一些简单方法步骤你可以立即开始去做，还有一些更大的计划你需要更多的努力去完成。<br><br><strong>1.每天读书。</strong><br><br>书是智慧的源泉。你读的书越多，你就会变得更加有智慧。都有什么书可以让你提高自己呢？我看过的《正能量》、《高效能人士的7个习惯》、《从优秀到卓越》等等都是很好的<a href="https://www.51flash.com/lizhi/lizhishuji/" style="color: rgb(19, 110, 194);">励志书籍</a>，可以帮助你认识自己，同时<a href="https://www.51flash.com/lizhi/lizhishuji/94.html" style="color: rgb(19, 110, 194);">正确认识自己是一种能力</a>。<br><br><strong>2.学习新的语言。</strong><br><br>学习一门新的语言是一项挑战，你可以通过学习语言来了解不同的文化背景，丰富自己的知识。前一阵俄罗斯大选时，我就学习了俄语的一些基本语句，很有意思。你还在苦苦学习英语么？为什么不去学习新的语言呢，也许有更适合你的语言等着你去发掘。<br><br><strong>3.打造你的灵感空间。</strong><br><br>你的生活环境会影响你的情绪，如果你生活在一个充满灵感的环境中，你每天都会富有创造力和激情。如果你的房间还是一团糟的话，是时候改造它了。从小事做起，先整理你的桌面吧。<br><br><strong>4.战胜你的恐惧。</strong><br><br>不得不说的是，每个人都有他害怕的东西。有人害怕在众人面前演讲，害怕成功，害怕冒险，害怕鬼怪，甚至是害怕毛毛虫。你也有害怕的东西吧？为什么不花时间去战胜你的恐惧呢？这会帮助你成长的。<br><br><strong>5.升级你的技能。</strong><br><br>如果你玩过角色扮演游戏的话，你应该了解升级的概念——通过增加经验值，你会变得更加强壮，更加厉害。我们的生活就好似一场真实的角色扮演游戏，只不过你不能任意存档或者读档（这就是现实与虚拟的区别）。我总是在学习新的知识，不断升级我的技能，在过去的一年里，我为自己增添了很多技能。这些新技能也是战胜强大“Boss”（生活中的困难）的最大资本。你会为自己升级哪些技能呢？ 可以看看这篇<a href="https://www.51flash.com/lizhi/xuexifangfa/379.html" style="color: rgb(19, 110, 194);">激发创造力的三个小练习</a>。<br><br><strong>6.给未来的自己写一封信。</strong><br><br>5年后的自己会是什么样的呢？你可以写一封信给5年后的自己，我想你一定有很多话要说：“告诉自己要好好学习，珍惜时间……不要做浪费时间的事情”亦或是“珍惜身边的朋友，亲人……” 好吧，既然这样，为什么不从现在开始珍惜生活呢？要知道，现在的每一步都在书写自己的历史。我想5年后的自己应该不仅仅是身体上的成长，思想与心灵也应该更加成熟。<br><br><strong>7.承认自己的缺点。</strong><br><br>每个人都有缺点，但重点是了解它们，承认它们，并且重视它们。你的缺点是什么呢？不用告诉我，用自己的行动去改掉吧！<br><br><strong>8.立即行动。</strong><br><br>我承认天枰座的我确实有时会变得非常犹豫，不知道该怎么选择。<a href="https://www.51flash.com/lizhi/lizhiwenzhang/" target="_blank" style="color: rgb(19, 110, 194);">励志文章</a>&nbsp;<a href="https://www.51flash.com/" target="_blank" style="color: rgb(19, 110, 194);">www.51fLash.com</a>&nbsp;后来，我找到了克服犹豫的秘诀——立即行动。通常一件事我会在60秒内果断下决定，然后立即执行。这样我就不会给自己任何时间去犹豫不决。自从我养成了立即行动的习惯，我的效率变得更高了，我节省了一大笔时间去做事情，而不是去想，去犹豫。我认为，<a href="https://www.51flash.com/lizhi/lizhigushi/397.html" style="color: rgb(19, 110, 194);">立即行动</a>的习惯是每个人都应该努力培养的，这会给你的生活带来巨大的改变。<br><br><strong>9.向你佩服的人学习。</strong><br><br>每个人在生活中都有自己佩服的人，他们可以是伟大人物，也可以是你的朋友，你的亲人，甚至是一个陌生人。我在参加运动会的时候，非常佩服5000米比赛的第一名，每一次他从我身边跑过，我为他坚定地眼神所折服。尽管他大口喘着粗气，汗流浃背，但是他还是没有放慢脚步。我想，这种坚毅的眼神正是我所缺少的，我要向他学习。你也有佩服的人吧？你之所以佩服那个人，是因为他们身上拥有某种你没有的东西，而这种东西正是你所缺少的。所以，向你佩服的人学习，从他们身上获得新的能力。<br><br><strong>10.减少在QQ上的时间。</strong><br><br>我已经认识到自己养成了一个不好的习惯，那就是每次打开电脑第一件事就是挂上QQ，我的很多朋友也有这个习惯。当你挂着QQ的时候，你会不时的收到聊天信息，打断你正在进行的工作。每当你停下手头工作去查看QQ消息的时候，你的时间被浪费了，而重新进行工作又需要一定的“转换时间”。<br><br><strong>11.培养一个新的习惯。</strong><br><br>30天可以培养一个新的习惯，我在用Any.Do这个软件管理时间时，我设定了培养新习惯的计划。将一个任务设定成每日重复，每天只需完成这个任务，这样30天后我就养成了新的习惯。现在，我通过每日习惯计划已经养成了每天做50个俯卧撑；每天早上读一个小时英语；每天听写VOA英语；每天6：30起床…… 习惯一旦养成，就很容易做到了。<br><br><strong>12.让过去的过去。</strong><br><br>你是否曾经有过一些不愉快的事情呢？如果有的话，是时候让它们随风而去了。记着那些事情只会阻挡你前进的步伐。你是否有时会焦虑呢？不如看看这篇《如何消除焦虑情绪 》。<br><br><strong>13.送人玫瑰手有余香。</strong><br><br>你对别人好，别人也会对你好。事实上，我们很多人并不能够做到这一点。我们看到别人的缺点，总是想以一个长者的身份教育别人，但是殊不知每个人都有自己的生活，你不能将你的意志强加于别人身上。试着尊重他人的想法与生活习惯，更多的帮助他们，你会发现与人相处好其实很简单。<br><br><strong>14.好好休息。</strong><br><br>个人提升不是一朝一夕就能完成的，它需要我们持之以恒的努力与<a href="https://www.51flash.com/339.html" style="color: rgb(19, 110, 194);">勤奋</a>。当我们看书累了的时候，要懂得休息，听听轻音乐，舒缓心情。散散步，亲近大自然。只有休息好了，我们才能更好的前行。</div>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('7da2f93f3b0b4a77a220a328b3024ee3', 'c0635501f7ac45d7b66255d287c3193a', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">不要说从头我们该看以后</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">面对到不同的问题，我们无法做到尽善尽美，有时候选择错一个方法，有时候踏错了一步伐，这些都会发生，不过人生嘛，总是在错误中学习成长的，你没有用错方法、踏错步伐，你又能如何知道原来还有更好的方式去处理这些问题，只是错了就错了，一直想着如果以前怎么做、怎么做就不会发生这种后果的话，你又如何能面对以后的人生。<br><br>以前的种种就放给过去吧！过去的所有请告诉自己不要后悔也不要用以后的人生来浪费，你只要能从过去的经历学得以后面对人生的经验，那过去的选择错或对，已经发生，无法改变也不可能让你重新来过，但我们必须看着以后的人生，从以前的错误选择、错误决定中得到教训，让过去的不好变成以后的好。<div class="google-auto-placed ap_container" style="width: 625px; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-8774499223795406" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 0px;"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="display: inline-table; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 625px; background-color: transparent;"><ins id="aswift_2_anchor" style="display: block; border: none; height: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 625px; background-color: transparent; overflow: hidden; opacity: 0;"><iframe id="aswift_2" name="aswift_2" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="625" height="280" frameborder="0" src="https://googleads.g.doubleclick.net/pagead/ads?guci=2.2.0.0.2.2.0.0&amp;client=ca-pub-8774499223795406&amp;output=html&amp;h=280&amp;adk=3433591129&amp;adf=2201363562&amp;pi=t.aa~a.2318691080~i.4~rp.1&amp;w=625&amp;fwrn=4&amp;fwrnh=100&amp;lmt=1595866995&amp;num_ads=1&amp;rafmt=1&amp;armr=3&amp;sem=mc&amp;pwprc=1273901384&amp;psa=1&amp;ad_type=text_image&amp;format=625x280&amp;url=https%3A%2F%2Fwww.51flash.com%2Flizhi%2Flizhiwenzhang%2F18688.html&amp;flash=0&amp;fwr=0&amp;pra=3&amp;rh=157&amp;rw=625&amp;rpe=1&amp;resp_fmts=3&amp;wgl=1&amp;fa=27&amp;adsid=NT&amp;tt_state=W3siaXNzdWVyT3JpZ2luIjoiaHR0cHM6Ly9hZHNlcnZpY2UuZ29vZ2xlLmNvbSIsInN0YXRlIjowfSx7Imlzc3Vlck9yaWdpbiI6Imh0dHBzOi8vYXR0ZXN0YXRpb24uYW5kcm9pZC5jb20iLCJzdGF0ZSI6MH1d&amp;dt=1609158713942&amp;bpp=2&amp;bdt=382&amp;idt=-M&amp;shv=r20201203&amp;cbv=r20190131&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Db5d8dd43eb9ff308-22ed457c57c50042%3AT%3D1608994850%3ART%3D1608994850%3AS%3DALNI_MYx013sFaO3tNHaWDu2Xkdd4gH9oA&amp;prev_fmts=0x0%2C980x280&amp;nras=2&amp;correlator=479957863216&amp;frm=20&amp;pv=1&amp;ga_vid=1081928679.1609158714&amp;ga_sid=1609158714&amp;ga_hid=1709791312&amp;ga_fc=0&amp;u_tz=480&amp;u_his=1&amp;u_java=0&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1004&amp;u_aw=1920&amp;u_cd=24&amp;u_nplug=3&amp;u_nmime=4&amp;adx=484&amp;ady=916&amp;biw=1903&amp;bih=843&amp;scr_x=0&amp;scr_y=0&amp;oid=3&amp;pvsid=2262205358601054&amp;pem=291&amp;ref=https%3A%2F%2Fwww.51flash.com%2Flizhi%2Flizhiwenzhang%2Flist_2.html&amp;rx=0&amp;eae=0&amp;fc=1408&amp;brdim=0%2C0%2C0%2C0%2C1920%2C0%2C1920%2C1004%2C1920%2C843&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=8328&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;btvi=1&amp;fsb=1&amp;xpc=xoe9VZngnX&amp;p=https%3A//www.51flash.com&amp;dtd=9" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CL7IuqzX8O0CFVDL3godzksGrw" data-load-complete="true" style="left: 0px; position: absolute; top: 0px; border-width: 0px; border-style: initial; width: 625px; height: 280px;"></iframe></ins></ins></ins></div><br><br>我们常常都会花费很多时间在懊恼过去犯下的错，但懊恼无法改变过去已经发生的事实，只会让自己浪费更多更多时间在错误的事情上，你能选择记着过去的错误，然后一直在后悔、懊恼的回圈下让往后的人生都笼罩黑暗的色彩，但更可以亲自改变未来，用以前的经验跟教训让自己能找到更好更适合的选择来面对，只是你放下了对于过去的后悔了吗？<br><br>心里不要总想着如果可以从头再来，那有多好。因为你每想一次，就是浪费一次时间，浪费一次面对未来的机会，过去不能从头再来，但我们能把握未来，以前的已经过去，事情都过了，自己就不要还把自己的心放在过去的那些事情上，错或对搞清楚就好，接着从对的事情上累积经验，从错误的过程中学习新的体验。<br><br>自己要给自己面对未来的机会，以前的就过去了，不要跟自己过不去，虽然你不一定可以轻松的面对以前的错误，只是要记得以后的<font color="#136ec2">人生</font>才是你该好好掌握的，过去不能从头开始，但以后却能从新走起。<br></div><div><br></div>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('04c05db767384618a66165b18b743d88', 'ad1e4af494624d0791643c9f0ddbd124', '<h1 style="margin-top: 0px; margin-bottom: 0px; padding: 0px; font-weight: bold; font-family: 微软雅黑, Arial, sans-serif; font-size: 24px; text-align: center; color: rgb(53, 53, 53); height: 60px; line-height: 60px;">踏出梦想第一步</h1><div class="articleads2" style="float: right; color: rgb(68, 68, 68); font-family: &quot;Microsoft YaHei&quot;; font-size: 12px; margin-left: 6px !important;"></div><div class="articleContent" style="margin: 10px 0px 12px; line-height: 2; font-size: 14px; font-family: &quot;Microsoft YaHei&quot;; height: auto !important;">一件事情，没有踏出第一步（开个头），那你就永远没有前进的机会，可能许许多多因素让你顾虑、担心，这都是一定会有的现象，但是你会不会因为这些担心的事情而把自己绑再原地而不愿意前进呢？一个目标，你必须踏出第一步，才有可能到达目的地，也才有机会去完成你要完成的事情，没有第一步，以后几千几万步都是空谈的天马行空。<br><br>一个目标、一个想法无论过程会有什么挑战，前提是你要自己把第一步跨出去，路途是好是坏是辛苦是甜美都无法预料，你认为会很辛苦、很难熬的路程，它同样有让你回味无穷的山林美景；一段你认为很美好很平稳的旅途，它也可能会有突然的暴风雨甚至下大雪的可能，你不需要担心东担心西，把工具准备好、心态调适好，然后就出发吧，你该有的不是担心，而是勇气。</div>', NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."CMS_ARTICLE_DATA" VALUES ('9d6b4a41303b4ad185afe894c2ade954', '8d9861ed2e294d2793ad912e346e168f', '<p><font face="微软雅黑"><span style="font-size: 14px;">荣获xxx颁发的“技术创新先进企业"</span></font><br></p>', NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for CMS_COLUMN
@@ -2338,7 +2338,7 @@ CREATE TABLE "ZHGLXT"."OA_NOTIFY" (
   "UPDATE_BY" NVARCHAR2(64) VISIBLE NOT NULL,
   "UPDATE_TIME" DATE VISIBLE NOT NULL,
   "REMARK" NVARCHAR2(255) VISIBLE,
-  "DEL_FLAG" NCHAR(1) VISIBLE NOT NULL
+  "DEL_FLAG" NCHAR(1) VISIBLE DEFAULT '0' NOT NULL
 )
 LOGGING
 NOCOMPRESS
@@ -2415,6 +2415,15 @@ COMMENT ON TABLE "ZHGLXT"."OA_NOTIFY_RECORD" IS '通知通告发送记录';
 -- ----------------------------
 -- Records of OA_NOTIFY_RECORD
 -- ----------------------------
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('dd2e787f9bf04501b1d07e46e5ed6177', 'ff0ce9b990634f71b40a0d9678242c59', '6', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('dd7b83ab4bc842eea747ee031302db98', '61d351b9f34d4c70a0e565bf47a35af9', '3', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('deeda09033f14eb599c16cce1ea7e5a1', '1f3bf4fcad934e51b86f9ee661457b05', '12', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('e3d9e2bc284f4a87b2b5cb89dbfaf6ee', 'ff0ce9b990634f71b40a0d9678242c59', '4', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ea29c5fb30f34879800448b274f71ba1', '769607caf5e245f3ba3a4291649ed855', '12', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ee4ee7cf305c41e9838170eb8f54cf23', 'ff0ce9b990634f71b40a0d9678242c59', '3', '1', TO_DATE('2020-12-21 00:00:00', 'SYYYY-MM-DD HH24:MI:SS'));
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('efe47c2253bb4ecfaaec58ef92653c68', '769607caf5e245f3ba3a4291649ed855', '2', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('f149a2d083bd4122a083bc7413b4656f', '769607caf5e245f3ba3a4291649ed855', '3', '0', NULL);
+INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ffd4c9fd25e346fea25c696db231486d', '1f3bf4fcad934e51b86f9ee661457b05', '5', '0', NULL);
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('0aed096b8aa94b79bf2ac33b42cac1da', 'ff0ce9b990634f71b40a0d9678242c59', '13', '0', NULL);
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('0d24cda4d0e74fe485706140038fc840', 'ff68c5da85404b01a39b93f6cfea1ace', '7', '0', NULL);
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('0fad2feb3edc4cd69db176c1e0c20833', 'ff0ce9b990634f71b40a0d9678242c59', '2', '1', TO_DATE('2020-12-21 00:00:00', 'SYYYY-MM-DD HH24:MI:SS'));
@@ -2465,15 +2474,6 @@ INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('c8837bc1784445ecbc4735301f0a6f0
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('d2f0c6acf7034f7eb570be1230446c46', 'ff68c5da85404b01a39b93f6cfea1ace', '1', '1', TO_DATE('2022-11-04 00:00:00', 'SYYYY-MM-DD HH24:MI:SS'));
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('d82c7d7e41ea4a0a8ff25ec715808c24', '1f3bf4fcad934e51b86f9ee661457b05', '11', '0', NULL);
 INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('d87b11cea32d47dc80933e8bc2aa568d', '769607caf5e245f3ba3a4291649ed855', '8', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('dd2e787f9bf04501b1d07e46e5ed6177', 'ff0ce9b990634f71b40a0d9678242c59', '6', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('dd7b83ab4bc842eea747ee031302db98', '61d351b9f34d4c70a0e565bf47a35af9', '3', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('deeda09033f14eb599c16cce1ea7e5a1', '1f3bf4fcad934e51b86f9ee661457b05', '12', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('e3d9e2bc284f4a87b2b5cb89dbfaf6ee', 'ff0ce9b990634f71b40a0d9678242c59', '4', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ea29c5fb30f34879800448b274f71ba1', '769607caf5e245f3ba3a4291649ed855', '12', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ee4ee7cf305c41e9838170eb8f54cf23', 'ff0ce9b990634f71b40a0d9678242c59', '3', '1', TO_DATE('2020-12-21 00:00:00', 'SYYYY-MM-DD HH24:MI:SS'));
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('efe47c2253bb4ecfaaec58ef92653c68', '769607caf5e245f3ba3a4291649ed855', '2', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('f149a2d083bd4122a083bc7413b4656f', '769607caf5e245f3ba3a4291649ed855', '3', '0', NULL);
-INSERT INTO "ZHGLXT"."OA_NOTIFY_RECORD" VALUES ('ffd4c9fd25e346fea25c696db231486d', '1f3bf4fcad934e51b86f9ee661457b05', '5', '0', NULL);
 
 -- ----------------------------
 -- Table structure for QRTZ_BLOB_TRIGGERS
@@ -2599,10 +2599,6 @@ NOCOMPRESS
 PCTFREE 10
 INITRANS 1
 STORAGE (
-  INITIAL 65536 
-  NEXT 1048576 
-  MINEXTENTS 1
-  MAXEXTENTS 2147483645
   BUFFER_POOL DEFAULT
 )
 PARALLEL 1
@@ -2772,7 +2768,7 @@ COMMENT ON TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" IS '调度器状态表';
 -- ----------------------------
 -- Records of QRTZ_SCHEDULER_STATE
 -- ----------------------------
-INSERT INTO "ZHGLXT"."QRTZ_SCHEDULER_STATE" VALUES ('ZhglxtScheduler', 'DESKTOP-H1BQSV81677153244159', '1677154065465', '15000');
+INSERT INTO "ZHGLXT"."QRTZ_SCHEDULER_STATE" VALUES ('ZhglxtScheduler', 'DESKTOP-H1BQSV81677153244159', '1677159406085', '15000');
 
 -- ----------------------------
 -- Table structure for QRTZ_SIMPLE_TRIGGERS
@@ -2791,10 +2787,6 @@ NOCOMPRESS
 PCTFREE 10
 INITRANS 1
 STORAGE (
-  INITIAL 65536 
-  NEXT 1048576 
-  MINEXTENTS 1
-  MAXEXTENTS 2147483645
   BUFFER_POOL DEFAULT
 )
 PARALLEL 1
@@ -3038,6 +3030,7 @@ COMMENT ON TABLE "ZHGLXT"."SYS_DEPT" IS '部门表';
 -- ----------------------------
 -- Records of SYS_DEPT
 -- ----------------------------
+INSERT INTO "ZHGLXT"."SYS_DEPT" VALUES ('1', '104', '0,100,101,104', 'ces', '15', NULL, NULL, NULL, '0', '2', 'system', TO_DATE('2023-02-22 23:41:17', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL);
 INSERT INTO "ZHGLXT"."SYS_DEPT" VALUES ('100', '0', '0', '中国', '0', '系统管理员', '15888888888', '1111111111@qq.com', '0', '0', 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 22:51:18', 'SYYYY-MM-DD HH24:MI:SS'));
 INSERT INTO "ZHGLXT"."SYS_DEPT" VALUES ('101', '100', '0,100', '广东省', '40', 'test', '18888888888', '1111111111@qq.com', '0', '0', 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 22:51:18', 'SYYYY-MM-DD HH24:MI:SS'));
 INSERT INTO "ZHGLXT"."SYS_DEPT" VALUES ('102', '100', '0,100', '上海直辖市', '2', 'test', '18888888888', '1111111111@qq.com', '0', '0', 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 19:00:32', 'SYYYY-MM-DD HH24:MI:SS'));
@@ -3354,6 +3347,8 @@ INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('27', '系统默认（无参）', 'DE
 INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('28', '系统默认（无参）', 'DEFAULT', NULL, NULL, 'zhglxtTask.noParams', '系统默认（无参） 总共耗时：1毫秒', '0', NULL, TO_DATE('2020-10-29 16:00:46', 'SYYYY-MM-DD HH24:MI:SS'));
 INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('29', '系统默认（有参）', 'DEFAULT', NULL, NULL, 'zhglxtTask.params(''zhglxt'')', '系统默认（有参） 总共耗时：0毫秒', '0', NULL, TO_DATE('2020-10-29 16:00:50', 'SYYYY-MM-DD HH24:MI:SS'));
 INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('30', '系统默认（多参）', 'DEFAULT', NULL, NULL, 'zhglxtTask.multipleParams(''zhglxt'', true, 2000L, 316.50D, 100)', '系统默认（多参） 总共耗时：1毫秒', '0', NULL, TO_DATE('2020-10-29 16:00:53', 'SYYYY-MM-DD HH24:MI:SS'));
+INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('c13f631892be403999f8f2e7a82e63e5', '系统默认（有参）', 'DEFAULT', NULL, NULL, 'zhglxtTask.params(''zhglxt'')', '系统默认（有参） 总共耗时：7毫秒', '0', NULL, TO_DATE('2023-02-23 00:06:31', 'SYYYY-MM-DD HH24:MI:SS'));
+INSERT INTO "ZHGLXT"."SYS_JOB_LOG" VALUES ('cce79b7a151242159f7a2f23f327fb28', 'ee', 'DEFAULT', NULL, NULL, 'zhglxtTask.params(''zhglxt'')', 'ee 总共耗时：0毫秒', '0', NULL, TO_DATE('2023-02-06 23:40:08', 'SYYYY-MM-DD HH24:MI:SS'));
 
 -- ----------------------------
 -- Table structure for SYS_LOGININFOR
@@ -3458,55 +3453,6 @@ COMMENT ON TABLE "ZHGLXT"."SYS_MENU" IS '菜单权限表';
 -- ----------------------------
 -- Records of SYS_MENU
 -- ----------------------------
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1141', '缓存监控', '2', '10', '/monitor/cache', 'menuItem', 'C', '0', '1', 'monitor:cache:view', 'fa fa-cube', 'system', TO_DATE('2020-11-23 16:08:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-11-23 16:09:11', 'SYYYY-MM-DD HH24:MI:SS'), '缓存监控菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1142', '通告管理', '1077', '5', '/oa/notify', 'menuItem', 'C', '0', '1', 'oa:notify:view', 'fa fa-commenting-o', 'system', TO_DATE('2020-12-19 13:47:02', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-19 19:04:38', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1143', '新增', '1142', '10', '#', 'menuItem', 'F', '0', '1', 'oa:notify:add', '#', 'system', TO_DATE('2020-12-19 13:48:01', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-19 13:50:01', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1144', '修改', '1142', '20', '#', 'menuItem', 'F', '0', '1', 'oa:notify:edit', '#', 'system', TO_DATE('2020-12-19 13:48:27', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1145', '删除', '1142', '30', '#', 'menuItem', 'F', '0', '1', 'oa:notify:remove', '#', 'system', TO_DATE('2020-12-19 13:48:55', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1146', '我的通知', '1077', '4', '/oa/notify/myNotify', 'menuItem', 'C', '0', '0', 'oa:notify:myNotify', 'fa fa-commenting-o', 'system', TO_DATE('2020-12-19 18:42:08', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-07-07 14:16:10', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1148', '新增', '1118', '20', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:add', '#', 'system', TO_DATE('2020-12-25 00:49:13', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1149', '修改', '1118', '30', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:edit', '#', 'system', TO_DATE('2020-12-25 00:49:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1150', '删除', '1118', '40', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:remove', '#', 'system', TO_DATE('2020-12-25 00:49:52', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1151', '新增', '1119', '10', '#', 'menuItem', 'F', '0', '1', 'cms:article:add', '#', 'system', TO_DATE('2020-12-25 01:23:52', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-25 01:24:21', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1152', '修改', '1119', '20', '#', 'menuItem', 'F', '0', '1', 'cms:article:edit', '#', 'system', TO_DATE('2020-12-25 01:24:07', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-25 01:24:35', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1153', '删除', '1119', '30', '#', 'menuItem', 'F', '0', '1', 'cms:article:remove', '#', 'system', TO_DATE('2020-12-25 01:24:50', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1154', '新增', '1115', '10', '#', 'menuItem', 'F', '0', '1', 'cms:site:add', '#', 'system', TO_DATE('2021-01-05 19:50:54', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1155', '修改', '1115', '20', '#', 'menuItem', 'F', '0', '1', 'cms:site:edit', '#', 'system', TO_DATE('2021-01-05 19:51:22', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1156', '删除', '1115', '30', '#', 'menuItem', 'F', '0', '1', 'cms:site:remove', '#', 'system', TO_DATE('2021-01-05 19:51:46', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1174', '大数据导入', '1061', '110', '/demo/import/index', 'menuItem', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-17 10:21:09', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-17 10:22:15', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1175', 'MD在线编辑器', '1061', '50', '/demo/markdown/markdownEdit', 'menuBlank', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-21 16:22:37', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 20:33:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1176', '文档管理', '1105', '60', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-file-word-o', 'system', TO_DATE('2021-06-24 17:47:05', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 20:04:11', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1177', '文档列表', '1176', '10', '/cms/helpDoc', 'menuItem', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-24 17:48:46', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 17:55:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1', '系统管理', '0', '50', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-gear', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 20:54:11', 'SYYYY-MM-DD HH24:MI:SS'), '系统管理目录');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('2', '系统监控', '0', '60', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-video-camera', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-07-15 19:40:28', 'SYYYY-MM-DD HH24:MI:SS'), '系统监控目录');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('3', '系统工具', '0', '65', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-bars', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-16 13:12:07', 'SYYYY-MM-DD HH24:MI:SS'), '系统工具目录');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('100', '用户管理', '1', '1', '/system/user', NULL, 'C', '0', '1', 'system:user:view', 'fa fa-user-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '用户管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('101', '角色管理', '1', '2', '/system/role', NULL, 'C', '0', '1', 'system:role:view', 'fa fa-user-secret', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '角色管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('102', '菜单管理', '1', '3', '/system/menu', NULL, 'C', '0', '1', 'system:menu:view', 'fa fa-th-list', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '菜单管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('103', '部门管理', '1', '4', '/system/dept', NULL, 'C', '0', '1', 'system:dept:view', 'fa fa-outdent', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '部门管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('104', '岗位管理', '1', '5', '/system/post', NULL, 'C', '0', '1', 'system:post:view', 'fa fa-address-card-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '岗位管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('105', '字典管理', '1', '6', '/system/dict', NULL, 'C', '0', '1', 'system:dict:view', 'fa fa-bookmark-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '字典管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('106', '参数设置', '1', '7', '/system/config', NULL, 'C', '0', '1', 'system:config:view', 'fa fa-sun-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '参数设置菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('108', '日志管理', '1', '9', '#', NULL, 'M', '0', '1', NULL, 'fa fa-pencil-square-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '日志管理菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('109', '在线用户', '2', '1', '/monitor/online', NULL, 'C', '0', '1', 'monitor:online:view', 'fa fa-user-circle', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '在线用户菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('110', '定时任务', '2', '2', '/monitor/job', NULL, 'C', '0', '1', 'monitor:job:view', 'fa fa-tasks', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '定时任务菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('111', '数据监控', '2', '3', '/monitor/data', NULL, 'C', '0', '1', 'monitor:data:view', 'fa fa-bug', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '数据监控菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('112', '服务监控', '2', '3', '/monitor/server', NULL, 'C', '0', '1', 'monitor:server:view', 'fa fa-server', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '服务监控菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('113', '表单构建', '3', '1', '/tool/build', NULL, 'C', '0', '1', 'tool:build:view', 'fa fa-wpforms', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '表单构建菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('114', '代码生成', '3', '2', '/tool/gen', NULL, 'C', '0', '1', 'tool:gen:view', 'fa fa-code', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '代码生成菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('115', '系统接口', '3', '3', '/tool/swagger', 'menuItem', 'C', '0', '1', 'tool:swagger:view', 'fa fa-gg', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-06-08 15:49:58', 'SYYYY-MM-DD HH24:MI:SS'), '系统接口菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('500', '操作日志', '108', '1', '/monitor/operlog', NULL, 'C', '0', '1', 'monitor:operlog:view', 'fa fa-address-book', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '操作日志菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('501', '登录日志', '108', '2', '/monitor/logininfor', NULL, 'C', '0', '1', 'monitor:logininfor:view', 'fa fa-file-image-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '登录日志菜单');
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1000', '用户查询', '100', '1', '#', NULL, 'F', '0', '1', 'system:user:list', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1001', '用户新增', '100', '2', '#', NULL, 'F', '0', '1', 'system:user:add', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1002', '用户修改', '100', '3', '#', NULL, 'F', '0', '1', 'system:user:edit', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1003', '用户删除', '100', '4', '#', NULL, 'F', '0', '1', 'system:user:remove', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1004', '用户导出', '100', '5', '#', NULL, 'F', '0', '1', 'system:user:export', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1005', '用户导入', '100', '6', '#', NULL, 'F', '0', '1', 'system:user:import', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1006', '重置密码', '100', '7', '#', NULL, 'F', '0', '1', 'system:user:resetPwd', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1007', '角色查询', '101', '1', '#', NULL, 'F', '0', '1', 'system:role:list', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1008', '角色新增', '101', '2', '#', NULL, 'F', '0', '1', 'system:role:add', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1009', '角色修改', '101', '3', '#', NULL, 'F', '0', '1', 'system:role:edit', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1010', '角色删除', '101', '4', '#', NULL, 'F', '0', '1', 'system:role:remove', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1011', '角色导出', '101', '5', '#', NULL, 'F', '0', '1', 'system:role:export', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1012', '菜单查询', '102', '1', '#', NULL, 'F', '0', '1', 'system:menu:list', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
@@ -3588,6 +3534,55 @@ INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1104', '通知通告查看', '1078', '1
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1105', '企业官网管理', '0', '5', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-clone', 'system', TO_DATE('2019-12-03 23:39:29', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-01-20 14:57:04', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1113', '站点栏目管理', '1105', '10', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-calendar', 'system', TO_DATE('2019-12-18 21:32:18', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-07-05 17:59:56', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1114', '栏目列表', '1113', '10', '/cms/column/index', 'menuItem', 'C', '0', '1', NULL, 'fa fa-home', 'system', TO_DATE('2019-12-18 21:33:21', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-24 21:49:59', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1141', '缓存监控', '2', '10', '/monitor/cache', 'menuItem', 'C', '0', '1', 'monitor:cache:view', 'fa fa-cube', 'system', TO_DATE('2020-11-23 16:08:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-11-23 16:09:11', 'SYYYY-MM-DD HH24:MI:SS'), '缓存监控菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1142', '通告管理', '1077', '5', '/oa/notify', 'menuItem', 'C', '0', '1', 'oa:notify:view', 'fa fa-commenting-o', 'system', TO_DATE('2020-12-19 13:47:02', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-19 19:04:38', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1143', '新增', '1142', '10', '#', 'menuItem', 'F', '0', '1', 'oa:notify:add', '#', 'system', TO_DATE('2020-12-19 13:48:01', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-19 13:50:01', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1144', '修改', '1142', '20', '#', 'menuItem', 'F', '0', '1', 'oa:notify:edit', '#', 'system', TO_DATE('2020-12-19 13:48:27', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1145', '删除', '1142', '30', '#', 'menuItem', 'F', '0', '1', 'oa:notify:remove', '#', 'system', TO_DATE('2020-12-19 13:48:55', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1146', '我的通知', '1077', '4', '/oa/notify/myNotify', 'menuItem', 'C', '0', '0', 'oa:notify:myNotify', 'fa fa-commenting-o', 'system', TO_DATE('2020-12-19 18:42:08', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-07-07 14:16:10', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1148', '新增', '1118', '20', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:add', '#', 'system', TO_DATE('2020-12-25 00:49:13', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1149', '修改', '1118', '30', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:edit', '#', 'system', TO_DATE('2020-12-25 00:49:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1150', '删除', '1118', '40', '#', 'menuItem', 'F', '0', '1', 'cms:advertising:remove', '#', 'system', TO_DATE('2020-12-25 00:49:52', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1151', '新增', '1119', '10', '#', 'menuItem', 'F', '0', '1', 'cms:article:add', '#', 'system', TO_DATE('2020-12-25 01:23:52', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-25 01:24:21', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1152', '修改', '1119', '20', '#', 'menuItem', 'F', '0', '1', 'cms:article:edit', '#', 'system', TO_DATE('2020-12-25 01:24:07', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-12-25 01:24:35', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1153', '删除', '1119', '30', '#', 'menuItem', 'F', '0', '1', 'cms:article:remove', '#', 'system', TO_DATE('2020-12-25 01:24:50', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1154', '新增', '1115', '10', '#', 'menuItem', 'F', '0', '1', 'cms:site:add', '#', 'system', TO_DATE('2021-01-05 19:50:54', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1155', '修改', '1115', '20', '#', 'menuItem', 'F', '0', '1', 'cms:site:edit', '#', 'system', TO_DATE('2021-01-05 19:51:22', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1156', '删除', '1115', '30', '#', 'menuItem', 'F', '0', '1', 'cms:site:remove', '#', 'system', TO_DATE('2021-01-05 19:51:46', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1174', '大数据导入', '1061', '110', '/demo/import/index', 'menuItem', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-17 10:21:09', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-17 10:22:15', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1175', 'MD在线编辑器', '1061', '50', '/demo/markdown/markdownEdit', 'menuBlank', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-21 16:22:37', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 20:33:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1176', '文档管理', '1105', '60', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-file-word-o', 'system', TO_DATE('2021-06-24 17:47:05', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 20:04:11', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1177', '文档列表', '1176', '10', '/cms/helpDoc', 'menuItem', 'C', '0', '1', NULL, '#', 'system', TO_DATE('2021-06-24 17:48:46', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-24 17:55:33', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1', '系统管理', '0', '50', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-gear', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 20:54:11', 'SYYYY-MM-DD HH24:MI:SS'), '系统管理目录');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('2', '系统监控', '0', '60', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-video-camera', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-07-15 19:40:28', 'SYYYY-MM-DD HH24:MI:SS'), '系统监控目录');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('3', '系统工具', '0', '65', '#', 'menuItem', 'M', '0', '1', NULL, 'fa fa-bars', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-06-16 13:12:07', 'SYYYY-MM-DD HH24:MI:SS'), '系统工具目录');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('100', '用户管理', '1', '1', '/system/user', NULL, 'C', '0', '1', 'system:user:view', 'fa fa-user-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '用户管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('101', '角色管理', '1', '2', '/system/role', NULL, 'C', '0', '1', 'system:role:view', 'fa fa-user-secret', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '角色管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('102', '菜单管理', '1', '3', '/system/menu', NULL, 'C', '0', '1', 'system:menu:view', 'fa fa-th-list', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '菜单管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('103', '部门管理', '1', '4', '/system/dept', NULL, 'C', '0', '1', 'system:dept:view', 'fa fa-outdent', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '部门管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('104', '岗位管理', '1', '5', '/system/post', NULL, 'C', '0', '1', 'system:post:view', 'fa fa-address-card-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '岗位管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('105', '字典管理', '1', '6', '/system/dict', NULL, 'C', '0', '1', 'system:dict:view', 'fa fa-bookmark-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '字典管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('106', '参数设置', '1', '7', '/system/config', NULL, 'C', '0', '1', 'system:config:view', 'fa fa-sun-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '参数设置菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('108', '日志管理', '1', '9', '#', NULL, 'M', '0', '1', NULL, 'fa fa-pencil-square-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '日志管理菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('109', '在线用户', '2', '1', '/monitor/online', NULL, 'C', '0', '1', 'monitor:online:view', 'fa fa-user-circle', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '在线用户菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('110', '定时任务', '2', '2', '/monitor/job', NULL, 'C', '0', '1', 'monitor:job:view', 'fa fa-tasks', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '定时任务菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('111', '数据监控', '2', '3', '/monitor/data', NULL, 'C', '0', '1', 'monitor:data:view', 'fa fa-bug', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '数据监控菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('112', '服务监控', '2', '3', '/monitor/server', NULL, 'C', '0', '1', 'monitor:server:view', 'fa fa-server', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '服务监控菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('113', '表单构建', '3', '1', '/tool/build', NULL, 'C', '0', '1', 'tool:build:view', 'fa fa-wpforms', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '表单构建菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('114', '代码生成', '3', '2', '/tool/gen', NULL, 'C', '0', '1', 'tool:gen:view', 'fa fa-code', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '代码生成菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('115', '系统接口', '3', '3', '/tool/swagger', 'menuItem', 'C', '0', '1', 'tool:swagger:view', 'fa fa-gg', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2020-06-08 15:49:58', 'SYYYY-MM-DD HH24:MI:SS'), '系统接口菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('500', '操作日志', '108', '1', '/monitor/operlog', NULL, 'C', '0', '1', 'monitor:operlog:view', 'fa fa-address-book', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '操作日志菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('501', '登录日志', '108', '2', '/monitor/logininfor', NULL, 'C', '0', '1', 'monitor:logininfor:view', 'fa fa-file-image-o', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), '登录日志菜单');
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1000', '用户查询', '100', '1', '#', NULL, 'F', '0', '1', 'system:user:list', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1001', '用户新增', '100', '2', '#', NULL, 'F', '0', '1', 'system:user:add', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1002', '用户修改', '100', '3', '#', NULL, 'F', '0', '1', 'system:user:edit', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1003', '用户删除', '100', '4', '#', NULL, 'F', '0', '1', 'system:user:remove', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1004', '用户导出', '100', '5', '#', NULL, 'F', '0', '1', 'system:user:export', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1005', '用户导入', '100', '6', '#', NULL, 'F', '0', '1', 'system:user:import', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1006', '重置密码', '100', '7', '#', NULL, 'F', '0', '1', 'system:user:resetPwd', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1007', '角色查询', '101', '1', '#', NULL, 'F', '0', '1', 'system:role:list', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1008', '角色新增', '101', '2', '#', NULL, 'F', '0', '1', 'system:role:add', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
+INSERT INTO "ZHGLXT"."SYS_MENU" VALUES ('1009', '角色修改', '101', '3', '#', NULL, 'F', '0', '1', 'system:role:edit', '#', 'admin', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'ry', TO_DATE('2018-03-16 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 
 -- ----------------------------
 -- Table structure for SYS_NOTICE
@@ -4039,7 +4034,7 @@ COMMENT ON TABLE "ZHGLXT"."SYS_USER" IS '用户信息表';
 -- Records of SYS_USER
 -- ----------------------------
 INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('d2c6a4d331d8488eb9f2b03efef0e054', NULL, 'test', 'system', '666666666666666666', NULL, NULL, '18888888888', '0', NULL, '43354744468f2d733144175ca65940b5', '2f79ac', '0', '0', NULL, NULL, NULL, 'system', TO_DATE('2023-02-23 00:08:15', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2023-02-23 00:09:29', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
-INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('1', '100', 'system', '超级系统管理员', NULL, '00', '1111111111@qq.com', '18888888888', '0', '/profile/avatar/2020/07/17/27f3974b62ea4ff386ae992b18d19380.png', '90e40a84a011a86d0b7e44db9a4dced4', '7fe6d2', '0', '0', '127.0.0.1', TO_DATE('2023-02-23 19:54:22', 'SYYYY-MM-DD HH24:MI:SS'), NULL, 'admin', TO_DATE('2019-08-11 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2023-02-23 19:54:22', 'SYYYY-MM-DD HH24:MI:SS'), '超级系统管理员');
+INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('1', '100', 'system', '超级系统管理员', NULL, '00', '1111111111@qq.com', '18888888888', '0', '/profile/avatar/2020/07/17/27f3974b62ea4ff386ae992b18d19380.png', '90e40a84a011a86d0b7e44db9a4dced4', '7fe6d2', '0', '0', '127.0.0.1', TO_DATE('2023-02-23 20:58:39', 'SYYYY-MM-DD HH24:MI:SS'), NULL, 'admin', TO_DATE('2019-08-11 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2023-02-23 20:58:39', 'SYYYY-MM-DD HH24:MI:SS'), '超级系统管理员');
 INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('14', '114', 'dlsdys', '淡蓝色的忧伤', NULL, '00', '1111111111@qq.com', '18888888888', '0', NULL, 'aaf811dccbe790d8af9a7c9177ed346d', 'ee0c10', '0', '0', '127.0.0.1', TO_DATE('2022-11-13 18:30:38', 'SYYYY-MM-DD HH24:MI:SS'), NULL, 'system', TO_DATE('2019-10-13 16:00:45', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2022-11-13 18:30:38', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('18', NULL, 'test', 'test', NULL, '01', NULL, NULL, '0', NULL, '7ea9465c9f534ab0ffbb71148db00315', 'a285a5', '0', '2', '127.0.0.1', TO_DATE('2020-06-25 00:31:03', 'SYYYY-MM-DD HH24:MI:SS'), NULL, NULL, TO_DATE('2020-06-25 00:23:41', 'SYYYY-MM-DD HH24:MI:SS'), NULL, TO_DATE('2020-06-25 00:31:02', 'SYYYY-MM-DD HH24:MI:SS'), NULL);
 INSERT INTO "ZHGLXT"."SYS_USER" VALUES ('2', '114', 'administrator', '管理员', NULL, '00', '1111111111@qq.com', '18888888888', '1', NULL, '3a882584598e16bdec13ea2c7995e839', '19e38e', '0', '0', '127.0.0.1', TO_DATE('2021-01-28 03:02:53', 'SYYYY-MM-DD HH24:MI:SS'), NULL, 'admin', TO_DATE('2019-08-11 11:33:00', 'SYYYY-MM-DD HH24:MI:SS'), 'system', TO_DATE('2021-05-13 20:48:25', 'SYYYY-MM-DD HH24:MI:SS'), '管理员');
@@ -4099,6 +4094,7 @@ COMMENT ON TABLE "ZHGLXT"."SYS_USER_ONLINE" IS '在线用户记录';
 -- ----------------------------
 -- Records of SYS_USER_ONLINE
 -- ----------------------------
+INSERT INTO "ZHGLXT"."SYS_USER_ONLINE" VALUES ('07de5d19-a2b0-4995-8121-51204418a098', 'system', '中国', '127.0.0.1', '内网IP', 'Chrome 10', 'Windows 10', 'on_line', TO_DATE('2023-02-23 20:58:36', 'SYYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-02-23 20:58:39', 'SYYYY-MM-DD HH24:MI:SS'), '900000');
 
 -- ----------------------------
 -- Table structure for SYS_USER_POST
@@ -4359,22 +4355,22 @@ CREATE SEQUENCE "ZHGLXT"."SEQ_SYS_USER" MINVALUE 1 MAXVALUE 99999999999999999999
 -- ----------------------------
 -- Primary Key structure for table ACT_EVT_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_EVT_LOG" ADD CONSTRAINT "SYS_C0015849" PRIMARY KEY ("LOG_NR_");
+ALTER TABLE "ZHGLXT"."ACT_EVT_LOG" ADD CONSTRAINT "SYS_C0020907" PRIMARY KEY ("LOG_NR_");
 
 -- ----------------------------
 -- Checks structure for table ACT_EVT_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_EVT_LOG" ADD CONSTRAINT "SYS_C0015848" CHECK ("TIME_STAMP_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_EVT_LOG" ADD CONSTRAINT "SYS_C0020906" CHECK ("TIME_STAMP_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table ACT_GE_BYTEARRAY
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_GE_BYTEARRAY" ADD CONSTRAINT "SYS_C0015851" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_GE_BYTEARRAY" ADD CONSTRAINT "SYS_C0020909" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_GE_BYTEARRAY
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_GE_BYTEARRAY" ADD CONSTRAINT "SYS_C0015850" CHECK (GENERATED_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_GE_BYTEARRAY" ADD CONSTRAINT "SYS_C0020908" CHECK (GENERATED_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_GE_BYTEARRAY
@@ -4398,23 +4394,23 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_GE_PROPERTY
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_GE_PROPERTY" ADD CONSTRAINT "SYS_C0015852" PRIMARY KEY ("NAME_");
+ALTER TABLE "ZHGLXT"."ACT_GE_PROPERTY" ADD CONSTRAINT "SYS_C0020910" PRIMARY KEY ("NAME_");
 
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_ACTINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015860" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020918" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_ACTINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015853" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015854" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015855" CHECK ("PROC_INST_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015856" CHECK ("EXECUTION_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015857" CHECK ("ACT_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015858" CHECK ("ACT_TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0015859" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020911" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020912" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020913" CHECK ("PROC_INST_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020914" CHECK ("EXECUTION_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020915" CHECK ("ACT_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020916" CHECK ("ACT_TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ACTINST" ADD CONSTRAINT "SYS_C0020917" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_ACTINST
@@ -4483,36 +4479,36 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_ATTACHMENT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_ATTACHMENT" ADD CONSTRAINT "SYS_C0015862" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_ATTACHMENT" ADD CONSTRAINT "SYS_C0020920" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_ATTACHMENT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_ATTACHMENT" ADD CONSTRAINT "SYS_C0015861" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_ATTACHMENT" ADD CONSTRAINT "SYS_C0020919" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_COMMENT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0015865" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0020923" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_COMMENT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0015863" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0015864" CHECK ("TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0020921" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_COMMENT" ADD CONSTRAINT "SYS_C0020922" CHECK ("TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_DETAIL
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0015870" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0020928" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_DETAIL
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0015866" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0015867" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0015868" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0015869" CHECK ("TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0020924" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0020925" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0020926" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_DETAIL" ADD CONSTRAINT "SYS_C0020927" CHECK ("TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_DETAIL
@@ -4596,7 +4592,7 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_IDENTITYLINK
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_IDENTITYLINK" ADD CONSTRAINT "SYS_C0015871" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_IDENTITYLINK" ADD CONSTRAINT "SYS_C0020929" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_IDENTITYLINK
@@ -4650,20 +4646,20 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_PROCINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015876" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020934" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Uniques structure for table ACT_HI_PROCINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015877" UNIQUE ("PROC_INST_ID_") NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020935" UNIQUE ("PROC_INST_ID_") NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_PROCINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015872" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015873" CHECK ("PROC_INST_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015874" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0015875" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020930" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020931" CHECK ("PROC_INST_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020932" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_PROCINST" ADD CONSTRAINT "SYS_C0020933" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_PROCINST
@@ -4702,13 +4698,13 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_TASKINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0015880" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0020938" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_TASKINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0015878" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0015879" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0020936" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_TASKINST" ADD CONSTRAINT "SYS_C0020937" CHECK ("START_TIME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_TASKINST
@@ -4732,13 +4728,13 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_HI_VARINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0015883" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0020941" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_HI_VARINST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0015881" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0015882" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0020939" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_HI_VARINST" ADD CONSTRAINT "SYS_C0020940" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_HI_VARINST
@@ -4792,17 +4788,17 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_ID_GROUP
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_ID_GROUP" ADD CONSTRAINT "SYS_C0015884" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_ID_GROUP" ADD CONSTRAINT "SYS_C0020942" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Primary Key structure for table ACT_ID_INFO
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_ID_INFO" ADD CONSTRAINT "SYS_C0015885" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_ID_INFO" ADD CONSTRAINT "SYS_C0020943" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Primary Key structure for table ACT_ID_MEMBERSHIP
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_ID_MEMBERSHIP" ADD CONSTRAINT "SYS_C0015886" PRIMARY KEY ("USER_ID_", "GROUP_ID_");
+ALTER TABLE "ZHGLXT"."ACT_ID_MEMBERSHIP" ADD CONSTRAINT "SYS_C0020944" PRIMARY KEY ("USER_ID_", "GROUP_ID_");
 
 -- ----------------------------
 -- Indexes structure for table ACT_ID_MEMBERSHIP
@@ -4833,12 +4829,12 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_ID_USER
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_ID_USER" ADD CONSTRAINT "SYS_C0015887" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_ID_USER" ADD CONSTRAINT "SYS_C0020945" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Primary Key structure for table ACT_PROCDEF_INFO
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0015890" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0020948" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Uniques structure for table ACT_PROCDEF_INFO
@@ -4848,8 +4844,8 @@ ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "ACT_UNIQ_INFO_PROCDEF" U
 -- ----------------------------
 -- Checks structure for table ACT_PROCDEF_INFO
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0015888" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0015889" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0020946" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_PROCDEF_INFO" ADD CONSTRAINT "SYS_C0020947" CHECK ("PROC_DEF_ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_PROCDEF_INFO
@@ -4880,17 +4876,17 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RE_DEPLOYMENT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RE_DEPLOYMENT" ADD CONSTRAINT "SYS_C0015892" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RE_DEPLOYMENT" ADD CONSTRAINT "SYS_C0020950" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Primary Key structure for table ACT_RE_MODEL
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RE_MODEL" ADD CONSTRAINT "SYS_C0015894" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RE_MODEL" ADD CONSTRAINT "SYS_C0020952" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_RE_MODEL
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RE_MODEL" ADD CONSTRAINT "SYS_C0015893" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_MODEL" ADD CONSTRAINT "SYS_C0020951" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_RE_MODEL
@@ -4944,7 +4940,7 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RE_PROCDEF
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015900" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020958" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Uniques structure for table ACT_RE_PROCDEF
@@ -4954,23 +4950,23 @@ ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "ACT_UNIQ_PROCDEF" UNIQUE (
 -- ----------------------------
 -- Checks structure for table ACT_RE_PROCDEF
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015895" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015896" CHECK ("KEY_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015897" CHECK ("VERSION_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015898" CHECK (HAS_START_FORM_KEY_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0015899" CHECK (HAS_GRAPHICAL_NOTATION_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020953" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020954" CHECK ("KEY_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020955" CHECK ("VERSION_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020956" CHECK (HAS_START_FORM_KEY_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RE_PROCDEF" ADD CONSTRAINT "SYS_C0020957" CHECK (HAS_GRAPHICAL_NOTATION_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_EVENT_SUBSCR
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0015905" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0020963" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_RU_EVENT_SUBSCR
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0015902" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0015903" CHECK ("EVENT_TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0015904" CHECK ("CREATED_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0020960" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0020961" CHECK ("EVENT_TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EVENT_SUBSCR" ADD CONSTRAINT "SYS_C0020962" CHECK ("CREATED_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_EVENT_SUBSCR
@@ -5001,15 +4997,15 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_EXECUTION
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0015910" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0020968" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_RU_EXECUTION
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0015906" CHECK (IS_ACTIVE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0015907" CHECK (IS_CONCURRENT_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0015908" CHECK (IS_SCOPE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0015909" CHECK (IS_EVENT_SCOPE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0020964" CHECK (IS_ACTIVE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0020965" CHECK (IS_CONCURRENT_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0020966" CHECK (IS_SCOPE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_EXECUTION" ADD CONSTRAINT "SYS_C0020967" CHECK (IS_EVENT_SCOPE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_EXECUTION
@@ -5093,7 +5089,7 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_IDENTITYLINK
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_IDENTITYLINK" ADD CONSTRAINT "SYS_C0015911" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_IDENTITYLINK" ADD CONSTRAINT "SYS_C0020969" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_IDENTITYLINK
@@ -5177,14 +5173,14 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_JOB
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0015915" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0020973" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_RU_JOB
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0015912" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0015913" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0015914" CHECK (EXCLUSIVE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0020970" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0020971" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_JOB" ADD CONSTRAINT "SYS_C0020972" CHECK (EXCLUSIVE_ IN (1,0)) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_JOB
@@ -5204,7 +5200,7 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_TASK
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_TASK" ADD CONSTRAINT "SYS_C0015916" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_TASK" ADD CONSTRAINT "SYS_C0020974" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_TASK
@@ -5273,14 +5269,14 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table ACT_RU_VARIABLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0015920" PRIMARY KEY ("ID_");
+ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0020978" PRIMARY KEY ("ID_");
 
 -- ----------------------------
 -- Checks structure for table ACT_RU_VARIABLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0015917" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0015918" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0015919" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0020975" CHECK ("ID_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0020976" CHECK ("TYPE_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."ACT_RU_VARIABLE" ADD CONSTRAINT "SYS_C0020977" CHECK ("NAME_" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table ACT_RU_VARIABLE
@@ -5349,65 +5345,65 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table CMS_ADVERTISING
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ADVERTISING" ADD CONSTRAINT "SYS_C0015922" PRIMARY KEY ("ID");
+ALTER TABLE "ZHGLXT"."CMS_ADVERTISING" ADD CONSTRAINT "SYS_C0020980" PRIMARY KEY ("ID");
 
 -- ----------------------------
 -- Checks structure for table CMS_ADVERTISING
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ADVERTISING" ADD CONSTRAINT "SYS_C0015921" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_ADVERTISING" ADD CONSTRAINT "SYS_C0020979" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table CMS_ARTICLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0015925" PRIMARY KEY ("ID");
+ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0020983" PRIMARY KEY ("ID");
 
 -- ----------------------------
 -- Checks structure for table CMS_ARTICLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0015923" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0015924" CHECK ("SITE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0020981" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_ARTICLE" ADD CONSTRAINT "SYS_C0020982" CHECK ("SITE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table CMS_ARTICLE_DATA
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ARTICLE_DATA" ADD CONSTRAINT "SYS_C0015927" PRIMARY KEY ("ID");
+ALTER TABLE "ZHGLXT"."CMS_ARTICLE_DATA" ADD CONSTRAINT "SYS_C0020985" PRIMARY KEY ("ID");
 
 -- ----------------------------
 -- Checks structure for table CMS_ARTICLE_DATA
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_ARTICLE_DATA" ADD CONSTRAINT "SYS_C0015926" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_ARTICLE_DATA" ADD CONSTRAINT "SYS_C0020984" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table CMS_COLUMN
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015933" PRIMARY KEY ("COLUMN_ID");
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020991" PRIMARY KEY ("COLUMN_ID");
 
 -- ----------------------------
 -- Checks structure for table CMS_COLUMN
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015928" CHECK ("COLUMN_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015929" CHECK ("SITE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015930" CHECK ("COLUMN_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015931" CHECK ("IS_SHOW" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0015932" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020986" CHECK ("COLUMN_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020987" CHECK ("SITE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020988" CHECK ("COLUMN_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020989" CHECK ("IS_SHOW" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_COLUMN" ADD CONSTRAINT "SYS_C0020990" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Checks structure for table CMS_HELP_DOC
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_HELP_DOC" ADD CONSTRAINT "SYS_C0015934" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_HELP_DOC" ADD CONSTRAINT "SYS_C0020992" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table CMS_SITE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0015939" PRIMARY KEY ("ID");
+ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0020997" PRIMARY KEY ("ID");
 
 -- ----------------------------
 -- Checks structure for table CMS_SITE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0015935" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0015936" CHECK ("NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0015937" CHECK ("TITLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0015938" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0020993" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0020994" CHECK ("NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0020995" CHECK ("TITLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."CMS_SITE" ADD CONSTRAINT "SYS_C0020996" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Indexes structure for table CMS_SITE
@@ -5436,7 +5432,7 @@ ALTER TABLE "ZHGLXT"."GEN_TABLE" ADD CONSTRAINT "SYS_C008685" PRIMARY KEY ("TABL
 -- ----------------------------
 -- Checks structure for table GEN_TABLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."GEN_TABLE" ADD CONSTRAINT "SYS_C0015940" CHECK ("TABLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."GEN_TABLE" ADD CONSTRAINT "SYS_C0020998" CHECK ("TABLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."GEN_TABLE" ADD CONSTRAINT "SYS_C008569" CHECK ("TABLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
@@ -5447,7 +5443,7 @@ ALTER TABLE "ZHGLXT"."GEN_TABLE_COLUMN" ADD CONSTRAINT "SYS_C008686" PRIMARY KEY
 -- ----------------------------
 -- Checks structure for table GEN_TABLE_COLUMN
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."GEN_TABLE_COLUMN" ADD CONSTRAINT "SYS_C0015943" CHECK ("COLUMN_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."GEN_TABLE_COLUMN" ADD CONSTRAINT "SYS_C0021001" CHECK ("COLUMN_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."GEN_TABLE_COLUMN" ADD CONSTRAINT "SYS_C008570" CHECK ("COLUMN_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
@@ -5458,14 +5454,14 @@ ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C008688" PRIMARY KEY ("ID");
 -- ----------------------------
 -- Checks structure for table OA_LEAVE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015946" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015947" CHECK ("START_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015948" CHECK ("END_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015949" CHECK ("CREATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015950" CHECK ("CREATE_DATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015951" CHECK ("UPDATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015952" CHECK ("UPDATE_DATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0015953" CHECK ("DEL_FLAG" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021004" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021005" CHECK ("START_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021006" CHECK ("END_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021007" CHECK ("CREATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021008" CHECK ("CREATE_DATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021009" CHECK ("UPDATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021010" CHECK ("UPDATE_DATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C0021011" CHECK ("DEL_FLAG" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C008577" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C008578" CHECK ("START_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_LEAVE" ADD CONSTRAINT "SYS_C008579" CHECK ("END_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5502,12 +5498,12 @@ ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C008687" PRIMARY KEY ("ID")
 -- ----------------------------
 -- Checks structure for table OA_NOTIFY
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015963" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015964" CHECK ("CREATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015965" CHECK ("CREATE_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015966" CHECK ("UPDATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015967" CHECK ("UPDATE_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0015968" CHECK ("DEL_FLAG" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021021" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021022" CHECK ("CREATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021023" CHECK ("CREATE_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021024" CHECK ("UPDATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021025" CHECK ("UPDATE_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C0021026" CHECK ("DEL_FLAG" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C008571" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C008572" CHECK ("CREATE_BY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_NOTIFY" ADD CONSTRAINT "SYS_C008573" CHECK ("CREATE_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5542,7 +5538,7 @@ ALTER TABLE "ZHGLXT"."OA_NOTIFY_RECORD" ADD CONSTRAINT "SYS_C008689" PRIMARY KEY
 -- ----------------------------
 -- Checks structure for table OA_NOTIFY_RECORD
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."OA_NOTIFY_RECORD" ADD CONSTRAINT "SYS_C0015976" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."OA_NOTIFY_RECORD" ADD CONSTRAINT "SYS_C0021034" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."OA_NOTIFY_RECORD" ADD CONSTRAINT "SYS_C008585" CHECK ("ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
@@ -5602,9 +5598,9 @@ ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C008690" PRIMARY K
 -- ----------------------------
 -- Checks structure for table QRTZ_BLOB_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0015979" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0015980" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0015981" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0021037" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0021038" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C0021039" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C008586" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C008587" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_BLOB_TRIGGERS" ADD CONSTRAINT "SYS_C008588" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5617,9 +5613,9 @@ ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C008691" PRIMARY KEY (
 -- ----------------------------
 -- Checks structure for table QRTZ_CALENDARS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0015986" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0015987" CHECK ("CALENDAR_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0015988" CHECK ("CALENDAR" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0021044" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0021045" CHECK ("CALENDAR_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C0021046" CHECK ("CALENDAR" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C008589" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C008590" CHECK ("CALENDAR_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CALENDARS" ADD CONSTRAINT "SYS_C008591" CHECK ("CALENDAR" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5632,10 +5628,10 @@ ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C008693" PRIMARY K
 -- ----------------------------
 -- Checks structure for table QRTZ_CRON_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0015993" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0015994" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0015995" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0015996" CHECK ("CRON_EXPRESSION" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0021051" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0021052" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0021053" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C0021054" CHECK ("CRON_EXPRESSION" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C008601" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C008602" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_CRON_TRIGGERS" ADD CONSTRAINT "SYS_C008603" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5649,15 +5645,15 @@ ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C008692" PRIMARY 
 -- ----------------------------
 -- Checks structure for table QRTZ_FIRED_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016002" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016003" CHECK ("ENTRY_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016004" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016005" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016006" CHECK ("INSTANCE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016007" CHECK ("FIRED_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016008" CHECK ("SCHED_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016009" CHECK ("PRIORITY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0016010" CHECK ("STATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021060" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021061" CHECK ("ENTRY_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021062" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021063" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021064" CHECK ("INSTANCE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021065" CHECK ("FIRED_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021066" CHECK ("SCHED_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021067" CHECK ("PRIORITY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C0021068" CHECK ("STATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C008592" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C008593" CHECK ("ENTRY_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_FIRED_TRIGGERS" ADD CONSTRAINT "SYS_C008594" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5676,14 +5672,14 @@ ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C008694" PRIMARY KEY
 -- ----------------------------
 -- Checks structure for table QRTZ_JOB_DETAILS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016021" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016022" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016023" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016024" CHECK ("JOB_CLASS_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016025" CHECK ("IS_DURABLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016026" CHECK ("IS_NONCONCURRENT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016027" CHECK ("IS_UPDATE_DATA" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0016028" CHECK ("REQUESTS_RECOVERY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021079" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021080" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021081" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021082" CHECK ("JOB_CLASS_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021083" CHECK ("IS_DURABLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021084" CHECK ("IS_NONCONCURRENT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021085" CHECK ("IS_UPDATE_DATA" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C0021086" CHECK ("REQUESTS_RECOVERY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C008605" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C008606" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_JOB_DETAILS" ADD CONSTRAINT "SYS_C008607" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5701,8 +5697,8 @@ ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C008695" PRIMARY KEY ("SCH
 -- ----------------------------
 -- Checks structure for table QRTZ_LOCKS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C0016038" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C0016039" CHECK ("LOCK_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C0021096" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C0021097" CHECK ("LOCK_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C008613" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_LOCKS" ADD CONSTRAINT "SYS_C008614" CHECK ("LOCK_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
@@ -5714,8 +5710,8 @@ ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C008696" PRI
 -- ----------------------------
 -- Checks structure for table QRTZ_PAUSED_TRIGGER_GRPS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C0016043" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C0016044" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C0021101" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C0021102" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C008615" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_PAUSED_TRIGGER_GRPS" ADD CONSTRAINT "SYS_C008616" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
@@ -5727,10 +5723,10 @@ ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C008697" PRIMARY
 -- ----------------------------
 -- Checks structure for table QRTZ_SCHEDULER_STATE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0016048" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0016049" CHECK ("INSTANCE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0016050" CHECK ("LAST_CHECKIN_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0016051" CHECK ("CHECKIN_INTERVAL" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0021106" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0021107" CHECK ("INSTANCE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0021108" CHECK ("LAST_CHECKIN_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C0021109" CHECK ("CHECKIN_INTERVAL" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C008617" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C008618" CHECK ("INSTANCE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SCHEDULER_STATE" ADD CONSTRAINT "SYS_C008619" CHECK ("LAST_CHECKIN_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5744,12 +5740,12 @@ ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C008698" PRIMARY
 -- ----------------------------
 -- Checks structure for table QRTZ_SIMPLE_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016057" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016058" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016059" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016060" CHECK ("REPEAT_COUNT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016061" CHECK ("REPEAT_INTERVAL" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0016062" CHECK ("TIMES_TRIGGERED" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021115" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021116" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021117" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021118" CHECK ("REPEAT_COUNT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021119" CHECK ("REPEAT_INTERVAL" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C0021120" CHECK ("TIMES_TRIGGERED" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C008621" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C008622" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPLE_TRIGGERS" ADD CONSTRAINT "SYS_C008623" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5765,9 +5761,9 @@ ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C008699" PRIMAR
 -- ----------------------------
 -- Checks structure for table QRTZ_SIMPROP_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0016070" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0016071" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0016072" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0021128" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0021129" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C0021130" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C008627" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C008628" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_SIMPROP_TRIGGERS" ADD CONSTRAINT "SYS_C008629" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5780,14 +5776,14 @@ ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C008700" PRIMARY KEY ("
 -- ----------------------------
 -- Checks structure for table QRTZ_TRIGGERS
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016077" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016078" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016079" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016080" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016081" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016082" CHECK ("TRIGGER_STATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016083" CHECK ("TRIGGER_TYPE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0016084" CHECK ("START_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021135" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021136" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021137" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021138" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021139" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021140" CHECK ("TRIGGER_STATE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021141" CHECK ("TRIGGER_TYPE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C0021142" CHECK ("START_TIME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C008630" CHECK ("SCHED_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C008631" CHECK ("TRIGGER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."QRTZ_TRIGGERS" ADD CONSTRAINT "SYS_C008632" CHECK ("TRIGGER_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5819,68 +5815,68 @@ STORAGE (
 -- ----------------------------
 -- Primary Key structure for table SYS_CONFIG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_CONFIG" ADD CONSTRAINT "SYS_C0016315" PRIMARY KEY ("CONFIG_ID");
+ALTER TABLE "ZHGLXT"."SYS_CONFIG" ADD CONSTRAINT "SYS_C0021153" PRIMARY KEY ("CONFIG_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_CONFIG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_CONFIG" ADD CONSTRAINT "SYS_C0016314" CHECK ("CONFIG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_CONFIG" ADD CONSTRAINT "SYS_C0021152" CHECK ("CONFIG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_DEPT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DEPT" ADD CONSTRAINT "SYS_C0016317" PRIMARY KEY ("DEPT_ID");
+ALTER TABLE "ZHGLXT"."SYS_DEPT" ADD CONSTRAINT "SYS_C0021155" PRIMARY KEY ("DEPT_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_DEPT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DEPT" ADD CONSTRAINT "SYS_C0016316" CHECK ("DEPT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_DEPT" ADD CONSTRAINT "SYS_C0021154" CHECK ("DEPT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_DICT_DATA
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DICT_DATA" ADD CONSTRAINT "SYS_C0016319" PRIMARY KEY ("DICT_CODE");
+ALTER TABLE "ZHGLXT"."SYS_DICT_DATA" ADD CONSTRAINT "SYS_C0021157" PRIMARY KEY ("DICT_CODE");
 
 -- ----------------------------
 -- Checks structure for table SYS_DICT_DATA
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DICT_DATA" ADD CONSTRAINT "SYS_C0016318" CHECK ("DICT_CODE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_DICT_DATA" ADD CONSTRAINT "SYS_C0021156" CHECK ("DICT_CODE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_DICT_TYPE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DICT_TYPE" ADD CONSTRAINT "SYS_C0016321" PRIMARY KEY ("DICT_ID");
+ALTER TABLE "ZHGLXT"."SYS_DICT_TYPE" ADD CONSTRAINT "SYS_C0021159" PRIMARY KEY ("DICT_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_DICT_TYPE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_DICT_TYPE" ADD CONSTRAINT "SYS_C0016320" CHECK ("DICT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_DICT_TYPE" ADD CONSTRAINT "SYS_C0021158" CHECK ("DICT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_JOB
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0016110" PRIMARY KEY ("JOB_ID", "JOB_NAME", "JOB_GROUP");
+ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0021164" PRIMARY KEY ("JOB_ID", "JOB_NAME", "JOB_GROUP");
 
 -- ----------------------------
 -- Checks structure for table SYS_JOB
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0016106" CHECK ("JOB_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0016107" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0016108" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0016109" CHECK ("INVOKE_TARGET" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0021160" CHECK ("JOB_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0021161" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0021162" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB" ADD CONSTRAINT "SYS_C0021163" CHECK ("INVOKE_TARGET" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_JOB_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0016115" PRIMARY KEY ("JOB_LOG_ID");
+ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0021169" PRIMARY KEY ("JOB_LOG_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_JOB_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0016111" CHECK ("JOB_LOG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0016112" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0016113" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0016114" CHECK ("INVOKE_TARGET" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0021165" CHECK ("JOB_LOG_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0021166" CHECK ("JOB_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0021167" CHECK ("JOB_GROUP" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_JOB_LOG" ADD CONSTRAINT "SYS_C0021168" CHECK ("INVOKE_TARGET" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_LOGININFOR
@@ -5890,14 +5886,14 @@ ALTER TABLE "ZHGLXT"."SYS_LOGININFOR" ADD CONSTRAINT "SYS_C008714" PRIMARY KEY (
 -- ----------------------------
 -- Checks structure for table SYS_LOGININFOR
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_LOGININFOR" ADD CONSTRAINT "SYS_C0016116" CHECK ("INFO_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_LOGININFOR" ADD CONSTRAINT "SYS_C0021170" CHECK ("INFO_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."SYS_LOGININFOR" ADD CONSTRAINT "SYS_C008650" CHECK ("INFO_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Checks structure for table SYS_MENU
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_MENU" ADD CONSTRAINT "SYS_C0016337" CHECK ("MENU_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_MENU" ADD CONSTRAINT "SYS_C0016338" CHECK ("MENU_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_MENU" ADD CONSTRAINT "SYS_C0021173" CHECK ("MENU_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_MENU" ADD CONSTRAINT "SYS_C0021174" CHECK ("MENU_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_NOTICE
@@ -5907,9 +5903,9 @@ ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C008708" PRIMARY KEY ("NOT
 -- ----------------------------
 -- Checks structure for table SYS_NOTICE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0016124" CHECK ("NOTICE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0016125" CHECK ("NOTICE_TITLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0016126" CHECK ("NOTICE_TYPE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0021175" CHECK ("NOTICE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0021176" CHECK ("NOTICE_TITLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C0021177" CHECK ("NOTICE_TYPE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C008653" CHECK ("NOTICE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C008654" CHECK ("NOTICE_TITLE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C008655" CHECK ("NOTICE_TYPE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
@@ -5917,69 +5913,69 @@ ALTER TABLE "ZHGLXT"."SYS_NOTICE" ADD CONSTRAINT "SYS_C008655" CHECK ("NOTICE_TY
 -- ----------------------------
 -- Primary Key structure for table SYS_OPER_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_OPER_LOG" ADD CONSTRAINT "SYS_C0016292" PRIMARY KEY ("OPER_ID");
+ALTER TABLE "ZHGLXT"."SYS_OPER_LOG" ADD CONSTRAINT "SYS_C0021183" PRIMARY KEY ("OPER_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_OPER_LOG
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_OPER_LOG" ADD CONSTRAINT "SYS_C0016290" CHECK ("OPER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_OPER_LOG" ADD CONSTRAINT "SYS_C0021182" CHECK ("OPER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_POST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016310" PRIMARY KEY ("POST_ID");
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021189" PRIMARY KEY ("POST_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_POST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016305" CHECK ("POST_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016306" CHECK ("POST_CODE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016307" CHECK ("POST_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016308" CHECK ("POST_SORT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0016309" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021184" CHECK ("POST_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021185" CHECK ("POST_CODE" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021186" CHECK ("POST_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021187" CHECK ("POST_SORT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_POST" ADD CONSTRAINT "SYS_C0021188" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Checks structure for table SYS_ROLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0016322" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0016323" CHECK ("ROLE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0016324" CHECK ("ROLE_KEY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0016325" CHECK ("ROLE_SORT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0016326" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0021190" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0021191" CHECK ("ROLE_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0021192" CHECK ("ROLE_KEY" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0021193" CHECK ("ROLE_SORT" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE" ADD CONSTRAINT "SYS_C0021194" CHECK ("STATUS" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_ROLE_DEPT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0016329" PRIMARY KEY ("ROLE_ID", "DEPT_ID");
+ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0021197" PRIMARY KEY ("ROLE_ID", "DEPT_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_ROLE_DEPT
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0016327" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0016328" CHECK ("DEPT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0021195" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE_DEPT" ADD CONSTRAINT "SYS_C0021196" CHECK ("DEPT_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_ROLE_MENU
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0016332" PRIMARY KEY ("ROLE_ID", "MENU_ID");
+ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0021200" PRIMARY KEY ("ROLE_ID", "MENU_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_ROLE_MENU
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0016330" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0016331" CHECK ("MENU_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0021198" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_ROLE_MENU" ADD CONSTRAINT "SYS_C0021199" CHECK ("MENU_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_USER
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0016301" PRIMARY KEY ("USER_ID");
+ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0021204" PRIMARY KEY ("USER_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_USER
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0016298" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0016299" CHECK ("LOGIN_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0016300" CHECK ("USER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0021201" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0021202" CHECK ("LOGIN_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER" ADD CONSTRAINT "SYS_C0021203" CHECK ("USER_NAME" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_USER_ONLINE
@@ -5989,30 +5985,30 @@ ALTER TABLE "ZHGLXT"."SYS_USER_ONLINE" ADD CONSTRAINT "SYS_C008716" PRIMARY KEY 
 -- ----------------------------
 -- Checks structure for table SYS_USER_ONLINE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER_ONLINE" ADD CONSTRAINT "SYS_C0016173" CHECK ("SESSIONID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER_ONLINE" ADD CONSTRAINT "SYS_C0021205" CHECK ("SESSIONID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."SYS_USER_ONLINE" ADD CONSTRAINT "SYS_C008674" CHECK ("SESSIONID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_USER_POST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0016304" PRIMARY KEY ("USER_ID", "POST_ID");
+ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0021210" PRIMARY KEY ("USER_ID", "POST_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_USER_POST
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0016302" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0016303" CHECK ("POST_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0021208" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER_POST" ADD CONSTRAINT "SYS_C0021209" CHECK ("POST_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table SYS_USER_ROLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0016313" PRIMARY KEY ("USER_ID", "ROLE_ID");
+ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0021213" PRIMARY KEY ("USER_ID", "ROLE_ID");
 
 -- ----------------------------
 -- Checks structure for table SYS_USER_ROLE
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0016311" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
-ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0016312" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0021211" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."SYS_USER_ROLE" ADD CONSTRAINT "SYS_C0021212" CHECK ("ROLE_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
 -- Primary Key structure for table T_USER
@@ -6022,7 +6018,7 @@ ALTER TABLE "ZHGLXT"."T_USER" ADD CONSTRAINT "SYS_C008719" PRIMARY KEY ("USER_ID
 -- ----------------------------
 -- Checks structure for table T_USER
 -- ----------------------------
-ALTER TABLE "ZHGLXT"."T_USER" ADD CONSTRAINT "SYS_C0016186" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
+ALTER TABLE "ZHGLXT"."T_USER" ADD CONSTRAINT "SYS_C0021214" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 ALTER TABLE "ZHGLXT"."T_USER" ADD CONSTRAINT "SYS_C008679" CHECK ("USER_ID" IS NOT NULL) NOT DEFERRABLE INITIALLY IMMEDIATE NORELY VALIDATE;
 
 -- ----------------------------
