@@ -251,8 +251,7 @@
                            th:href="@{/oa/notify/myNotify}" class="menuItem" style="color: #fff;font-weight: 600;">
                             <i class="fa fa-comment-o"></i> 我的通知
                         </a>
-                        <i style="padding: 0 3px;font-size: 12px;text-align: center;background-color: #FF5722;color: #fff;border-radius: 2px;"
-                           th:if="${notifyNumber>0}">[[${notifyNumber}]]</i>
+                        <i id="notifyCount" style="padding: 0 3px;font-size: 12px;text-align: center;background-color: #FF5722;color: #fff;border-radius: 2px;"></i>
                     </i>
                     <li class="dropdown user-menu">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-hover="dropdown">
@@ -438,7 +437,17 @@
         }
 
         $("[data-toggle='tooltip']").tooltip();
+
+        // 刷新通知通告总数
+        refreshNotifyCount();
     })
+
+    function refreshNotifyCount(){
+        $.post(ctx + 'notifyCount', function (result) {
+            $("#notifyCount").text(result)
+        });
+        setTimeout(refreshNotifyCount, 5000);
+    }
 </script>
 </body>
 </html>

@@ -71,10 +71,7 @@ public class SysIndexController extends BaseController {
         mmap.put("isPasswordExpired", passwordIsExpiration(user.getPwdUpdateDate()));
         mmap.put("isMobile", ServletUtils.checkAgentIsMobile(ServletUtils.getRequest().getHeader("User-Agent")));
 
-        //通知通告消息数
-        NotifyRecord notifyRecord = new NotifyRecord();
-        notifyRecord.setUserId(ShiroUtils.getUserId());
-        mmap.put("notifyNumber", notifyRecordMapper.getNotifyNumber(notifyRecord));
+        // 系统名称
         mmap.put("systemName", GlobalConfig.getName());
 
         // 菜单导航显示风格
@@ -172,5 +169,15 @@ public class SysIndexController extends BaseController {
             return DateUtils.differentDaysByMillisecond(nowDate, pwdUpdateDate) > passwordValidateDays;
         }
         return false;
+    }
+
+    /** 通知通告消息总数 */
+    @PostMapping("/notifyCount")
+    @ResponseBody
+    public int notifyCount(ModelMap mmap) {
+        //通知通告消息数
+        NotifyRecord notifyRecord = new NotifyRecord();
+        notifyRecord.setUserId(ShiroUtils.getUserId());
+        return notifyRecordMapper.getNotifyNumber(notifyRecord);
     }
 }
