@@ -5,28 +5,28 @@
 
     <groupId>com.zhglxt</groupId>
     <artifactId>zhglxt</artifactId>
-    <version>4.7.7</version>
+    <version>4.7.8</version>
 
     <name>zhglxt</name>
     <description>web应用系统</description>
 
     <properties>
-        <zhglxt.version>4.7.7</zhglxt.version>
+        <zhglxt.version>4.7.8</zhglxt.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-        <shiro.version>1.12.0</shiro.version>
+        <shiro.version>1.13.0</shiro.version>
         <thymeleaf.extras.shiro.version>2.1.0</thymeleaf.extras.shiro.version>
         <oracle.version>19.3.0.0</oracle.version>
-        <druid.version>1.2.16</druid.version>
+        <druid.version>1.2.20</druid.version>
         <bitwalker.version>1.21</bitwalker.version>
         <kaptcha.version>2.3.3</kaptcha.version>
         <swagger.version>3.0.0</swagger.version>
-        <mybatis-spring-boot.version>2.2.2</mybatis-spring-boot.version>
-        <pagehelper.boot.version>1.4.3</pagehelper.boot.version>
+        <mybatis-spring-boot.version>2.2.0</mybatis-spring-boot.version>
+        <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
         <fastjson.version>1.2.83</fastjson.version>
-        <oshi.version>6.4.6</oshi.version>
+        <oshi.version>6.4.11</oshi.version>
         <commons.io.version>2.11.0</commons.io.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
