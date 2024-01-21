@@ -3,6 +3,7 @@ package com.zhglxt.quartz.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
+
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -33,7 +34,7 @@ public class ScheduleConfig
         // 集群配置
         prop.put("org.quartz.jobStore.isClustered", "true");
         prop.put("org.quartz.jobStore.clusterCheckinInterval", "15000");
-        prop.put("org.quartz.jobStore.maxMisfiresToHandleAtATime", "1");
+        prop.put("org.quartz.jobStore.maxMisfiresToHandleAtATime", "10");
         prop.put("org.quartz.jobStore.txIsolationLevelSerializable", "true");
 
         // sqlserver 启用

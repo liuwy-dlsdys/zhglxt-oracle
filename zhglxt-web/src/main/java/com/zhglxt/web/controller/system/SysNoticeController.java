@@ -1,7 +1,6 @@
 package com.zhglxt.web.controller.system;
 
 import com.zhglxt.common.annotation.Log;
-import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.page.TableDataInfo;
@@ -13,7 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -99,6 +102,17 @@ public class SysNoticeController extends BaseController {
     public AjaxResult editSave(@Validated SysNotice notice) {
         notice.setUpdateBy(getLoginName());
         return toAjax(noticeService.updateNotice(notice));
+    }
+
+    /**
+     * 查询公告详细
+     */
+    @RequiresPermissions("system:notice:list")
+    @GetMapping("/view/{noticeId}")
+    public String view(@PathVariable("noticeId") String noticeId, ModelMap mmap)
+    {
+        mmap.put("notice", noticeService.selectNoticeById(noticeId));
+        return prefix + "/view";
     }
 
     /**
