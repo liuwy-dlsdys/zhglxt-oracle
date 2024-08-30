@@ -1,6 +1,6 @@
 package com.zhglxt.framework.config;
 
-import java.util.Locale;
+import com.zhglxt.common.constant.Constants;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -11,24 +11,21 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 /**
  * 资源文件配置加载
- * 
+ *
  * @author ruoyi
  */
 @Configuration
-public class I18nConfig implements WebMvcConfigurer
-{
+public class I18nConfig implements WebMvcConfigurer {
     @Bean
-    public LocaleResolver localeResolver()
-    {
+    public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
         // 默认语言
-        slr.setDefaultLocale(Locale.SIMPLIFIED_CHINESE);
+        slr.setDefaultLocale(Constants.DEFAULT_LOCALE);
         return slr;
     }
 
     @Bean
-    public LocaleChangeInterceptor localeChangeInterceptor()
-    {
+    public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor lci = new LocaleChangeInterceptor();
         // 参数名
         lci.setParamName("lang");
@@ -36,8 +33,7 @@ public class I18nConfig implements WebMvcConfigurer
     }
 
     @Override
-    public void addInterceptors(InterceptorRegistry registry)
-    {
+    public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeChangeInterceptor());
     }
 }
