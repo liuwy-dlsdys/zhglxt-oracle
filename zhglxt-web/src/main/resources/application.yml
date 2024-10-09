@@ -3,7 +3,7 @@ zhglxt:
   # 名称
   name: WEB应用系统
   # 版本
-  version: 4.7.8
+  version: 4.7.9
   # 版权年份
   copyrightYear: 2024
   # 实例演示开关
@@ -22,6 +22,8 @@ server:
   servlet:
     # 应用的访问路径
     context-path: /zhglxt
+  # http请求头大小
+  max-http-header-size: 65536
   tomcat:
     # tomcat的URI编码
     uri-encoding: UTF-8

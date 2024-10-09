@@ -89,6 +89,11 @@ public @interface Excel {
     public String[] combo() default {};
 
     /**
+     * 是否从字典读数据到combo,默认不读取,如读取需要设置dictType注解.
+     */
+    public boolean comboReadDict() default false;
+
+    /**
      * 是否需要纵向合并单元格,应对需求:含有list集合单元格)
      */
     public boolean needMerge() default false;
@@ -102,6 +107,7 @@ public @interface Excel {
      * 另一个类中的属性名称,支持多级获取,以小数点隔开
      */
     public String targetAttr() default "";
+
 
     /**
      * 是否自动统计数据,在最后追加一行统计数据总和

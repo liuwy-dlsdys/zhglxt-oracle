@@ -1,17 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zhglxt</groupId>
     <artifactId>zhglxt</artifactId>
-    <version>4.7.8</version>
+    <version>4.7.9</version>
+    <packaging>pom</packaging>
 
     <name>zhglxt</name>
-    <description>web应用系统</description>
+    <url>http://zhglxt.dlsdys.com</url>
+    <description>WEB应用系统</description>
+
+    <inceptionYear>2019</inceptionYear>
 
     <properties>
-        <zhglxt.version>4.7.8</zhglxt.version>
+        <zhglxt.version>4.7.9</zhglxt.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -26,9 +30,9 @@
         <mybatis-spring-boot.version>2.2.0</mybatis-spring-boot.version>
         <pagehelper.boot.version>1.4.7</pagehelper.boot.version>
         <fastjson.version>1.2.83</fastjson.version>
-        <oshi.version>6.5.0</oshi.version>
+        <oshi.version>6.6.3</oshi.version>
         <spring-framework.version>5.3.33</spring-framework.version>
-        <commons.io.version>2.13.0</commons.io.version>
+        <commons.io.version>2.16.1</commons.io.version>
         <poi.version>4.1.2</poi.version>
         <velocity.version>2.3</velocity.version>
 
@@ -51,7 +55,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- SpringBoot的依赖配置-->
+            <!-- SpringBoot的依赖配置 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -60,21 +64,21 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- 阿里数据库连接池 -->
+            <!--阿里数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
 
-            <!-- 验证码 -->
+            <!--验证码 -->
             <dependency>
                 <groupId>pro.fessional</groupId>
                 <artifactId>kaptcha</artifactId>
                 <version>${kaptcha.version}</version>
             </dependency>
 
-            <!-- Shiro核心框架 -->
+            <!--Shiro核心框架 -->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
@@ -95,6 +99,13 @@
                 <version>${shiro.version}</version>
             </dependency>
 
+            <!--ehcache缓存-->
+            <dependency>
+                <groupId>org.ehcache</groupId>
+                <artifactId>ehcache</artifactId>
+                <version>3.4.0</version>
+            </dependency>
+
             <!-- thymeleaf模板引擎和shiro框架的整合 -->
             <dependency>
                 <groupId>com.github.theborakompanioni</groupId>
@@ -102,7 +113,7 @@
                 <version>${thymeleaf.extras.shiro.version}</version>
             </dependency>
 
-            <!-- 解析客户端操作系统、浏览器等 -->
+            <!-- 解析客户端操作系统 浏览器等 -->
             <dependency>
                 <groupId>eu.bitwalker</groupId>
                 <artifactId>UserAgentUtils</artifactId>
@@ -160,7 +171,7 @@
                 </exclusions>
             </dependency>
 
-            <!-- io常用工具类 -->
+            <!--io常用工具类 -->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
@@ -174,7 +185,14 @@
                 <version>${poi.version}</version>
             </dependency>
 
-            <!-- velocity代码生成使用模板 -->
+            <!-- easyexcel导入导出插件 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <!--velocity代码生成使用模板 -->
             <dependency>
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
@@ -188,39 +206,11 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-            <!-- 定时任务-->
+            <!-- springBoot aop -->
             <dependency>
-                <groupId>com.zhglxt</groupId>
-                <artifactId>zhglxt-quartz</artifactId>
-                <version>${zhglxt.version}</version>
-            </dependency>
-
-            <!-- 代码生成-->
-            <dependency>
-                <groupId>com.zhglxt</groupId>
-                <artifactId>zhglxt-generator</artifactId>
-                <version>${zhglxt.version}</version>
-            </dependency>
-
-            <!-- 核心模块-->
-            <dependency>
-                <groupId>com.zhglxt</groupId>
-                <artifactId>zhglxt-framework</artifactId>
-                <version>${zhglxt.version}</version>
-            </dependency>
-
-            <!-- 系统模块-->
-            <dependency>
-                <groupId>com.zhglxt</groupId>
-                <artifactId>zhglxt-system</artifactId>
-                <version>${zhglxt.version}</version>
-            </dependency>
-
-            <!-- 通用工具-->
-            <dependency>
-                <groupId>com.zhglxt</groupId>
-                <artifactId>zhglxt-common</artifactId>
-                <version>${zhglxt.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${aop.version}</version>
             </dependency>
 
             <!-- activiti工作流 -->
@@ -236,18 +226,39 @@
                 <version>${activiti.version}</version>
             </dependency>
 
-            <!-- springBoot aop -->
+            <!-- 定时任务 -->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-aop</artifactId>
-                <version>${aop.version}</version>
+                <groupId>com.zhglxt</groupId>
+                <artifactId>zhglxt-quartz</artifactId>
+                <version>${zhglxt.version}</version>
             </dependency>
 
-            <!-- easyexcel导入导出插件 -->
+            <!-- 代码生成 -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>easyexcel</artifactId>
-                <version>${easyexcel.version}</version>
+                <groupId>com.zhglxt</groupId>
+                <artifactId>zhglxt-generator</artifactId>
+                <version>${zhglxt.version}</version>
+            </dependency>
+
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.zhglxt</groupId>
+                <artifactId>zhglxt-framework</artifactId>
+                <version>${zhglxt.version}</version>
+            </dependency>
+
+            <!-- 系统模块 -->
+            <dependency>
+                <groupId>com.zhglxt</groupId>
+                <artifactId>zhglxt-system</artifactId>
+                <version>${zhglxt.version}</version>
+            </dependency>
+
+            <!-- 通用工具 -->
+            <dependency>
+                <groupId>com.zhglxt</groupId>
+                <artifactId>zhglxt-common</artifactId>
+                <version>${zhglxt.version}</version>
             </dependency>
 
             <!-- 工作流模块 -->
@@ -289,17 +300,16 @@
         <module>zhglxt-generator</module>
         <module>zhglxt-common</module>
 
-        <module>zhglxt-oa</module>
         <module>zhglxt-activiti</module>
+        <module>zhglxt-oa</module>
         <module>zhglxt-cms</module>
-        <module>zhglxt-file-manager</module>
         <module>zhglxt-demo</module>
+        <module>zhglxt-file-manager</module>
     </modules>
-    <packaging>pom</packaging>
-
 
     <build>
         <plugins>
+            <!-- maven插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -314,7 +324,8 @@
     </build>
 
     <repositories>
-        <!-- 阿里云镜像仓库 -->
+
+        <!-- 阿里云Maven中央仓库 -->
         <repository>
             <id>public</id>
             <name>aliyun nexus</name>
@@ -323,9 +334,12 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
+
     </repositories>
 
     <pluginRepositories>
+
+        <!-- 阿里云Maven中央仓库插件 -->
         <pluginRepository>
             <id>public</id>
             <name>aliyun nexus</name>
@@ -337,6 +351,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+
     </pluginRepositories>
 
 </project>

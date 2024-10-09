@@ -15,6 +15,7 @@ import com.zhglxt.common.utils.poi.ExcelUtil;
 import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.framework.shiro.service.SysPasswordService;
 import com.zhglxt.framework.shiro.util.AuthorizationUtils;
+import com.zhglxt.system.service.ISysDeptService;
 import com.zhglxt.system.service.ISysPostService;
 import com.zhglxt.system.service.ISysRoleService;
 import com.zhglxt.system.service.ISysUserService;
@@ -24,11 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -50,6 +47,9 @@ public class SysUserController extends BaseController {
 
     @Autowired
     private ISysRoleService roleService;
+
+    @Autowired
+    private ISysDeptService deptService;
 
     @Autowired
     private ISysPostService postService;
@@ -122,6 +122,8 @@ public class SysUserController extends BaseController {
     @PostMapping("/add")
     @ResponseBody
     public AjaxResult addSave(@Validated SysUser user) {
+        deptService.checkDeptDataScope(user.getDeptId());
+        roleService.checkRoleDataScope(user.getRoleIds());
         if (!userService.checkLoginNameUnique(user)) {
             return error("新增用户'" + user.getLoginName() + "'失败，登录账号已存在");
         } else if (StringUtils.isNotEmpty(user.getPhonenumber()) && !userService.checkPhoneUnique(user)) {
@@ -176,6 +178,9 @@ public class SysUserController extends BaseController {
         //超级系统管理员&角色不允许操作
         userService.checkUserAllowed(user);
         //userService.checkUserDataScope(user.getUserId());
+
+        deptService.checkDeptDataScope(user.getDeptId());
+        roleService.checkRoleDataScope(user.getRoleIds());
 
         //数据校验
         if (!userService.checkLoginNameUnique(user))
@@ -241,6 +246,7 @@ public class SysUserController extends BaseController {
     @ResponseBody
     public AjaxResult insertAuthRole(String userId, String[] roleIds) {
         userService.checkUserDataScope(userId);
+        roleService.checkRoleDataScope(roleIds);
         userService.insertUserAuth(userId, roleIds);
         AuthorizationUtils.clearAllCachedAuthorizationInfo();
         return success();

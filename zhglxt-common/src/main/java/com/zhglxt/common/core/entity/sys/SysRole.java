@@ -1,12 +1,13 @@
 package com.zhglxt.common.core.entity.sys;
 
-import java.util.Set;
-import javax.validation.constraints.*;
+import com.zhglxt.common.annotation.Excel;
+import com.zhglxt.common.core.entity.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import com.zhglxt.common.annotation.Excel;
-import com.zhglxt.common.annotation.Excel.ColumnType;
-import com.zhglxt.common.core.entity.BaseEntity;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+import java.util.Set;
 
 /**
  * 角色表 sys_role
@@ -18,7 +19,7 @@ public class SysRole extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 角色ID */
-    @Excel(name = "角色序号", cellType = ColumnType.NUMERIC)
+    @Excel(name = "角色序号", cellType = Excel.ColumnType.STRING)
     private String roleId;
 
     /** 角色名称 */
@@ -30,7 +31,7 @@ public class SysRole extends BaseEntity
     private String roleKey;
 
     /** 角色排序 */
-    @Excel(name = "角色排序", cellType = ColumnType.NUMERIC)
+    @Excel(name = "角色排序", cellType = Excel.ColumnType.NUMERIC)
     private String roleSort;
 
     /** 数据范围（1：所有数据权限；2：自定义数据权限；3：本部门数据权限；4：本部门及以下数据权限；5：仅本人数据权限） */
@@ -81,9 +82,8 @@ public class SysRole extends BaseEntity
         return isAdmin(this.roleId);
     }
 
-    public static boolean isAdmin(String roleId)
-    {
-        return roleId != null && "1".equals(roleId);
+    public static boolean isAdmin(String roleId) {
+        return roleId != null && roleId.equals("1");
     }
 
     public String getDataScope()
