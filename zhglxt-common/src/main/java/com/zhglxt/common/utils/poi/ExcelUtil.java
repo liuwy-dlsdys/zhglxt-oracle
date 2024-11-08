@@ -1,9 +1,81 @@
 package com.zhglxt.common.utils.poi;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
+import javax.servlet.http.HttpServletResponse;
+
+import com.zhglxt.common.config.GlobalConfig;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.RegExUtils;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
+import org.apache.poi.hssf.usermodel.HSSFPicture;
+import org.apache.poi.hssf.usermodel.HSSFPictureData;
+import org.apache.poi.hssf.usermodel.HSSFShape;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ooxml.POIXMLDocumentPart;
+import org.apache.poi.ss.usermodel.BorderStyle;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.ClientAnchor;
+import org.apache.poi.ss.usermodel.DataFormat;
+import org.apache.poi.ss.usermodel.DataValidation;
+import org.apache.poi.ss.usermodel.DataValidationConstraint;
+import org.apache.poi.ss.usermodel.DataValidationHelper;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Drawing;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.usermodel.Name;
+import org.apache.poi.ss.usermodel.PictureData;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.CellRangeAddressList;
+import org.apache.poi.util.IOUtils;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
+import org.apache.poi.xssf.usermodel.XSSFDataValidation;
+import org.apache.poi.xssf.usermodel.XSSFDrawing;
+import org.apache.poi.xssf.usermodel.XSSFPicture;
+import org.apache.poi.xssf.usermodel.XSSFShape;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.zhglxt.common.annotation.Excel;
+import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.annotation.Excel.Type;
 import com.zhglxt.common.annotation.Excels;
-import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.text.Convert;
 import com.zhglxt.common.exception.UtilException;
@@ -14,32 +86,6 @@ import com.zhglxt.common.utils.file.FileTypeUtils;
 import com.zhglxt.common.utils.file.FileUtils;
 import com.zhglxt.common.utils.file.ImageUtils;
 import com.zhglxt.common.utils.reflect.ReflectUtils;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.RegExUtils;
-import org.apache.commons.lang3.reflect.FieldUtils;
-import org.apache.poi.hssf.usermodel.*;
-import org.apache.poi.ooxml.POIXMLDocumentPart;
-import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.*;
-import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Excel相关处理
@@ -62,7 +108,7 @@ public class ExcelUtil<T>
     /**
      * Excel sheet最大行数，默认65536
      */
-    public static final int SHEET_SIZE = 65536;
+    public static final int sheetSize = 65536;
 
     /**
      * 工作表名称
@@ -150,6 +196,11 @@ public class ExcelUtil<T>
     public Class<T> clazz;
 
     /**
+     * 需要显示列属性
+     */
+    public String[] includeFields;
+
+    /**
      * 需要排除列属性
      */
     public String[] excludeFields;
@@ -160,10 +211,19 @@ public class ExcelUtil<T>
     }
 
     /**
+     * 仅在Excel中显示列属性
+     *
+     * @param fields 列属性名 示例[单个"name"/多个"id","name"]
+     */
+    public void showColumn(String... fields)
+    {
+        this.includeFields = fields;
+    }
+
+    /**
      * 隐藏Excel中列属性
      *
      * @param fields 列属性名 示例[单个"name"/多个"id","name"]
-     * @throws Exception
      */
     public void hideColumn(String... fields)
     {
@@ -437,7 +497,7 @@ public class ExcelUtil<T>
                         {
                             val = dataFormatHandlerAdapter(val, attr, null);
                         }
-                        else if (Excel.ColumnType.IMAGE == attr.cellType() && StringUtils.isNotEmpty(pictures))
+                        else if (ColumnType.IMAGE == attr.cellType() && StringUtils.isNotEmpty(pictures))
                         {
                             PictureData image = pictures.get(row.getRowNum() + "_" + entry.getKey());
                             if (image == null)
@@ -621,7 +681,7 @@ public class ExcelUtil<T>
     public void writeSheet()
     {
         // 取出一共有多少个sheet.
-        int sheetNo = Math.max(1, (int) Math.ceil(list.size() * 1.0 / SHEET_SIZE));
+        int sheetNo = Math.max(1, (int) Math.ceil(list.size() * 1.0 / sheetSize));
         for (int index = 0; index < sheetNo; index++)
         {
             createSheet(sheetNo, index);
@@ -664,8 +724,8 @@ public class ExcelUtil<T>
     @SuppressWarnings("unchecked")
     public void fillExcelData(int index, Row row)
     {
-        int startNo = index * SHEET_SIZE;
-        int endNo = Math.min(startNo + SHEET_SIZE, list.size());
+        int startNo = index * sheetSize;
+        int endNo = Math.min(startNo + sheetSize, list.size());
         int rowNo = (1 + rownum) - startNo;
         for (int i = startNo; i < endNo; i++)
         {
@@ -687,7 +747,6 @@ public class ExcelUtil<T>
                     subMergedLastRowNum++;
                 }
             }
-
             int column = 0;
             for (Object[] os : fields)
             {
@@ -880,7 +939,7 @@ public class ExcelUtil<T>
             dataFont.setFontHeightInPoints((short) 10);
             dataFont.setColor(excel.color().index);
             style.setFont(dataFont);
-            if (Excel.ColumnType.TEXT == excel.cellType())
+            if (ColumnType.TEXT == excel.cellType())
             {
                 DataFormat dataFormat = wb.createDataFormat();
                 style.setDataFormat(dataFormat.getFormat("@"));
@@ -921,7 +980,7 @@ public class ExcelUtil<T>
      */
     public void setCellVo(Object value, Excel attr, Cell cell)
     {
-        if (Excel.ColumnType.STRING == attr.cellType() || Excel.ColumnType.TEXT == attr.cellType())
+        if (ColumnType.STRING == attr.cellType() || ColumnType.TEXT == attr.cellType())
         {
             String cellValue = Convert.toStr(value);
             // 对于任何以表达式触发字符 =-+@开头的单元格，直接使用tab字符作为前缀，防止CSV注入。
@@ -935,14 +994,14 @@ public class ExcelUtil<T>
             }
             cell.setCellValue(StringUtils.isNull(cellValue) ? attr.defaultValue() : cellValue + attr.suffix());
         }
-        else if (Excel.ColumnType.NUMERIC == attr.cellType())
+        else if (ColumnType.NUMERIC == attr.cellType())
         {
             if (StringUtils.isNotNull(value))
             {
                 cell.setCellValue(StringUtils.contains(Convert.toStr(value), ".") ? Convert.toDouble(value) : Convert.toInt(value));
             }
         }
-        else if (Excel.ColumnType.IMAGE == attr.cellType())
+        else if (ColumnType.IMAGE == attr.cellType())
         {
             ClientAnchor anchor = new XSSFClientAnchor(0, 0, 0, 0, (short) cell.getColumnIndex(), cell.getRow().getRowNum(), (short) (cell.getColumnIndex() + 1), cell.getRow().getRowNum() + 1);
             String imagePath = Convert.toStr(value);
@@ -1443,46 +1502,86 @@ public class ExcelUtil<T>
         List<Field> tempFields = new ArrayList<>();
         tempFields.addAll(Arrays.asList(clazz.getSuperclass().getDeclaredFields()));
         tempFields.addAll(Arrays.asList(clazz.getDeclaredFields()));
-        for (Field field : tempFields)
+        if (StringUtils.isNotEmpty(includeFields))
         {
-            if (!ArrayUtils.contains(this.excludeFields, field.getName()))
+            for (Field field : tempFields)
             {
-                // 单注解
-                if (field.isAnnotationPresent(Excel.class))
+                if (ArrayUtils.contains(this.includeFields, field.getName()) || field.isAnnotationPresent(Excels.class))
                 {
-                    Excel attr = field.getAnnotation(Excel.class);
-                    if (attr != null && (attr.type() == Type.ALL || attr.type() == type))
+                    addField(fields, field);
+                }
+            }
+        }
+        else if (StringUtils.isNotEmpty(excludeFields))
+        {
+            for (Field field : tempFields)
+            {
+                if (!ArrayUtils.contains(this.excludeFields, field.getName()))
+                {
+                    addField(fields, field);
+                }
+            }
+        }
+        else
+        {
+            for (Field field : tempFields)
+            {
+                addField(fields, field);
+            }
+        }
+        return fields;
+    }
+
+    /**
+     * 添加字段信息
+     */
+    public void addField(List<Object[]> fields, Field field)
+    {
+        // 单注解
+        if (field.isAnnotationPresent(Excel.class))
+        {
+            Excel attr = field.getAnnotation(Excel.class);
+            if (attr != null && (attr.type() == Type.ALL || attr.type() == type))
+            {
+                field.setAccessible(true);
+                fields.add(new Object[] { field, attr });
+            }
+            if (Collection.class.isAssignableFrom(field.getType()))
+            {
+                subMethod = getSubMethod(field.getName(), clazz);
+                ParameterizedType pt = (ParameterizedType) field.getGenericType();
+                Class<?> subClass = (Class<?>) pt.getActualTypeArguments()[0];
+                this.subFields = FieldUtils.getFieldsListWithAnnotation(subClass, Excel.class);
+            }
+        }
+
+        // 多注解
+        if (field.isAnnotationPresent(Excels.class))
+        {
+            Excels attrs = field.getAnnotation(Excels.class);
+            Excel[] excels = attrs.value();
+            for (Excel attr : excels)
+            {
+                if (StringUtils.isNotEmpty(includeFields))
+                {
+                    if (ArrayUtils.contains(this.includeFields, field.getName() + "." + attr.targetAttr())
+                            && (attr != null && (attr.type() == Type.ALL || attr.type() == type)))
                     {
                         field.setAccessible(true);
                         fields.add(new Object[] { field, attr });
                     }
-                    if (Collection.class.isAssignableFrom(field.getType()))
-                    {
-                        subMethod = getSubMethod(field.getName(), clazz);
-                        ParameterizedType pt = (ParameterizedType) field.getGenericType();
-                        Class<?> subClass = (Class<?>) pt.getActualTypeArguments()[0];
-                        this.subFields = FieldUtils.getFieldsListWithAnnotation(subClass, Excel.class);
-                    }
                 }
-
-                // 多注解
-                if (field.isAnnotationPresent(Excels.class))
+                else
                 {
-                    Excels attrs = field.getAnnotation(Excels.class);
-                    Excel[] excels = attrs.value();
-                    for (Excel attr : excels)
+                    if (!ArrayUtils.contains(this.excludeFields, field.getName() + "." + attr.targetAttr())
+                            && (attr != null && (attr.type() == Type.ALL || attr.type() == type)))
                     {
-                        if (!ArrayUtils.contains(this.excludeFields, field.getName() + "." + attr.targetAttr())
-                                && (attr != null && (attr.type() == Type.ALL || attr.type() == type)))
-                        {
-                            field.setAccessible(true);
-                            fields.add(new Object[] { field, attr });
-                        }
+                        field.setAccessible(true);
+                        fields.add(new Object[] { field, attr });
                     }
                 }
             }
         }
-        return fields;
     }
 
     /**

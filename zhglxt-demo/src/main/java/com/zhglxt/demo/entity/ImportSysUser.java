@@ -329,8 +329,8 @@ public class ImportSysUser extends BaseEntity {
         this.postIds = postIds;
     }
 
-    @NotBlank(message = "身份证号码不能为空")
-    @Size(min = 15, max = 18, message = "身份证号码不能小于15或大于18个数字")
+//    @NotBlank(message = "身份证号码不能为空")
+//    @Size(min = 15, max = 18, message = "身份证号码不能小于15或大于18个数字")
     public String getIdCard() {
         return idCard;
     }

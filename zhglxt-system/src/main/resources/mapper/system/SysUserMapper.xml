@@ -86,11 +86,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			AND (u.dept_id = #{deptId} OR u.dept_id IN ( SELECT t.dept_id FROM sys_dept t WHERE FIND_IN_SET (#{deptId}, ancestors) <![CDATA[ <> ]]> 0 ))
 		</if>
 		<!-- 数据范围过滤 -->
-		${params.dataScope}
+		/*${params.dataScope}*/
 	</select>
 	
 	<select id="selectAllocatedList" parameterType="SysUser" resultMap="SysUserResult">
-	    select distinct u.user_id, u.dept_id, u.login_name, u.id_card, u.user_name, u.user_type, u.email, u.avatar, u.phonenumber, u.status, u.create_time
+	    select distinct u.user_id, u.dept_id, u.login_name, u.id_card, u.user_name, u.user_type, u.email, u.avatar, u.phonenumber, u.status, u.create_time, u.update_time
 	    from sys_user u
 			 left join sys_dept d on u.dept_id = d.dept_id
 			 left join sys_user_role ur on u.user_id = ur.user_id
