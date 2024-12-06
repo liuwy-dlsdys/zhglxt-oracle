@@ -1,81 +1,10 @@
 package com.zhglxt.common.utils.poi;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
-import java.util.stream.Collectors;
-import javax.servlet.http.HttpServletResponse;
-
-import com.zhglxt.common.config.GlobalConfig;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.RegExUtils;
-import org.apache.commons.lang3.reflect.FieldUtils;
-import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
-import org.apache.poi.hssf.usermodel.HSSFPicture;
-import org.apache.poi.hssf.usermodel.HSSFPictureData;
-import org.apache.poi.hssf.usermodel.HSSFShape;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ooxml.POIXMLDocumentPart;
-import org.apache.poi.ss.usermodel.BorderStyle;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.ClientAnchor;
-import org.apache.poi.ss.usermodel.DataFormat;
-import org.apache.poi.ss.usermodel.DataValidation;
-import org.apache.poi.ss.usermodel.DataValidationConstraint;
-import org.apache.poi.ss.usermodel.DataValidationHelper;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Drawing;
-import org.apache.poi.ss.usermodel.FillPatternType;
-import org.apache.poi.ss.usermodel.Font;
-import org.apache.poi.ss.usermodel.HorizontalAlignment;
-import org.apache.poi.ss.usermodel.IndexedColors;
-import org.apache.poi.ss.usermodel.Name;
-import org.apache.poi.ss.usermodel.PictureData;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.VerticalAlignment;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.ss.util.CellRangeAddress;
-import org.apache.poi.ss.util.CellRangeAddressList;
-import org.apache.poi.util.IOUtils;
-import org.apache.poi.xssf.streaming.SXSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFClientAnchor;
-import org.apache.poi.xssf.usermodel.XSSFDataValidation;
-import org.apache.poi.xssf.usermodel.XSSFDrawing;
-import org.apache.poi.xssf.usermodel.XSSFPicture;
-import org.apache.poi.xssf.usermodel.XSSFShape;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.zhglxt.common.annotation.Excel;
 import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.annotation.Excel.Type;
 import com.zhglxt.common.annotation.Excels;
+import com.zhglxt.common.config.GlobalConfig;
 import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.text.Convert;
 import com.zhglxt.common.exception.UtilException;
@@ -86,6 +15,32 @@ import com.zhglxt.common.utils.file.FileTypeUtils;
 import com.zhglxt.common.utils.file.FileUtils;
 import com.zhglxt.common.utils.file.ImageUtils;
 import com.zhglxt.common.utils.reflect.ReflectUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.RegExUtils;
+import org.apache.commons.lang3.reflect.FieldUtils;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ooxml.POIXMLDocumentPart;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellRangeAddress;
+import org.apache.poi.ss.util.CellRangeAddressList;
+import org.apache.poi.util.IOUtils;
+import org.apache.poi.xssf.streaming.SXSSFWorkbook;
+import org.apache.poi.xssf.usermodel.*;
+import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Excel相关处理
@@ -253,8 +208,6 @@ public class ExcelUtil<T>
     {
         if (StringUtils.isNotEmpty(title))
         {
-            subMergedFirstRowNum++;
-            subMergedLastRowNum++;
             int titleLastCol = this.fields.size() - 1;
             if (isSubList())
             {
@@ -265,7 +218,7 @@ public class ExcelUtil<T>
             Cell titleCell = titleRow.createCell(0);
             titleCell.setCellStyle(styles.get("title"));
             titleCell.setCellValue(title);
-            sheet.addMergedRegion(new CellRangeAddress(titleRow.getRowNum(), titleRow.getRowNum(), titleRow.getRowNum(), titleLastCol));
+            sheet.addMergedRegion(new CellRangeAddress(titleRow.getRowNum(), titleRow.getRowNum(), 0, titleLastCol));
         }
     }
 
@@ -276,23 +229,31 @@ public class ExcelUtil<T>
     {
         if (isSubList())
         {
-            subMergedFirstRowNum++;
-            subMergedLastRowNum++;
             Row subRow = sheet.createRow(rownum);
-            int excelNum = 0;
+            int column = 0;
+            int subFieldSize = subFields != null ? subFields.size() : 0;
             for (Object[] objects : fields)
             {
+                Field field = (Field) objects[0];
                 Excel attr = (Excel) objects[1];
-                Cell headCell1 = subRow.createCell(excelNum);
-                headCell1.setCellValue(attr.name());
-                headCell1.setCellStyle(styles.get(StringUtils.format("header_{}_{}", attr.headerColor(), attr.headerBackgroundColor())));
-                excelNum++;
-            }
-            int headFirstRow = excelNum - 1;
-            int headLastRow = headFirstRow + subFields.size() - 1;
-            if (headLastRow > headFirstRow)
-            {
-                sheet.addMergedRegion(new CellRangeAddress(rownum, rownum, headFirstRow, headLastRow));
+                if (Collection.class.isAssignableFrom(field.getType()))
+                {
+                    Cell cell = subRow.createCell(column);
+                    cell.setCellValue(attr.name());
+                    cell.setCellStyle(styles.get(StringUtils.format("header_{}_{}", attr.headerColor(), attr.headerBackgroundColor())));
+                    if (subFieldSize > 1)
+                    {
+                        CellRangeAddress cellAddress = new CellRangeAddress(rownum, rownum, column, column + subFieldSize - 1);
+                        sheet.addMergedRegion(cellAddress);
+                    }
+                    column += subFieldSize;
+                }
+                else
+                {
+                    Cell cell = subRow.createCell(column++);
+                    cell.setCellValue(attr.name());
+                    cell.setCellStyle(styles.get(StringUtils.format("header_{}_{}", attr.headerColor(), attr.headerBackgroundColor())));
+                }
             }
             rownum++;
         }
@@ -434,7 +395,7 @@ public class ExcelUtil<T>
                             }
                             else
                             {
-                                val = Convert.toStr(val);
+                                val = Convert.toStr(((String) val).trim());
                             }
                         }
                     }
@@ -462,7 +423,7 @@ public class ExcelUtil<T>
                     {
                         if (val instanceof String)
                         {
-                            val = DateUtils.parseDate(val);
+                            val = DateUtils.parseDate(((String) val).trim());
                         }
                         else if (val instanceof Double)
                         {
@@ -726,64 +687,91 @@ public class ExcelUtil<T>
     {
         int startNo = index * sheetSize;
         int endNo = Math.min(startNo + sheetSize, list.size());
-        int rowNo = (1 + rownum) - startNo;
+        int currentRowNum = rownum + 1; // 从标题行后开始
+
         for (int i = startNo; i < endNo; i++)
         {
-            rowNo = isSubList() ? (i > 1 ? rowNo + 1 : rowNo + i) : i + 1 + rownum - startNo;
-            row = sheet.createRow(rowNo);
-            // 得到导出对象.
+            row = sheet.createRow(currentRowNum);
             T vo = (T) list.get(i);
-            Collection<?> subList = null;
-            if (isSubList())
-            {
-                if (isSubListValue(vo))
-                {
-                    subList = getListCellValue(vo);
-                    subMergedLastRowNum = subMergedLastRowNum + subList.size();
-                }
-                else
-                {
-                    subMergedFirstRowNum++;
-                    subMergedLastRowNum++;
-                }
-            }
             int column = 0;
+            int maxSubListSize = getCurrentMaxSubListSize(vo);
             for (Object[] os : fields)
             {
                 Field field = (Field) os[0];
                 Excel excel = (Excel) os[1];
-                if (Collection.class.isAssignableFrom(field.getType()) && StringUtils.isNotNull(subList))
+                if (Collection.class.isAssignableFrom(field.getType()))
                 {
-                    boolean subFirst = false;
-                    for (Object obj : subList)
+                    try
                     {
-                        if (subFirst)
+                        Collection<?> subList = (Collection<?>) getTargetValue(vo, field, excel);
+                        if (subList != null && !subList.isEmpty())
                         {
-                            rowNo++;
-                            row = sheet.createRow(rowNo);
-                        }
-                        List<Field> subFields = FieldUtils.getFieldsListWithAnnotation(obj.getClass(), Excel.class);
-                        int subIndex = 0;
-                        for (Field subField : subFields)
-                        {
-                            if (subField.isAnnotationPresent(Excel.class))
+                            int subIndex = 0;
+                            for (Object subVo : subList)
                             {
-                                subField.setAccessible(true);
-                                Excel attr = subField.getAnnotation(Excel.class);
-                                this.addCell(attr, row, (T) obj, subField, column + subIndex);
+                                Row subRow = sheet.getRow(currentRowNum + subIndex);
+                                if (subRow == null)
+                                {
+                                    subRow = sheet.createRow(currentRowNum + subIndex);
+                                }
+
+                                int subColumn = column;
+                                for (Field subField : subFields)
+                                {
+                                    Excel subExcel = subField.getAnnotation(Excel.class);
+                                    addCell(subExcel, subRow, (T) subVo, subField, subColumn++);
+                                }
+                                subIndex++;
                             }
-                            subIndex++;
+                            column += subFields.size();
                         }
-                        subFirst = true;
                     }
-                    this.subMergedFirstRowNum = this.subMergedFirstRowNum + subList.size();
+                    catch (Exception e)
+                    {
+                        log.error("填充集合数据失败", e);
+                    }
                 }
                 else
                 {
-                    this.addCell(excel, row, vo, field, column++);
+                    // 创建单元格并设置值
+                    addCell(excel, row, vo, field, column);
+                    if (maxSubListSize > 1 && excel.needMerge())
+                    {
+                        sheet.addMergedRegion(new CellRangeAddress(currentRowNum, currentRowNum + maxSubListSize - 1, column, column));
+                    }
+                    column++;
+                }
+            }
+            currentRowNum += maxSubListSize;
+        }
+    }
+
+    /**
+     * 获取子列表最大数
+     */
+    private int getCurrentMaxSubListSize(T vo)
+    {
+        int maxSubListSize = 1;
+        for (Object[] os : fields)
+        {
+            Field field = (Field) os[0];
+            if (Collection.class.isAssignableFrom(field.getType()))
+            {
+                try
+                {
+                    Collection<?> subList = (Collection<?>) getTargetValue(vo, field, (Excel) os[1]);
+                    if (subList != null && !subList.isEmpty())
+                    {
+                        maxSubListSize = Math.max(maxSubListSize, subList.size());
+                    }
+                }
+                catch (Exception e)
+                {
+                    log.error("获取集合大小失败", e);
                 }
             }
         }
+        return maxSubListSize;
     }
 
     /**
@@ -918,7 +906,7 @@ public class ExcelUtil<T>
      */
     public void annotationDataStyles(Map<String, CellStyle> styles, Field field, Excel excel)
     {
-        String key = StringUtils.format("data_{}_{}_{}_{}", excel.align(), excel.color(), excel.backgroundColor(), excel.cellType());
+        String key = StringUtils.format("data_{}_{}_{}_{}_{}", excel.align(), excel.color(), excel.backgroundColor(), excel.cellType(), excel.wrapText());
         if (!styles.containsKey(key))
         {
             CellStyle style = wb.createCellStyle();
@@ -934,6 +922,7 @@ public class ExcelUtil<T>
             style.setBottomBorderColor(IndexedColors.GREY_50_PERCENT.getIndex());
             style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
             style.setFillForegroundColor(excel.backgroundColor().getIndex());
+            style.setWrapText(excel.wrapText());
             Font dataFont = wb.createFont();
             dataFont.setFontName("Arial");
             dataFont.setFontHeightInPoints((short) 10);
@@ -962,7 +951,7 @@ public class ExcelUtil<T>
         if (isSubList())
         {
             // 填充默认样式，防止合并单元格样式失效
-            sheet.setDefaultColumnStyle(column, styles.get(StringUtils.format("data_{}_{}_{}_{}", attr.align(), attr.color(), attr.backgroundColor(), attr.cellType())));
+            sheet.setDefaultColumnStyle(column, styles.get(StringUtils.format("data_{}_{}_{}_{}_{}", attr.align(), attr.color(), attr.backgroundColor(), attr.cellType(), attr.wrapText())));
             if (attr.needMerge())
             {
                 sheet.addMergedRegion(new CellRangeAddress(rownum - 1, rownum, column, column));
@@ -1100,10 +1089,13 @@ public class ExcelUtil<T>
                 cell = row.createCell(column);
                 if (isSubListValue(vo) && getListCellValue(vo).size() > 1 && attr.needMerge())
                 {
-                    CellRangeAddress cellAddress = new CellRangeAddress(subMergedFirstRowNum, subMergedLastRowNum, column, column);
-                    sheet.addMergedRegion(cellAddress);
+                    if (subMergedLastRowNum >= subMergedFirstRowNum)
+                    {
+                        sheet.addMergedRegion(new CellRangeAddress(subMergedFirstRowNum, subMergedLastRowNum, column, column));
+                    }
                 }
-                cell.setCellStyle(styles.get(StringUtils.format("data_{}_{}_{}_{}", attr.align(), attr.color(), attr.backgroundColor(), attr.cellType())));
+                cell.setCellStyle(styles.get(StringUtils.format("data_{}_{}_{}_{}_{}", attr.align(), attr.color(), attr.backgroundColor(), attr.cellType(), attr.wrapText())));
+
                 // 用于读取对象中的属性
                 Object value = getTargetValue(vo, field, attr);
                 String dateFormat = attr.dateFormat();
@@ -1443,6 +1435,7 @@ public class ExcelUtil<T>
      */
     private Object getTargetValue(T vo, Field field, Excel excel) throws Exception
     {
+        field.setAccessible(true);
         Object o = field.get(vo);
         if (StringUtils.isNotEmpty(excel.targetAttr()))
         {
@@ -1543,7 +1536,6 @@ public class ExcelUtil<T>
             Excel attr = field.getAnnotation(Excel.class);
             if (attr != null && (attr.type() == Type.ALL || attr.type() == type))
             {
-                field.setAccessible(true);
                 fields.add(new Object[] { field, attr });
             }
             if (Collection.class.isAssignableFrom(field.getType()))
@@ -1567,7 +1559,6 @@ public class ExcelUtil<T>
                     if (ArrayUtils.contains(this.includeFields, field.getName() + "." + attr.targetAttr())
                             && (attr != null && (attr.type() == Type.ALL || attr.type() == type)))
                     {
-                        field.setAccessible(true);
                         fields.add(new Object[] { field, attr });
                     }
                 }
@@ -1576,7 +1567,6 @@ public class ExcelUtil<T>
                     if (!ArrayUtils.contains(this.excludeFields, field.getName() + "." + attr.targetAttr())
                             && (attr != null && (attr.type() == Type.ALL || attr.type() == type)))
                     {
-                        field.setAccessible(true);
                         fields.add(new Object[] { field, attr });
                     }
                 }
