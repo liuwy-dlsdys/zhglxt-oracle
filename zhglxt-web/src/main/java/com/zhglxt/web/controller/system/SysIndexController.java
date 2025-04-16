@@ -7,11 +7,7 @@ import com.zhglxt.common.core.entity.AjaxResult;
 import com.zhglxt.common.core.entity.sys.SysMenu;
 import com.zhglxt.common.core.entity.sys.SysUser;
 import com.zhglxt.common.core.text.Convert;
-import com.zhglxt.common.utils.CookieUtils;
-import com.zhglxt.common.utils.DateUtils;
-import com.zhglxt.common.utils.ServletUtils;
-import com.zhglxt.common.utils.ShiroUtils;
-import com.zhglxt.common.utils.StringUtils;
+import com.zhglxt.common.utils.*;
 import com.zhglxt.framework.shiro.service.SysPasswordService;
 import com.zhglxt.oa.entity.NotifyRecord;
 import com.zhglxt.oa.mapper.NotifyRecordMapper;
@@ -26,6 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.List;
@@ -51,7 +48,7 @@ public class SysIndexController extends BaseController {
 
     // 系统首页
     @GetMapping("/index")
-    public String index(ModelMap mmap) {
+    public String index(ModelMap mmap, HttpServletRequest request) {
         // 取身份信息
         SysUser user = getSysUser();
         // 根据用户id取出菜单
@@ -71,7 +68,10 @@ public class SysIndexController extends BaseController {
         mmap.put("isPasswordExpired", passwordIsExpiration(user.getPwdUpdateDate()));
         mmap.put("isMobile", ServletUtils.checkAgentIsMobile(ServletUtils.getRequest().getHeader("User-Agent")));
 
-        // 系统名称
+        //通知通告消息数
+        NotifyRecord notifyRecord = new NotifyRecord();
+        notifyRecord.setUserId(ShiroUtils.getUserId());
+        mmap.put("notifyNumber", notifyRecordMapper.getNotifyNumber(notifyRecord));
         mmap.put("systemName", GlobalConfig.getName());
 
         // 菜单导航显示风格
@@ -88,6 +88,8 @@ public class SysIndexController extends BaseController {
             }
         }
         String webIndex = "topnav".equalsIgnoreCase(indexStyle) ? "index-topnav" : "index";
+        // CSRF Token
+        request.getSession().setAttribute(ShiroConstants.CSRF_TOKEN, ServletUtils.generateToken());
         return webIndex;
     }
 
@@ -113,6 +115,7 @@ public class SysIndexController extends BaseController {
         }
         return AjaxResult.error("密码不正确，请重新输入。");
     }
+
 
     // 切换主题
     @GetMapping("/system/switchSkin")
@@ -169,15 +172,5 @@ public class SysIndexController extends BaseController {
             return DateUtils.differentDaysByMillisecond(nowDate, pwdUpdateDate) > passwordValidateDays;
         }
         return false;
-    }
-
-    /** 通知通告消息总数 */
-    @PostMapping("/notifyCount")
-    @ResponseBody
-    public int notifyCount(ModelMap mmap) {
-        //通知通告消息数
-        NotifyRecord notifyRecord = new NotifyRecord();
-        notifyRecord.setUserId(ShiroUtils.getUserId());
-        return notifyRecordMapper.getNotifyNumber(notifyRecord);
     }
 }

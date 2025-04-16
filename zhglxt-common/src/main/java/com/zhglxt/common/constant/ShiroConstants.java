@@ -2,11 +2,10 @@ package com.zhglxt.common.constant;
 
 /**
  * Shiro通用常量
- * 
+ *
  * @author ruoyi
  */
-public class ShiroConstants
-{
+public class ShiroConstants {
     /**
      * 当前登录的用户
      */
@@ -33,9 +32,9 @@ public class ShiroConstants
     public static final String ERROR = "errorMsg";
 
     /**
-     * 编码格式
+     * csrf key
      */
-    public static final String ENCODING = "UTF-8";
+    public static final String CSRF_TOKEN = "csrf_token";
 
     /**
      * 当前在线会话
