@@ -32,9 +32,14 @@ public class ShiroConstants {
     public static final String ERROR = "errorMsg";
 
     /**
-     * csrf key
+     * csrf session content
      */
     public static final String CSRF_TOKEN = "csrf_token";
+
+    /**
+     * csrf request header
+     */
+    public static final String X_CSRF_TOKEN = "X-CSRF-Token";
 
     /**
      * 当前在线会话
@@ -69,7 +74,7 @@ public class ShiroConstants {
     /**
      * 登录记录缓存
      */
-    public static final String LOGIN_RECORD_CACHE = "loginRecordCache";
+    public static final String LOGIN_RECORD_CACHE  = "loginRecordCache";
 
     /**
      * 系统活跃用户缓存
