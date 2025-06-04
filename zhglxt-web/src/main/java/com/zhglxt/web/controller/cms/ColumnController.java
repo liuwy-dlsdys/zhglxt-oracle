@@ -176,4 +176,15 @@ public class ColumnController extends BaseController {
         }
         return toAjax(columnService.deleteColumn(paramMap));
     }
+
+    /**
+     * 保存栏目菜单排序
+     */
+    @PostMapping("/updateColumnSort")
+    @ResponseBody
+    public AjaxResult updateColumnSort(@RequestParam String[] menuIds, @RequestParam String[] orderNums)
+    {
+        columnService.updateColumnSort(menuIds, orderNums);
+        return success();
+    }
 }
