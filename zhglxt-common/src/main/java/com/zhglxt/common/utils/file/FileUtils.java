@@ -1,65 +1,55 @@
 package com.zhglxt.common.utils.file;
 
 import com.zhglxt.common.config.GlobalConfig;
+import com.zhglxt.common.constant.Constants;
 import com.zhglxt.common.utils.DateUtils;
 import com.zhglxt.common.utils.StringUtils;
-import com.zhglxt.common.utils.uuid.IdUtils;
+import com.zhglxt.common.utils.uuid.UUID;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.ArrayUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 /**
  * 文件处理工具类
- * 
+ *
  * @author ruoyi
  */
-public class FileUtils
-{
+public class FileUtils{
+    private static Logger logger = LoggerFactory.getLogger(FileUtils.class);
+
     public static String FILENAME_PATTERN = "[a-zA-Z0-9_\\-\\|\\.\\u4e00-\\u9fa5]+";
 
     /**
      * 输出指定文件的byte数组
-     * 
+     *
      * @param filePath 文件路径
-     * @param os 输出流
+     * @param os       输出流
      * @return
      */
-    public static void writeBytes(String filePath, OutputStream os) throws IOException
-    {
+    public static void writeBytes(String filePath, OutputStream os) throws IOException {
         FileInputStream fis = null;
-        try
-        {
+        try {
             File file = new File(filePath);
-            if (!file.exists())
-            {
+            if (!file.exists()) {
                 throw new FileNotFoundException(filePath);
             }
             fis = new FileInputStream(file);
             byte[] b = new byte[1024];
             int length;
-            while ((length = fis.read(b)) > 0)
-            {
+            while ((length = fis.read(b)) > 0) {
                 os.write(b, 0, length);
             }
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             throw e;
-        }
-        finally
-        {
+        } finally {
             IOUtils.close(os);
             IOUtils.close(fis);
         }
@@ -92,7 +82,7 @@ public class FileUtils
         try
         {
             String extension = getFileExtendName(data);
-            pathName = DateUtils.datePath() + "/" + IdUtils.fastUUID() + "." + extension;
+            pathName = DateUtils.datePath() + "/" + UUID.fastUUID().toString(true) + "." + extension;
             File file = FileUploadUtils.getAbsoluteFile(uploadDir, pathName);
             fos = new FileOutputStream(file);
             fos.write(data);
@@ -105,18 +95,27 @@ public class FileUtils
     }
 
     /**
+     * 移除路径中的请求前缀片段
+     *
+     * @param filePath 文件路径
+     * @return 移除后的文件路径
+     */
+    public static String stripPrefix(String filePath)
+    {
+        return StringUtils.substringAfter(filePath, Constants.RESOURCE_PREFIX);
+    }
+
+    /**
      * 删除文件
-     * 
+     *
      * @param filePath 文件
      * @return
      */
-    public static boolean deleteFile(String filePath)
-    {
+    public static boolean deleteFile(String filePath) {
         boolean flag = false;
         File file = new File(filePath);
         // 路径为文件且不为空则进行删除
-        if (file.isFile() && file.exists())
-        {
+        if (file.isFile() && file.exists()) {
             file.delete();
             flag = true;
         }
@@ -125,32 +124,28 @@ public class FileUtils
 
     /**
      * 文件名称验证
-     * 
+     *
      * @param filename 文件名称
      * @return true 正常 false 非法
      */
-    public static boolean isValidFilename(String filename)
-    {
+    public static boolean isValidFilename(String filename) {
         return filename.matches(FILENAME_PATTERN);
     }
 
     /**
      * 检查文件是否可下载
-     * 
+     *
      * @param resource 需要下载的文件
      * @return true 正常 false 非法
      */
-    public static boolean checkAllowDownload(String resource)
-    {
+    public static boolean checkAllowDownload(String resource) {
         // 禁止目录上跳级别
-        if (StringUtils.contains(resource, ".."))
-        {
+        if (StringUtils.contains(resource, "..")) {
             return false;
         }
 
         // 检查允许下载的文件规则
-        if (ArrayUtils.contains(MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION, FileTypeUtils.getFileType(resource)))
-        {
+        if (ArrayUtils.contains(MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION, FileTypeUtils.getFileType(resource))) {
             return true;
         }
 
@@ -160,33 +155,25 @@ public class FileUtils
 
     /**
      * 下载文件名重新编码
-     * 
-     * @param request 请求对象
+     *
+     * @param request  请求对象
      * @param fileName 文件名
      * @return 编码后的文件名
      */
-    public static String setFileDownloadHeader(HttpServletRequest request, String fileName) throws UnsupportedEncodingException
-    {
+    public static String setFileDownloadHeader(HttpServletRequest request, String fileName) throws UnsupportedEncodingException {
         final String agent = request.getHeader("USER-AGENT");
         String filename = fileName;
-        if (agent.contains("MSIE"))
-        {
+        if (agent.contains("MSIE")) {
             // IE浏览器
             filename = URLEncoder.encode(filename, "utf-8");
             filename = filename.replace("+", " ");
-        }
-        else if (agent.contains("Firefox"))
-        {
+        } else if (agent.contains("Firefox")) {
             // 火狐浏览器
             filename = new String(fileName.getBytes(), "ISO8859-1");
-        }
-        else if (agent.contains("Chrome"))
-        {
+        } else if (agent.contains("Chrome")) {
             // google浏览器
             filename = URLEncoder.encode(filename, "utf-8");
-        }
-        else
-        {
+        } else {
             // 其它浏览器
             filename = URLEncoder.encode(filename, "utf-8");
         }
@@ -196,12 +183,11 @@ public class FileUtils
     /**
      * 下载文件名重新编码
      *
-     * @param response 响应对象
+     * @param response     响应对象
      * @param realFileName 真实文件名
      * @return
      */
-    public static void setAttachmentResponseHeader(HttpServletResponse response, String realFileName) throws UnsupportedEncodingException
-    {
+    public static void setAttachmentResponseHeader(HttpServletResponse response, String realFileName) throws UnsupportedEncodingException {
         String percentEncodedFileName = percentEncode(realFileName);
 
         StringBuilder contentDispositionValue = new StringBuilder();
@@ -221,15 +207,62 @@ public class FileUtils
      * @param s 需要百分号编码的字符串
      * @return 百分号编码后的字符串
      */
-    public static String percentEncode(String s) throws UnsupportedEncodingException
-    {
+    public static String percentEncode(String s) throws UnsupportedEncodingException {
         String encode = URLEncoder.encode(s, StandardCharsets.UTF_8.toString());
         return encode.replaceAll("\\+", "%20");
     }
 
     /**
+     * 修正路径，将 \\ 或 / 等替换为 File.separator
+     *
+     * @param path 待修正的路径
+     * @return 修正后的路径
+     */
+    public static String path(String path) {
+        String p = StringUtils.replace(path, "\\", "/");
+        p = StringUtils.join(StringUtils.split(p, "/"), "/");
+        if (!StringUtils.startsWithAny(p, "/") && StringUtils.startsWithAny(path, "\\", "/")) {
+            p += "/";
+        }
+        if (!StringUtils.endsWithAny(p, "/") && StringUtils.endsWithAny(path, "\\", "/")) {
+            p = p + "/";
+        }
+        if (path != null && path.startsWith("/")) {
+            p = "/" + p; // linux下路径
+        }
+        return p;
+    }
+
+    /**
+     * 创建目录
+     *
+     * @param descDirName 目录名,包含路径
+     * @return 如果创建成功，则返回true，否则返回false
+     */
+    public static boolean createDirectory(String descDirName) {
+        String descDirNames = descDirName;
+        if (!descDirNames.endsWith(File.separator)) {
+            descDirNames = descDirNames + File.separator;
+        }
+        File descDir = new File(descDirNames);
+        if (descDir.exists()) {
+            logger.debug("目录 " + descDirNames + " 已存在!");
+            return false;
+        }
+        // 创建目录
+        if (descDir.mkdirs()) {
+            logger.debug("目录 " + descDirNames + " 创建成功!");
+            return true;
+        } else {
+            logger.debug("目录 " + descDirNames + " 创建失败!");
+            return false;
+        }
+
+    }
+
+    /**
      * 获取图像后缀
-     * 
+     *
      * @param photoByte 图像数据
      * @return 后缀名
      */
@@ -257,8 +290,8 @@ public class FileUtils
     }
 
     /**
-     * 获取文件名称 /profile/upload/2022/04/16/ruoyi.png -- ruoyi.png
-     * 
+     * 获取带后缀的文件名称
+     *
      * @param fileName 路径名称
      * @return 没有文件路径的名称
      */
@@ -275,8 +308,8 @@ public class FileUtils
     }
 
     /**
-     * 获取不带后缀文件名称 /profile/upload/2022/04/16/ruoyi.png -- ruoyi
-     * 
+     * 获取不带后缀的文件名称
+     *
      * @param fileName 路径名称
      * @return 没有文件路径和后缀的名称
      */
@@ -290,26 +323,4 @@ public class FileUtils
         return baseName;
     }
 
-    /**
-     * 修正路径，将 \\ 或 / 等替换为 File.separator
-     *
-     * @param path 待修正的路径
-     * @return 修正后的路径
-     */
-    public static String path(String path) {
-        String p = StringUtils.replace(path, "\\", "/");
-        p = StringUtils.join(StringUtils.split(p, "/"), "/");
-        if (!StringUtils.startsWithAny(p, "/") && StringUtils.startsWithAny(path, "\\", "/")) {
-            p += "/";
-        }
-        if (!StringUtils.endsWithAny(p, "/") && StringUtils.endsWithAny(path, "\\", "/")) {
-            p = p + "/";
-        }
-        if (path != null && path.startsWith("/")) {
-            // linux下路径
-            p = "/" + p;
-        }
-        return p;
-    }
 }
-
