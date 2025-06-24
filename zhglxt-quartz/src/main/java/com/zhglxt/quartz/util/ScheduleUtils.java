@@ -7,16 +7,7 @@ import com.zhglxt.common.exception.job.TaskException.Code;
 import com.zhglxt.common.utils.StringUtils;
 import com.zhglxt.common.utils.spring.SpringUtils;
 import com.zhglxt.quartz.entity.SysJob;
-import org.quartz.CronScheduleBuilder;
-import org.quartz.CronTrigger;
-import org.quartz.Job;
-import org.quartz.JobBuilder;
-import org.quartz.JobDetail;
-import org.quartz.JobKey;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.TriggerBuilder;
-import org.quartz.TriggerKey;
+import org.quartz.*;
 
 /**
  * 定时任务工具类
@@ -120,12 +111,12 @@ public class ScheduleUtils {
         int count = StringUtils.countMatches(packageName, ".");
         if (count > 1)
         {
-            return StringUtils.containsAnyIgnoreCase(invokeTarget, Constants.JOB_WHITELIST_STR);
+            return StringUtils.startsWithAny(invokeTarget, Constants.JOB_WHITELIST_STR);
         }
         Object obj = SpringUtils.getBean(StringUtils.split(invokeTarget, ".")[0]);
         String beanPackageName = obj.getClass().getPackage().getName();
-        return StringUtils.containsAnyIgnoreCase(beanPackageName, Constants.JOB_WHITELIST_STR)
-                && !StringUtils.containsAnyIgnoreCase(beanPackageName, Constants.JOB_ERROR_STR);
+        return StringUtils.startsWithAny(beanPackageName, Constants.JOB_WHITELIST_STR)
+                && !StringUtils.startsWithAny(beanPackageName, Constants.JOB_ERROR_STR);
     }
 
 }
