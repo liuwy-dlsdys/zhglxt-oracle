@@ -1,15 +1,5 @@
 package com.zhglxt.web.controller.monitor;
 
-import java.util.List;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import com.zhglxt.common.annotation.Log;
 import com.zhglxt.common.core.controller.BaseController;
 import com.zhglxt.common.core.entity.AjaxResult;
@@ -18,6 +8,13 @@ import com.zhglxt.common.enums.BusinessType;
 import com.zhglxt.common.utils.poi.ExcelUtil;
 import com.zhglxt.system.entity.SysOperLog;
 import com.zhglxt.system.service.ISysOperLogService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 操作日志记录
@@ -72,7 +69,7 @@ public class SysOperlogController extends BaseController
 
     @RequiresPermissions("monitor:operlog:detail")
     @GetMapping("/detail/{operId}")
-    public String detail(@PathVariable("operId") Long operId, ModelMap mmap)
+    public String detail(@PathVariable("operId") String operId, ModelMap mmap)
     {
         mmap.put("operLog", operLogService.selectOperLogById(operId));
         return prefix + "/detail";

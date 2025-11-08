@@ -1,7 +1,6 @@
 package com.zhglxt.system.entity;
 
 import com.zhglxt.common.annotation.Excel;
-import com.zhglxt.common.annotation.Excel.ColumnType;
 import com.zhglxt.common.core.entity.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -19,8 +18,8 @@ public class SysOperLog extends BaseEntity {
     /**
      * 日志主键
      */
-    @Excel(name = "操作序号", cellType = ColumnType.NUMERIC)
-    private Long operId;
+    @Excel(name = "操作序号")
+    private String operId;
 
     /**
      * 操作模块
@@ -122,11 +121,11 @@ public class SysOperLog extends BaseEntity {
     @Excel(name = "消耗时间", suffix = "毫秒")
     private Long costTime;
 
-    public Long getOperId() {
+    public String getOperId() {
         return operId;
     }
 
-    public void setOperId(Long operId) {
+    public void setOperId(String operId) {
         this.operId = operId;
     }
 

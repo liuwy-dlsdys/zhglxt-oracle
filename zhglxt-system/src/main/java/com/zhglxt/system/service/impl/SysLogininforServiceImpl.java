@@ -1,12 +1,14 @@
 package com.zhglxt.system.service.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.zhglxt.common.core.text.Convert;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.entity.SysLogininfor;
 import com.zhglxt.system.mapper.SysLogininforMapper;
 import com.zhglxt.system.service.ISysLogininforService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 系统访问日志情况信息 服务层处理
@@ -28,6 +30,7 @@ public class SysLogininforServiceImpl implements ISysLogininforService
     @Override
     public void insertLogininfor(SysLogininfor logininfor)
     {
+        logininfor.setInfoId(UUID.fastUUID().toString(true));
         logininforMapper.insertLogininfor(logininfor);
     }
 

@@ -1,11 +1,11 @@
 package com.zhglxt.system.entity;
 
+import com.zhglxt.common.annotation.Excel;
+import com.zhglxt.common.core.entity.BaseEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.util.Date;
-import com.zhglxt.common.annotation.Excel;
-import com.zhglxt.common.annotation.Excel.ColumnType;
-import com.zhglxt.common.core.entity.BaseEntity;
 
 /**
  * 系统访问记录表 sys_logininfor
@@ -17,8 +17,8 @@ public class SysLogininfor extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** ID */
-    @Excel(name = "序号", cellType = ColumnType.NUMERIC)
-    private Long infoId;
+    @Excel(name = "序号")
+    private String infoId;
 
     /** 用户账号 */
     @Excel(name = "用户账号")
@@ -52,13 +52,11 @@ public class SysLogininfor extends BaseEntity
     @Excel(name = "访问时间", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
     private Date loginTime;
 
-    public Long getInfoId()
-    {
+    public String getInfoId() {
         return infoId;
     }
 
-    public void setInfoId(Long infoId)
-    {
+    public void setInfoId(String infoId) {
         this.infoId = infoId;
     }
 

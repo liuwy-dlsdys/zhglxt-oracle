@@ -30,11 +30,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </sql>
     
 	<insert id="insertOperlog" parameterType="SysOperLog">
-		<selectKey keyProperty="operId" resultType="Long" order="BEFORE">
-			SELECT seq_sys_oper_log.NEXTVAL as operId FROM DUAL
-		</selectKey>
 		insert into sys_oper_log(
-			<if test="operId != null and operId != 0">oper_id,</if>
+			<if test="operId != null and operId != ''">oper_id,</if>
 			<if test="title != null and title != ''">title,</if>
 			<if test="businessType != null and businessType != ''">business_type,</if>
 			<if test="method != null and method != ''">method,</if>
@@ -52,7 +49,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			cost_time,
 			oper_time
 		)values(
-			<if test="operId != null and operId != 0">#{operId},</if>
+			<if test="operId != null and operId != ''">#{operId},</if>
 			<if test="title != null and title != ''">#{title},</if>
 			<if test="businessType != null and businessType != ''">#{businessType},</if>
 			<if test="method != null and method != ''">#{method},</if>
@@ -76,7 +73,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<include refid="selectOperLogVo"/>
 		<where>
 			<if test="operIp != null and operIp != ''">
-				AND oper_ip like concat('%', #{operIp}, '%')
+				AND oper_ip like concat(concat('%',#{operIp}),'%')
 			</if>
 			<if test="title != null and title != ''">
 				AND title like concat(concat('%',#{title}),'%')
@@ -113,7 +110,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </foreach> 
  	</delete>
  	
- 	<select id="selectOperLogById" parameterType="Long" resultMap="SysOperLogResult">
+ 	<select id="selectOperLogById" parameterType="String" resultMap="SysOperLogResult">
 		<include refid="selectOperLogVo"/>
 		where oper_id = #{operId}
 	</select>

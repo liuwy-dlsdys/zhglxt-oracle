@@ -17,9 +17,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</resultMap>
 
 	<insert id="insertLogininfor" parameterType="SysLogininfor">
-	    <selectKey keyProperty="infoId" resultType="Long" order="BEFORE">
-			SELECT seq_sys_logininfor.NEXTVAL as infoId FROM DUAL
-		</selectKey>
 		insert into sys_logininfor (info_id, login_name, status, ipaddr, login_location, browser, os, msg, login_time)
 		values (#{infoId}, #{loginName}, #{status}, #{ipaddr}, #{loginLocation}, #{browser}, #{os}, #{msg}, sysdate)
 	</insert>

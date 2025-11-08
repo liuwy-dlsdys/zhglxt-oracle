@@ -1,7 +1,8 @@
 package com.zhglxt.system.service;
 
-import java.util.List;
 import com.zhglxt.system.entity.SysOperLog;
+
+import java.util.List;
 
 /**
  * 操作日志 服务层
@@ -39,7 +40,7 @@ public interface ISysOperLogService
      * @param operId 操作ID
      * @return 操作日志对象
      */
-    public SysOperLog selectOperLogById(Long operId);
+    public SysOperLog selectOperLogById(String operId);
 
     /**
      * 清空操作日志

@@ -1,12 +1,14 @@
 package com.zhglxt.system.service.impl;
 
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.zhglxt.common.core.text.Convert;
+import com.zhglxt.common.utils.uuid.UUID;
 import com.zhglxt.system.entity.SysOperLog;
 import com.zhglxt.system.mapper.SysOperLogMapper;
 import com.zhglxt.system.service.ISysOperLogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 操作日志 服务层处理
@@ -27,6 +29,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
     @Override
     public void insertOperlog(SysOperLog operLog)
     {
+        operLog.setOperId(UUID.fastUUID().toString(true));
         operLogMapper.insertOperlog(operLog);
     }
 
@@ -61,7 +64,7 @@ public class SysOperLogServiceImpl implements ISysOperLogService
      * @return 操作日志对象
      */
     @Override
-    public SysOperLog selectOperLogById(Long operId)
+    public SysOperLog selectOperLogById(String operId)
     {
         return operLogMapper.selectOperLogById(operId);
     }
