@@ -26,14 +26,14 @@ import java.util.List;
 public class DemoFormController {
     private String prefix = "demo/form";
 
-    private final static List<UserFormModel> USERS = new ArrayList<UserFormModel>();
+    private final static List<UserFormModel> users = new ArrayList<UserFormModel>();
 
     {
-        USERS.add(new UserFormModel(1, "1000001", "测试1", "15888888888"));
-        USERS.add(new UserFormModel(2, "1000002", "测试2", "15666666666"));
-        USERS.add(new UserFormModel(3, "1000003", "测试3", "15666666666"));
-        USERS.add(new UserFormModel(4, "1000004", "测试4", "15666666666"));
-        USERS.add(new UserFormModel(5, "1000005", "测试5", "15666666666"));
+        users.add(new UserFormModel(1, "1000001", "测试1", "15888888888"));
+        users.add(new UserFormModel(2, "1000002", "测试2", "15666666666"));
+        users.add(new UserFormModel(3, "1000003", "测试3", "15666666666"));
+        users.add(new UserFormModel(4, "1000004", "测试4", "15666666666"));
+        users.add(new UserFormModel(5, "1000005", "测试5", "15666666666"));
     }
 
     /**
@@ -250,11 +250,10 @@ public class DemoFormController {
     /**
      * 局部刷新-添加任务
      *
-     * @param    fragment    页面中的模板名称
      * @param    taskName    任务名称
      */
     @PostMapping("/localrefresh/task")
-    public String localRefreshTask(String fragment, String taskName, ModelMap mmap) {
+    public String localRefreshTask(String taskName, ModelMap mmap) {
         JSONArray list = new JSONArray();
         JSONObject item = new JSONObject();
         item.put("name", StringUtils.defaultIfBlank(taskName, "了解各技术的使用、系统使用情况及相关重要追踪人"));
@@ -267,7 +266,7 @@ public class DemoFormController {
         item.put("date", "2020.08.09");
         list.add(item);
         mmap.put("tasks", list);
-        return prefix + "/localrefresh::" + fragment;
+        return prefix + "/localrefresh::fragment-tasklist";
     }
 
     /**
@@ -289,7 +288,7 @@ public class DemoFormController {
         AjaxResult ajax = new AjaxResult();
 
         ajax.put("code", 200);
-        ajax.put("value", USERS);
+        ajax.put("value", users);
         return ajax;
     }
 
